@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Portal — C21 Alliance Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="loginScreen" class="login-screen">
+    <div class="login-card">
+      <div class="login-logo">C21<span>&reg;</span></div>
+      <h1>Team Portal</h1>
+      <p class="login-sub">Century 21&reg; Alliance Properties</p>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Team email" required />
+        <input type="password" id="loginPassword" placeholder="Password" required />
+        <button type="submit" id="loginBtn">Sign In</button>
+        <p id="loginError" class="error-msg"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ADMIN APP -->
+  <div id="adminApp" class="admin-app hidden">
+
+    <nav class="admin-nav">
+      <div class="admin-nav-brand">C21<span>&reg;</span> Team Portal</div>
+      <div class="admin-nav-tabs">
+        <button class="tab-btn active" data-tab="leads">Leads</button>
+        <button class="tab-btn" data-tab="subscribers">Subscribers</button>
+        <button class="tab-btn" data-tab="contacts">Contacts</button>
+      </div>
+      <div class="admin-nav-user">
+        <span id="userEmail" class="user-email"></span>
+        <button id="signOutBtn" class="sign-out-btn">Sign Out</button>
+      </div>
+    </nav>
+
+    <div class="admin-layout">
+
+      <main class="admin-main">
+
+        <!-- LEADS -->
+        <section id="tab-leads" class="tab-panel active">
+          <div class="panel-header">
+            <h2>Leads Queue</h2>
+            <span id="leadsCount" class="count-badge">0</span>
+          </div>
+          <div id="leadsList" class="card-list">
+            <p class="loading">Loading leads...</p>
+          </div>
+        </section>
+
+        <!-- SUBSCRIBERS -->
+        <section id="tab-subscribers" class="tab-panel hidden">
+          <div class="panel-header">
+            <h2>Subscribers</h2>
+            <span id="subscribersCount" class="count-badge">0</span>
+          </div>
+          <div id="subscribersList" class="card-list">
+            <p class="loading">Loading subscribers...</p>
+          </div>
+        </section>
+
+        <!-- CONTACTS -->
+        <section id="tab-contacts" class="tab-panel hidden">
+          <div class="panel-header">
+            <h2>Contacts</h2>
+          </div>
+          <div id="contactsList" class="card-list">
+            <p class="loading">Loading contacts...</p>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="admin-sidebar">
+        <h3>Upcoming Dates</h3>
+        <p class="sidebar-sub">Next 30 days</p>
+        <div id="upcomingDates"><p class="loading">Loading...</p></div>
+
+        <div class="sidebar-divider"></div>
+
+        <h3>Quick Stats</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-num" id="statNewLeads">—</div>
+            <div class="stat-label">New Leads</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" id="statSubscribers">—</div>
+            <div class="stat-label">Subscribers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" id="statContacts">—</div>
+            <div class="stat-label">Contacts</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" id="statConverted">—</div>
+            <div class="stat-label">Converted</div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- PROMOTE TO CONTACT MODAL -->
+  <div id="promoteModal" class="modal hidden">
+    <div class="modal-card">
+      <h3>Promote to Contact</h3>
+      <input type="hidden" id="promoteLeadId" />
+      <div class="modal-fields">
+        <label>Type
+          <select id="promoteType">
+            <option value="prospect">Prospect</option>
+            <option value="owner">Owner</option>
+            <option value="tenant">Tenant</option>
+          </select>
+        </label>
+        <label>Assign to
+          <select id="promoteAssigned">
+            <option value="">Unassigned</option>
+            <option value="Starlyn">Starlyn</option>
+            <option value="Sarena">Sarena</option>
+            <option value="Andrew">Andrew</option>
+          </select>
+        </label>
+        <label>Notes
+          <textarea id="promoteNotes" rows="3" placeholder="Any initial notes..."></textarea>
+        </label>
+      </div>
+      <div class="modal-actions">
+        <button id="promoteCancelBtn" class="btn-ghost">Cancel</button>
+        <button id="promoteConfirmBtn" class="btn-gold">Create Contact</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
