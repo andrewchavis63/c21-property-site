@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Century 21® Alliance Properties — Tenant Screening & Placement. How we find and qualify the right tenants for your Tarrant, Parker and Surrounding Counties rental property." />
+  <title>Tenant Screening &amp; Placement | Century 21&reg; Alliance Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .svc-hero {
+      background: #111113;
+      padding: 140px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .svc-hero .container { position: relative; z-index: 1; }
+    .svc-hero .section-label { margin-bottom: 16px; display: inline-block; }
+    .svc-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #f8f7f4;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .svc-hero h1 em { color: #beaf87; font-style: italic; }
+    .svc-hero p {
+      color: #c4c4c5;
+      max-width: 640px;
+      margin: 0 auto 32px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .svc-hero-btns { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+    .svc-btn-primary {
+      display: inline-block; background: #beaf87; color: #111113;
+      font-weight: 700; font-size: 0.95rem; padding: 14px 28px;
+      border-radius: 8px; text-decoration: none; letter-spacing: 0.03em;
+    }
+    .svc-btn-primary:hover { background: #a89c72; }
+    .svc-btn-outline {
+      display: inline-block; background: #1c1c1e; color: #beaf87;
+      border: 1px solid #beaf87; font-weight: 700; font-size: 0.95rem;
+      padding: 14px 28px; border-radius: 8px; text-decoration: none; letter-spacing: 0.03em;
+    }
+    .svc-btn-outline:hover { background: #2a2a2c; }
+
+    .svc-body { background: #f8f7f4; padding: 80px 0; }
+    .svc-section { max-width: 860px; margin: 0 auto 64px; }
+    .svc-section:last-child { margin-bottom: 0; }
+    .svc-section-label {
+      display: inline-block; background: #beaf87; color: #111113;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; padding: 5px 14px; border-radius: 4px; margin-bottom: 16px;
+    }
+    .svc-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: #1c1c1e; margin-bottom: 16px; line-height: 1.25;
+    }
+    .svc-section p {
+      font-size: 0.97rem; color: #444; line-height: 1.8; margin-bottom: 14px;
+    }
+    .svc-section p:last-child { margin-bottom: 0; }
+
+    .svc-steps { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
+    .svc-step {
+      display: flex; gap: 24px; padding: 28px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .svc-step:first-child { border-top: 1px solid rgba(0,0,0,0.08); }
+    .svc-step-num {
+      flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%;
+      background: #1c1c1e; color: #beaf87;
+      font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .svc-step-body h3 {
+      font-family: 'Playfair Display', serif; font-size: 1.1rem;
+      color: #1c1c1e; margin-bottom: 8px;
+    }
+    .svc-step-body p { font-size: 0.93rem; color: #555; line-height: 1.75; margin: 0; }
+
+    .svc-policy-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 28px;
+    }
+    .svc-policy-card {
+      background: #fff; border-radius: 10px; padding: 24px 28px;
+      border: 1px solid rgba(0,0,0,0.07);
+    }
+    .svc-policy-card h4 {
+      font-family: 'Playfair Display', serif; font-size: 1rem;
+      color: #beaf87; margin-bottom: 8px;
+    }
+    .svc-policy-card p { font-size: 0.88rem; color: #555; line-height: 1.7; margin: 0; }
+
+    .svc-alert {
+      background: #1c1c1e; border-left: 3px solid #beaf87;
+      border-radius: 0 10px 10px 0; padding: 20px 24px; margin-top: 24px;
+    }
+    .svc-alert p { color: #c4c4c5; font-size: 0.92rem; line-height: 1.75; margin: 0; }
+    .svc-alert strong { color: #beaf87; }
+
+    .svc-cta {
+      background: #1c1c1e; padding: 64px 0; text-align: center;
+    }
+    .svc-cta h2 {
+      font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem);
+      color: #f8f7f4; margin-bottom: 12px;
+    }
+    .svc-cta p { color: rgba(255,255,255,0.5); font-size: 0.95rem; margin-bottom: 28px; }
+
+    @media (max-width: 640px) {
+      .svc-policy-grid { grid-template-columns: 1fr; }
+      .svc-step { flex-direction: column; gap: 12px; }
+    }
+    @media(max-width:768px){ .svc-hero{padding:100px 0 60px;} }
+    @media(max-width:480px){ .svc-hero{padding:80px 0 48px;} }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-top">Alliance Properties</span>
+        <span class="logo-bottom">Century 21&reg; &bull; Property Management</span>
+      </a>
+      <div class="fluid-nav fluid-nav-right" id="fluidNavRight">
+        <button class="fn-trigger" id="fnTriggerRight" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="fn-icon fn-icon-open">
+            <img src="img/nav-key.jpg" class="fn-key-icon" alt="" aria-hidden="true" />
+          </span>
+          <span class="fn-icon fn-icon-close">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="1" y1="1" x2="13" y2="13"/><line x1="13" y1="1" x2="1" y2="13"/>
+            </svg>
+          </span>
+        </button>
+        <div class="fn-items" id="fnItemsRight">
+          <a href="index.html#services"  class="fn-item" style="--i:0">Services</a>
+          <a href="index.html#contact"   class="fn-item" style="--i:1">Owners</a><a href="index.html#about"     class="fn-item" style="--i:2">Our Team</a>
+          
+          <a href="tenant-criteria.html" class="fn-item" style="--i:3">Tenants</a>
+          <a href="https://c21allianceproperties.com/our-rentals" class="fn-item" style="--i:4" target="_blank" rel="noopener">Properties</a>
+          <a href="index.html"           class="fn-item" style="--i:5">Home</a>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#about">Our Team</a>
+  <a href="index.html#contact">Owners</a>
+  <a href="tenant-criteria.html">Tenants</a>
+  <a href="https://c21allianceproperties.com/our-rentals" target="_blank" rel="noopener">Properties</a>
+  <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="3 12 9 6 15 12"/>
+  </svg>
+</button>
+
+
+<div class="svc-hero">
+  <div class="container">
+    <span class="section-label">Our Services</span>
+    <h1>Tenant Screening<br>&amp; <em>Placement</em></h1>
+    <p>
+      Placing the right tenant is the single most important decision in property management.
+      We treat it that way — with thorough background research, identity verification,
+      and a process designed to protect your investment from day one.
+    </p>
+    <div class="svc-hero-btns">
+      <a class="svc-btn-outline" href="index.html#services">All Services</a>
+      <a class="svc-btn-primary" href="index.html#contact">Talk to Our Team &rarr;</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="svc-body">
+  <div class="container">
+
+    <div class="svc-section">
+      <span class="svc-section-label">Our Approach</span>
+      <h2>We Screen Like Your Asset Depends on It</h2>
+      <p>
+        To Century 21&reg; Alliance Properties, screening applicants is among the most important tasks
+        of a high-quality, professional property manager. Identity theft and fraud are on the rise,
+        so we continuously implement added security measures — using software equipped with
+        high-tech identity verification and Red Flag Rule compliance to prevent imposters from
+        reaching your property.
+      </p>
+      <p>
+        There is no perfect screening system, but we review and verify as much information as we
+        can access. We balance the data we gather with the applicant's ability to pay at move-in,
+        so we are always making an informed, documented decision on your behalf.
+      </p>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">What We Check</span>
+      <h2>Comprehensive Background Verification</h2>
+      <p>
+        Every adult applicant (18+) is required to submit their own application. For each applicant
+        with a valid SSN or ITIN and a most-recent U.S. address, we pull:
+      </p>
+      <div class="svc-steps">
+        <div class="svc-step">
+          <div class="svc-step-num">1</div>
+          <div class="svc-step-body">
+            <h3>Credit History</h3>
+            <p>Full credit report review including open accounts, collections, payment history, and overall credit score to assess financial responsibility.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">2</div>
+          <div class="svc-step-body">
+            <h3>Eviction, Foreclosure &amp; Bankruptcy Records</h3>
+            <p>We search nationwide eviction databases, foreclosure history, and bankruptcy filings to identify applicants with a history of housing instability.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">3</div>
+          <div class="svc-step-body">
+            <h3>Criminal History &amp; Sex Offender Check</h3>
+            <p>Comprehensive criminal background search including sex offender registry — run for every adult applicant without exception.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">4</div>
+          <div class="svc-step-body">
+            <h3>Employment &amp; Income Verification</h3>
+            <p>We verify employment by employer name, hire date, and gross monthly income. Self-employed applicants must provide tax returns attested by a CPA or attorney and six months of unaltered bank statements.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">5</div>
+          <div class="svc-step-body">
+            <h3>Residential History</h3>
+            <p>We contact previous landlords and verify the applicant's rental track record over the past two or more years — looking for on-time payments, lease compliance, and property condition at move-out.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">6</div>
+          <div class="svc-step-body">
+            <h3>Identity Verification</h3>
+            <p>Our software uses high-tech data points to verify the applicant's identity — catching fraudulent documentation and flagging inconsistencies before a lease is executed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">Owner Involvement</span>
+      <h2>You're Never Left Out of a Decision That Matters</h2>
+      <p>
+        If an applicant presents a special request, negotiates rent, has multiple pets or a restricted
+        breed, or has factors outside our normal approval process, we contact you directly to discuss
+        the situation — the benefits, the risks, and the recommendation — before any decision is made.
+      </p>
+      <div class="svc-policy-grid">
+        <div class="svc-policy-card">
+          <h4>Security Deposit Adjustments</h4>
+          <p>In some cases, we may recommend a security deposit of 1.5–3× one month's rent to proceed with a borderline applicant. This is a documented caution flag — not a blanket approval — and is always communicated to you before acceptance.</p>
+        </div>
+        <div class="svc-policy-card">
+          <h4>Cosigners Accepted</h4>
+          <p>We accept cosigners for applicants with limited rental or employment history who otherwise meet credit and income thresholds. Cosigners must meet a higher credit and income standard.</p>
+        </div>
+        <div class="svc-policy-card">
+          <h4>Lease Term Negotiation</h4>
+          <p>We negotiate leases in 12–24 month increments only. If you plan to sell or move back into the property, inform us in advance so we do not execute a term beyond your timeline.</p>
+        </div>
+        <div class="svc-policy-card">
+          <h4>Long-Term Tenancy Strategy</h4>
+          <p>Long-term tenants save you money by preventing costly vacancies. We build relationships with residents over time to encourage renewals — keeping your property occupied and profitable.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">Tenant Criteria</span>
+      <h2>Published Standards. Consistent Decisions.</h2>
+      <p>
+        Our Tenant Selection Criteria is a published, legally compliant document that outlines every
+        qualification standard we apply — credit thresholds, income requirements, rental history
+        minimums, and more. Every applicant is evaluated against the same criteria, protecting you
+        from Fair Housing liability and ensuring consistent, defensible decisions.
+      </p>
+      <div class="svc-alert">
+        <p><strong>No prices are disclosed on this page.</strong> Fees associated with screening and placement are outlined in your Property Management Agreement and vary based on property specifics. Contact our team for a full overview.</p>
+      </div>
+      <div style="margin-top:28px;">
+        <a href="tenant-criteria.html" class="svc-btn-primary">View Full Tenant Criteria &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="svc-cta">
+  <div class="container">
+    <h2>Ready to Place a Qualified Tenant?</h2>
+    <p>Contact our team to get started — we'll walk you through the process from listing to lease.</p>
+    <a href="index.html#contact" class="svc-btn-primary">Get a Free Consultation &rarr;</a>
+  </div>
+</div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex; margin-bottom:16px;">
+          <span class="logo-top">Alliance Properties</span>
+          <span class="logo-bottom">Century 21&reg; &bull; Property Management</span>
+        </a>
+        <p>Professional property management services for Tarrant, Parker and Surrounding Counties homeowners. We protect your investment, maximize your returns, and give you true peace of mind.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#why-us">Why Choose Us</a></li>
+          <li><a href="index.html#about">Our Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="tenant-criteria.html">Tenant Criteria</a></li>
+          <li><a href="petscreening.html">PetScreening Process</a></li>
+          <li><a href="services-screening.html">Screening &amp; Placement</a></li>
+          <li><a href="services-rent.html">Rent Collection</a></li>
+          <li><a href="services-maintenance.html">Maintenance</a></li>
+          <li><a href="services-reporting.html">Financial Reporting</a></li>
+          <li><a href="services-inspections.html">Inspections</a></li>
+          <li><a href="services-evictions.html">Eviction Management</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Century 21&reg; Alliance Properties. All rights reserved.</p>
+      <p class="footer-c21">Each Century 21&reg; office is independently owned and operated. &reg; &trade; Century 21&reg; Real Estate LLC. Equal Housing Opportunity.</p>
+    </div>
+    <div class="footer-trec">
+      <p>TREC Lic. No. 9014679 &bull; Broker: Alliance Sails LLC &bull; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener noreferrer">Consumer Protection Notice</a> &bull; <a href="docs/sarena-smith-iabs-2026.pdf" target="_blank" rel="noopener noreferrer">IABS — Sarena Smith</a> &bull; <a href="docs/andrew-chavis-iabs-2026.pdf" target="_blank" rel="noopener noreferrer">IABS — Andrew Chavis</a> &bull; <a href="admin/index.html">Staff Portal</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

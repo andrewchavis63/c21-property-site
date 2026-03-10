@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Century 21® Alliance Properties — Property Inspections. Move-in, periodic, and move-out inspections that protect your investment and document every detail." />
+  <title>Property Inspections | Century 21&reg; Alliance Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .svc-hero { background:#111113; padding:140px 0 80px; text-align:center; position:relative; overflow:hidden; }
+    .svc-hero .container { position:relative; z-index:1; }
+    .svc-hero .section-label { margin-bottom:16px; display:inline-block; }
+    .svc-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3rem); color:#f8f7f4; margin-bottom:20px; line-height:1.2; }
+    .svc-hero h1 em { color:#beaf87; font-style:italic; }
+    .svc-hero p { color:#c4c4c5; max-width:640px; margin:0 auto 32px; font-size:1.05rem; line-height:1.7; }
+    .svc-hero-btns { display:inline-flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+    .svc-btn-primary { display:inline-block; background:#beaf87; color:#111113; font-weight:700; font-size:0.95rem; padding:14px 28px; border-radius:8px; text-decoration:none; letter-spacing:0.03em; }
+    .svc-btn-primary:hover { background:#a89c72; }
+    .svc-btn-outline { display:inline-block; background:#1c1c1e; color:#beaf87; border:1px solid #beaf87; font-weight:700; font-size:0.95rem; padding:14px 28px; border-radius:8px; text-decoration:none; letter-spacing:0.03em; }
+    .svc-btn-outline:hover { background:#2a2a2c; }
+    .svc-body { background:#f8f7f4; padding:80px 0; }
+    .svc-section { max-width:860px; margin:0 auto 64px; }
+    .svc-section:last-child { margin-bottom:0; }
+    .svc-section-label { display:inline-block; background:#beaf87; color:#111113; font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:5px 14px; border-radius:4px; margin-bottom:16px; }
+    .svc-section h2 { font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.2rem); color:#1c1c1e; margin-bottom:16px; line-height:1.25; }
+    .svc-section p { font-size:0.97rem; color:#444; line-height:1.8; margin-bottom:14px; }
+    .svc-section p:last-child { margin-bottom:0; }
+    .insp-types { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin-top:32px; }
+    .insp-card { background:#fff; border-radius:12px; padding:28px 24px; border:1px solid rgba(0,0,0,0.07); border-top:3px solid #beaf87; }
+    .insp-card-num { font-family:'Playfair Display',serif; font-size:2rem; color:#beaf87; font-weight:700; margin-bottom:8px; line-height:1; }
+    .insp-card h3 { font-family:'Playfair Display',serif; font-size:1rem; color:#1c1c1e; margin-bottom:12px; }
+    .insp-card p { font-size:0.88rem; color:#555; line-height:1.7; margin:0; }
+    .svc-flow { display:flex; flex-direction:column; gap:0; margin-top:32px; }
+    .svc-step { display:flex; gap:24px; padding:28px 0; border-bottom:1px solid rgba(0,0,0,0.08); }
+    .svc-step:first-child { border-top:1px solid rgba(0,0,0,0.08); }
+    .svc-step-num { flex-shrink:0; width:44px; height:44px; border-radius:50%; background:#1c1c1e; color:#beaf87; font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; display:flex; align-items:center; justify-content:center; }
+    .svc-step-body h3 { font-family:'Playfair Display',serif; font-size:1.1rem; color:#1c1c1e; margin-bottom:8px; }
+    .svc-step-body p { font-size:0.93rem; color:#555; line-height:1.75; margin:0; }
+    .svc-alert { background:#1c1c1e; border-left:3px solid #beaf87; border-radius:0 10px 10px 0; padding:20px 24px; margin-top:24px; }
+    .svc-alert p { color:#c4c4c5; font-size:0.92rem; line-height:1.75; margin:0; }
+    .svc-alert strong { color:#beaf87; }
+    .svc-cta { background:#1c1c1e; padding:64px 0; text-align:center; }
+    .svc-cta h2 { font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3vw,2rem); color:#f8f7f4; margin-bottom:12px; }
+    .svc-cta p { color:rgba(255,255,255,0.5); font-size:0.95rem; margin-bottom:28px; }
+    @media(max-width:768px){ .insp-types{grid-template-columns:1fr;} .svc-hero{padding:100px 0 60px;} }
+    @media(max-width:640px){ .svc-step{flex-direction:column;gap:12px;} }
+    @media(max-width:480px){ .svc-hero{padding:80px 0 48px;} }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-top">Alliance Properties</span>
+        <span class="logo-bottom">Century 21&reg; &bull; Property Management</span>
+      </a>
+      <div class="fluid-nav fluid-nav-right" id="fluidNavRight">
+        <button class="fn-trigger" id="fnTriggerRight" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="fn-icon fn-icon-open"><img src="img/nav-key.jpg" class="fn-key-icon" alt="" aria-hidden="true" /></span>
+          <span class="fn-icon fn-icon-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="1" y1="1" x2="13" y2="13"/><line x1="13" y1="1" x2="1" y2="13"/></svg></span>
+        </button>
+        <div class="fn-items" id="fnItemsRight">
+          <a href="index.html#services"  class="fn-item" style="--i:0">Services</a>
+          <a href="index.html#contact"   class="fn-item" style="--i:1">Owners</a><a href="index.html#about"     class="fn-item" style="--i:2">Our Team</a>
+          
+          <a href="tenant-criteria.html" class="fn-item" style="--i:3">Tenants</a>
+          <a href="https://c21allianceproperties.com/our-rentals" class="fn-item" style="--i:4" target="_blank" rel="noopener">Properties</a>
+          <a href="index.html"           class="fn-item" style="--i:5">Home</a>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#about">Our Team</a>
+  <a href="index.html#contact">Owners</a>
+  <a href="tenant-criteria.html">Tenants</a>
+  <a href="https://c21allianceproperties.com/our-rentals" target="_blank" rel="noopener">Properties</a>
+  <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 12 9 6 15 12"/></svg>
+</button>
+
+
+<div class="svc-hero">
+  <div class="container">
+    <span class="section-label">Our Services</span>
+    <h1>Property<br><em>Inspections</em></h1>
+    <p>
+      Every stage of a tenancy is documented. From the move-in report before a tenant
+      takes possession to the photo-documented move-out inspection — your property is
+      always accounted for and you always have the records to back it up.
+    </p>
+    <div class="svc-hero-btns">
+      <a class="svc-btn-outline" href="index.html#services">All Services</a>
+      <a class="svc-btn-primary" href="index.html#contact">Talk to Our Team &rarr;</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="svc-body">
+  <div class="container">
+
+    <div class="svc-section">
+      <span class="svc-section-label">Overview</span>
+      <h2>Three Types of Inspections. Every Property. Every Tenancy.</h2>
+      <p>
+        Documentation is your best protection as a landlord. Our inspection process creates
+        a clear, photo-supported record of your property's condition at every critical point
+        in the tenancy — so you always have the evidence you need if a dispute arises.
+      </p>
+      <div class="insp-types">
+        <div class="insp-card">
+          <div class="insp-card-num">01</div>
+          <h3>Move-In Inspection</h3>
+          <p>Conducted just before the tenant takes possession by a third-party insured vendor. The full report is shared with the tenant and stored in your Owner Portal.</p>
+        </div>
+        <div class="insp-card">
+          <div class="insp-card-num">02</div>
+          <h3>Periodic Walkthrough</h3>
+          <p>Scheduled 2–3 months before lease expiration. Evaluates property condition, documents any issues, and informs the lease renewal decision.</p>
+        </div>
+        <div class="insp-card">
+          <div class="insp-card-num">03</div>
+          <h3>Move-Out Inspection</h3>
+          <p>Full photo-documented inspection at the end of tenancy, compared against the original move-in report to determine any tenant-caused damage for deposit accounting.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">Move-In</span>
+      <h2>Starting with a Clean, Documented Baseline</h2>
+      <p>
+        Before a tenant takes possession, an insured third-party vendor conducts a thorough
+        move-in inspection at our expense — covered by the one-time admin fee paid by the
+        new tenant with their security deposit. This creates the baseline record that protects
+        you at move-out.
+      </p>
+      <div class="svc-flow">
+        <div class="svc-step">
+          <div class="svc-step-num">1</div>
+          <div class="svc-step-body">
+            <h3>Third-Party Move-In Report</h3>
+            <p>A licensed, insured vendor documents the condition of every room, fixture, appliance, and system — with photos — before the tenant receives keys.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">2</div>
+          <div class="svc-step-body">
+            <h3>Report Shared with Tenant</h3>
+            <p>The completed report is provided to the tenant, who has 7 days to submit photos or descriptions of any additional items they want documented for their move-out protection.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">3</div>
+          <div class="svc-step-body">
+            <h3>Stored in Owner Portal</h3>
+            <p>The full move-in report — including all photos and tenant-noted items — is stored in your Owner Portal and retained for the duration of the tenancy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">Periodic</span>
+      <h2>Occupied Walkthroughs Before Renewal</h2>
+      <p>
+        Approximately 2–3 months before the lease expires, we schedule a walkthrough of the
+        occupied property with the tenant. This inspection serves two purposes: evaluating
+        the property's current condition to inform the renewal decision, and catching any
+        maintenance needs before they become larger problems.
+      </p>
+      <p>
+        The completed report is shared with both you and the tenant. The cost of the occupied
+        walkthrough is included in the lease renewal fee — there is no separate inspection charge.
+      </p>
+      <div class="svc-alert">
+        <p><strong>Unscheduled Drive-Bys:</strong> In addition to scheduled walkthroughs, our team may drive by to assess visible exterior conditions — roofs after hail storms, street numbers, mailbox condition, fence or yard issues — as time and weather permit. These visits are included in the monthly management fee.</p>
+      </div>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">Move-Out</span>
+      <h2>Protecting Your Deposit Claim with Documentation</h2>
+      <p>
+        When a tenant vacates, we conduct a complete, photo-documented move-out inspection
+        and compare it directly against the original move-in report. Texas law allows landlords
+        30 days after the tenant vacates to account for the security deposit — we manage
+        this entire process.
+      </p>
+      <div class="svc-flow">
+        <div class="svc-step">
+          <div class="svc-step-num">1</div>
+          <div class="svc-step-body">
+            <h3>Move-Out Inspection Conducted</h3>
+            <p>A full inspection is performed, documenting the condition of the property with photos room by room, compared against the move-in baseline.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">2</div>
+          <div class="svc-step-body">
+            <h3>Tenant-Caused Damage Identified</h3>
+            <p>We separate normal wear and tear — which Texas law prohibits charging to tenants — from tenant-caused damage, which can be billed from the security deposit with documentation.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">3</div>
+          <div class="svc-step-body">
+            <h3>Repairs Coordinated &amp; Invoiced</h3>
+            <p>Vendors are dispatched to complete necessary repairs. All invoices and receipts are collected and used for the security deposit accounting.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">4</div>
+          <div class="svc-step-body">
+            <h3>Security Deposit Accounting Sent Within 30 Days</h3>
+            <p>Within the Texas-required 30-day window, the past tenant receives a complete written accounting of all charges — with copies of every vendor receipt — and the remaining balance (if any) is refunded.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="svc-cta">
+  <div class="container">
+    <h2>Your Property — Documented at Every Stage.</h2>
+    <p>Move-in to move-out, every detail is on record.</p>
+    <a href="index.html#contact" class="svc-btn-primary">Get a Free Consultation &rarr;</a>
+  </div>
+</div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex; margin-bottom:16px;">
+          <span class="logo-top">Alliance Properties</span>
+          <span class="logo-bottom">Century 21&reg; &bull; Property Management</span>
+        </a>
+        <p>Professional property management services for Tarrant, Parker and Surrounding Counties homeowners. We protect your investment, maximize your returns, and give you true peace of mind.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#why-us">Why Choose Us</a></li>
+          <li><a href="index.html#about">Our Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="tenant-criteria.html">Tenant Criteria</a></li>
+          <li><a href="petscreening.html">PetScreening Process</a></li>
+          <li><a href="services-screening.html">Screening &amp; Placement</a></li>
+          <li><a href="services-rent.html">Rent Collection</a></li>
+          <li><a href="services-maintenance.html">Maintenance</a></li>
+          <li><a href="services-reporting.html">Financial Reporting</a></li>
+          <li><a href="services-inspections.html">Inspections</a></li>
+          <li><a href="services-evictions.html">Eviction Management</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Century 21&reg; Alliance Properties. All rights reserved.</p>
+      <p class="footer-c21">Each Century 21&reg; office is independently owned and operated. &reg; &trade; Century 21&reg; Real Estate LLC. Equal Housing Opportunity.</p>
+    </div>
+    <div class="footer-trec">
+      <p>TREC Lic. No. 9014679 &bull; Broker: Alliance Sails LLC &bull; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener noreferrer">Consumer Protection Notice</a> &bull; <a href="docs/sarena-smith-iabs-2026.pdf" target="_blank" rel="noopener noreferrer">IABS — Sarena Smith</a> &bull; <a href="docs/andrew-chavis-iabs-2026.pdf" target="_blank" rel="noopener noreferrer">IABS — Andrew Chavis</a> &bull; <a href="admin/index.html">Staff Portal</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

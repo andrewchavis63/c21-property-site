@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Starlyn Smith — Team Lead and Property Manager at Century 21® Alliance Properties. Serving Tarrant, Parker and Surrounding Counties." />
+  <title>Starlyn Smith — Team Lead | Century 21&reg; Alliance Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .tm-hero {
+      background: #111113;
+      padding: 140px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .tm-hero .container { position: relative; z-index: 1; }
+    .tm-hero-inner {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .tm-photo-wrap {
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      border: 1px solid rgba(190,175,135,0.2);
+      flex-shrink: 0;
+    }
+    .tm-photo-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+    .tm-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      background: #1c1c1e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tm-photo-placeholder svg {
+      width: 80px; height: 80px;
+      stroke: rgba(190,175,135,0.3); fill: none; stroke-width: 1;
+      stroke-linecap: round; stroke-linejoin: round;
+    }
+    .tm-hero-text .section-label { display: inline-block; margin-bottom: 16px; }
+    .tm-hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      color: #f8f7f4; line-height: 1.1; margin-bottom: 8px;
+    }
+    .tm-role {
+      font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: #beaf87; font-weight: 600; margin-bottom: 24px;
+    }
+    .tm-intro { color: #c4c4c5; font-size: 1.05rem; line-height: 1.75; max-width: 540px; margin-bottom: 32px; }
+    .tm-btns { display: inline-flex; gap: 12px; flex-wrap: wrap; }
+    .tm-btn-primary {
+      display: inline-block; background: #beaf87; color: #111113;
+      font-weight: 700; font-size: 0.95rem; padding: 14px 28px;
+      text-decoration: none; letter-spacing: 0.03em;
+    }
+    .tm-btn-primary:hover { background: #a89c72; }
+    .tm-btn-outline {
+      display: inline-block; background: transparent; color: #beaf87;
+      border: 1px solid rgba(190,175,135,0.4); font-weight: 600;
+      font-size: 0.95rem; padding: 14px 28px; text-decoration: none; letter-spacing: 0.03em;
+    }
+    .tm-btn-outline:hover { border-color: #beaf87; }
+    .tm-body { background: #f8f7f4; padding: 80px 0; }
+    .tm-section { max-width: 860px; margin: 0 auto 56px; }
+    .tm-section:last-child { margin-bottom: 0; }
+    .tm-section-label {
+      display: inline-block; background: #beaf87; color: #111113;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; padding: 5px 14px; margin-bottom: 16px;
+    }
+    .tm-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      color: #1c1c1e; margin-bottom: 16px; line-height: 1.25;
+    }
+    .tm-section p { font-size: 0.97rem; color: #444; line-height: 1.8; margin-bottom: 14px; }
+    .tm-responsibilities {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px;
+    }
+    .tm-resp-item {
+      background: #fff; border: 1px solid rgba(0,0,0,0.07);
+      padding: 20px 24px; display: flex; align-items: flex-start; gap: 14px;
+    }
+    .tm-resp-icon {
+      width: 32px; height: 32px; background: #1c1c1e; border-radius: 50%;
+      flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+    }
+    .tm-resp-icon svg { width: 14px; height: 14px; stroke: #beaf87; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .tm-resp-item h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: #1c1c1e; margin-bottom: 4px; }
+    .tm-resp-item p { font-size: 0.85rem; color: #666; line-height: 1.6; margin: 0; }
+    .tm-cta { background: #1c1c1e; padding: 64px 0; text-align: center; }
+    .tm-cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); color: #f8f7f4; margin-bottom: 12px; }
+    .tm-cta p { color: rgba(255,255,255,0.5); font-size: 0.95rem; margin-bottom: 28px; }
+    @media(max-width:768px) {
+      .tm-hero-inner { grid-template-columns: 1fr; gap: 36px; }
+      .tm-photo-wrap { width: 200px; height: 200px; margin: 0 auto; }
+      .tm-hero-text { text-align: center; }
+      .tm-intro { margin-left: auto; margin-right: auto; }
+      .tm-btns { justify-content: center; }
+      .tm-hero { padding: 100px 0 60px; }
+    }
+    @media(max-width:640px) {
+      .tm-responsibilities { grid-template-columns: 1fr; }
+      .tm-hero { padding: 80px 0 48px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-top">Alliance Properties</span>
+        <span class="logo-bottom">Century 21&reg; &bull; Property Management</span>
+      </a>
+      <div class="fluid-nav fluid-nav-right" id="fluidNavRight">
+        <button class="fn-trigger" id="fnTriggerRight" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="fn-icon fn-icon-open">
+            <img src="img/nav-key.jpg" class="fn-key-icon" alt="" aria-hidden="true" />
+          </span>
+          <span class="fn-icon fn-icon-close">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="1" y1="1" x2="13" y2="13"/><line x1="13" y1="1" x2="1" y2="13"/>
+            </svg>
+          </span>
+        </button>
+        <div class="fn-items" id="fnItemsRight">
+          <a href="index.html#services"  class="fn-item" style="--i:0">Services</a>
+          <a href="index.html#contact"   class="fn-item" style="--i:1">Owners</a><a href="index.html#about" class="fn-item" style="--i:2">Our Team</a>
+          <a href="tenant-criteria.html" class="fn-item" style="--i:3">Tenants</a>
+          <a href="https://c21allianceproperties.com/our-rentals" class="fn-item" style="--i:4" target="_blank" rel="noopener">Properties</a>
+          <a href="index.html"           class="fn-item" style="--i:5">Home</a>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#about">Our Team</a>
+  <a href="index.html#contact">Owners</a>
+  <a href="tenant-criteria.html">Tenants</a>
+  <a href="https://c21allianceproperties.com/our-rentals" target="_blank" rel="noopener">Properties</a>
+  <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="3 12 9 6 15 12"/>
+  </svg>
+</button>
+
+
+<div class="tm-hero">
+  <div class="container">
+    <div class="tm-hero-inner">
+      <div class="tm-photo-wrap">
+        <div class="tm-photo-placeholder">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+      </div>
+      <div class="tm-hero-text">
+        <span class="section-label">Our Team</span>
+        <h1>Starlyn Smith</h1>
+        <p class="tm-role">Team Lead &bull; Property Manager</p>
+        <p class="tm-intro">A Tarrant County native with deep roots in residential property management. Starlyn leads the Alliance Properties team with a focus on maximizing owner returns, minimizing vacancies, and delivering a consistent, professional experience from listing to lease renewal.</p>
+        <div class="tm-btns">
+          <a href="index.html#about" class="tm-btn-outline">Meet the Team</a>
+          <a href="index.html#contact" class="tm-btn-primary">Get in Touch &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="tm-body">
+  <div class="container">
+
+    <div class="tm-section">
+      <span class="tm-section-label">Team Lead</span>
+      <h2>Leading with Local Knowledge</h2>
+      <p>Starlyn brings hands-on expertise in every aspect of residential property management — from pricing strategy and tenant placement to lease enforcement and owner communication. Her deep knowledge of the Tarrant County market allows her to make informed decisions that keep properties occupied and profitable.</p>
+      <p>As Team Lead, Starlyn oversees day-to-day operations, coordinates between property managers and clients, and ensures that every owner receives the transparent, proactive communication they deserve. She is committed to treating every property as if it were her own.</p>
+    </div>
+
+    <div class="tm-section">
+      <span class="tm-section-label">Responsibilities</span>
+      <h2>What Starlyn Handles</h2>
+      <p>Every member of our team owns a specific part of your property's management. Here's what Starlyn is responsible for.</p>
+      <div class="tm-responsibilities">
+        <div class="tm-resp-item">
+          <div class="tm-resp-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Team Leadership</h4><p>Oversees operations and coordinates the full property management team.</p></div>
+        </div>
+        <div class="tm-resp-item">
+          <div class="tm-resp-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Owner Relations</h4><p>Primary point of contact for owner communications and strategic decisions.</p></div>
+        </div>
+        <div class="tm-resp-item">
+          <div class="tm-resp-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Lease Negotiations</h4><p>Handles lease terms, renewals, and rent adjustments to protect owner interests.</p></div>
+        </div>
+        <div class="tm-resp-item">
+          <div class="tm-resp-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Market Analysis</h4><p>Monitors local rental trends to ensure competitive pricing for every property.</p></div>
+        </div>
+        <div class="tm-resp-item">
+          <div class="tm-resp-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Compliance Oversight</h4><p>Ensures all properties and processes comply with Texas property law.</p></div>
+        </div>
+        <div class="tm-resp-item">
+          <div class="tm-resp-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><h4>Portfolio Management</h4><p>Manages a growing portfolio of single-family and residential properties across the region.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="tm-cta">
+  <div class="container">
+    <h2>Work Directly With Starlyn</h2>
+    <p>Ready to talk about your property? Reach out and our team will respond within one business day.</p>
+    <a href="index.html#contact" class="tm-btn-primary">Send Us a Message &rarr;</a>
+  </div>
+</div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex; margin-bottom:16px;">
+          <span class="logo-top">Alliance Properties</span>
+          <span class="logo-bottom">Century 21&reg; &bull; Property Management</span>
+        </a>
+        <p>Professional property management services for Tarrant, Parker and Surrounding Counties homeowners. We protect your investment, maximize your returns, and give you true peace of mind.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#why-us">Why Choose Us</a></li>
+          <li><a href="index.html#about">Our Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="tenant-criteria.html">Tenant Criteria</a></li>
+          <li><a href="petscreening.html">PetScreening Process</a></li>
+          <li><a href="services-screening.html">Screening &amp; Placement</a></li>
+          <li><a href="services-rent.html">Rent Collection</a></li>
+          <li><a href="services-maintenance.html">Maintenance</a></li>
+          <li><a href="services-reporting.html">Financial Reporting</a></li>
+          <li><a href="services-inspections.html">Inspections</a></li>
+          <li><a href="services-evictions.html">Eviction Management</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Century 21&reg; Alliance Properties. All rights reserved.</p>
+      <p class="footer-c21">Each Century 21&reg; office is independently owned and operated. &reg; &trade; Century 21&reg; Real Estate LLC. Equal Housing Opportunity.</p>
+    </div>
+    <div class="footer-trec">
+      <p>TREC Lic. No. 9014679 &bull; Broker: Alliance Sails LLC &bull; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener noreferrer">Consumer Protection Notice</a> &bull; <a href="docs/sarena-smith-iabs-2026.pdf" target="_blank" rel="noopener noreferrer">IABS &mdash; Sarena Smith</a> &bull; <a href="docs/andrew-chavis-iabs-2026.pdf" target="_blank" rel="noopener noreferrer">IABS &mdash; Andrew Chavis</a> &bull; <a href="admin/index.html">Staff Portal</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

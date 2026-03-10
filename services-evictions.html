@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Century 21® Alliance Properties — Eviction Management. How we handle the Texas eviction process from Notice to Vacate through Writ of Possession — on your behalf." />
+  <title>Eviction Management | Century 21&reg; Alliance Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .svc-hero { background:#111113; padding:140px 0 80px; text-align:center; position:relative; overflow:hidden; }
+    .svc-hero .container { position:relative; z-index:1; }
+    .svc-hero .section-label { margin-bottom:16px; display:inline-block; }
+    .svc-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3rem); color:#f8f7f4; margin-bottom:20px; line-height:1.2; }
+    .svc-hero h1 em { color:#beaf87; font-style:italic; }
+    .svc-hero p { color:#c4c4c5; max-width:640px; margin:0 auto 32px; font-size:1.05rem; line-height:1.7; }
+    .svc-hero-btns { display:inline-flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+    .svc-btn-primary { display:inline-block; background:#beaf87; color:#111113; font-weight:700; font-size:0.95rem; padding:14px 28px; border-radius:8px; text-decoration:none; letter-spacing:0.03em; }
+    .svc-btn-primary:hover { background:#a89c72; }
+    .svc-btn-outline { display:inline-block; background:#1c1c1e; color:#beaf87; border:1px solid #beaf87; font-weight:700; font-size:0.95rem; padding:14px 28px; border-radius:8px; text-decoration:none; letter-spacing:0.03em; }
+    .svc-btn-outline:hover { background:#2a2a2c; }
+    .svc-body { background:#f8f7f4; padding:80px 0; }
+    .svc-section { max-width:860px; margin:0 auto 64px; }
+    .svc-section:last-child { margin-bottom:0; }
+    .svc-section-label { display:inline-block; background:#beaf87; color:#111113; font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:5px 14px; border-radius:4px; margin-bottom:16px; }
+    .svc-section h2 { font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.2rem); color:#1c1c1e; margin-bottom:16px; line-height:1.25; }
+    .svc-section p { font-size:0.97rem; color:#444; line-height:1.8; margin-bottom:14px; }
+    .svc-section p:last-child { margin-bottom:0; }
+    .svc-flow { display:flex; flex-direction:column; gap:0; margin-top:32px; }
+    .svc-step { display:flex; gap:24px; padding:28px 0; border-bottom:1px solid rgba(0,0,0,0.08); }
+    .svc-step:first-child { border-top:1px solid rgba(0,0,0,0.08); }
+    .svc-step-num { flex-shrink:0; width:44px; height:44px; border-radius:50%; background:#1c1c1e; color:#beaf87; font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; display:flex; align-items:center; justify-content:center; }
+    .svc-step-body h3 { font-family:'Playfair Display',serif; font-size:1.1rem; color:#1c1c1e; margin-bottom:8px; }
+    .svc-step-body p { font-size:0.93rem; color:#555; line-height:1.75; margin:0; }
+    .svc-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:28px; }
+    .svc-card { background:#fff; border-radius:10px; padding:24px 28px; border:1px solid rgba(0,0,0,0.07); }
+    .svc-card h4 { font-family:'Playfair Display',serif; font-size:1rem; color:#beaf87; margin-bottom:8px; }
+    .svc-card p { font-size:0.88rem; color:#555; line-height:1.7; margin:0; }
+    .svc-alert { background:#1c1c1e; border-left:3px solid #beaf87; border-radius:0 10px 10px 0; padding:20px 24px; margin-top:24px; }
+    .svc-alert p { color:#c4c4c5; font-size:0.92rem; line-height:1.75; margin:0; }
+    .svc-alert strong { color:#beaf87; }
+    .svc-warn { background:#fff8ed; border:1.5px solid #beaf87; border-radius:10px; padding:20px 24px; margin-top:24px; }
+    .svc-warn p { font-size:0.92rem; color:#444; line-height:1.75; margin:0; }
+    .svc-warn strong { color:#1c1c1e; }
+    .svc-cta { background:#1c1c1e; padding:64px 0; text-align:center; }
+    .svc-cta h2 { font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3vw,2rem); color:#f8f7f4; margin-bottom:12px; }
+    .svc-cta p { color:rgba(255,255,255,0.5); font-size:0.95rem; margin-bottom:28px; }
+    @media(max-width:640px){ .svc-grid{grid-template-columns:1fr;} .svc-step{flex-direction:column;gap:12px;} }
+    @media(max-width:768px){ .svc-hero{padding:100px 0 60px;} }
+    @media(max-width:480px){ .svc-hero{padding:80px 0 48px;} }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-top">Alliance Properties</span>
+        <span class="logo-bottom">Century 21&reg; &bull; Property Management</span>
+      </a>
+      <div class="fluid-nav fluid-nav-right" id="fluidNavRight">
+        <button class="fn-trigger" id="fnTriggerRight" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="fn-icon fn-icon-open"><img src="img/nav-key.jpg" class="fn-key-icon" alt="" aria-hidden="true" /></span>
+          <span class="fn-icon fn-icon-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="1" y1="1" x2="13" y2="13"/><line x1="13" y1="1" x2="1" y2="13"/></svg></span>
+        </button>
+        <div class="fn-items" id="fnItemsRight">
+          <a href="index.html#services"  class="fn-item" style="--i:0">Services</a>
+          <a href="index.html#contact"   class="fn-item" style="--i:1">Owners</a><a href="index.html#about"     class="fn-item" style="--i:2">Our Team</a>
+          
+          <a href="tenant-criteria.html" class="fn-item" style="--i:3">Tenants</a>
+          <a href="https://c21allianceproperties.com/our-rentals" class="fn-item" style="--i:4" target="_blank" rel="noopener">Properties</a>
+          <a href="index.html"           class="fn-item" style="--i:5">Home</a>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#about">Our Team</a>
+  <a href="index.html#contact">Owners</a>
+  <a href="tenant-criteria.html">Tenants</a>
+  <a href="https://c21allianceproperties.com/our-rentals" target="_blank" rel="noopener">Properties</a>
+  <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 12 9 6 15 12"/></svg>
+</button>
+
+
+<div class="svc-hero">
+  <div class="container">
+    <span class="section-label">Our Services</span>
+    <h1>Eviction<br><em>Management</em></h1>
+    <p>
+      We work hard to prevent evictions — but when one becomes necessary, we manage
+      the full legal process under Texas law on your behalf. From the Notice to Vacate
+      through the Writ of Possession, you are protected and informed at every step.
+    </p>
+    <div class="svc-hero-btns">
+      <a class="svc-btn-outline" href="index.html#services">All Services</a>
+      <a class="svc-btn-primary" href="index.html#contact">Talk to Our Team &rarr;</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="svc-body">
+  <div class="container">
+
+    <div class="svc-section">
+      <span class="svc-section-label">Prevention First</span>
+      <h2>We Try Everything Before Filing</h2>
+      <p>
+        Eviction is a last resort. The costs — in time, money, and vacancy — are significant
+        for everyone involved. Before recommending a filing, we exhaust every available option:
+        proactive tenant communication, payment arrangements, and documented notices.
+      </p>
+      <p>
+        Under Texas law, the only legally valid grounds for eviction are <strong>nonpayment of rent</strong>
+        or a <strong>material lease violation</strong>. We only proceed when one of those grounds is
+        clearly established and documented — and always with your authorization.
+      </p>
+      <div class="svc-warn">
+        <p><strong>Important:</strong> Texas law does not allow retaliatory evictions or evictions based on discriminatory grounds. All eviction activity must comply with the Fair Housing Act and Texas Property Code. Our process is fully compliant and documented at every step.</p>
+      </div>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">The Process</span>
+      <h2>Step-by-Step: How a Texas Eviction Works</h2>
+      <div class="svc-flow">
+        <div class="svc-step">
+          <div class="svc-step-num">1</div>
+          <div class="svc-step-body">
+            <h3>Owner Authorization</h3>
+            <p>We contact you to explain the situation and recommend an eviction filing. Your written authorization is required before any legal action is initiated. We do not file without your approval.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">2</div>
+          <div class="svc-step-body">
+            <h3>Notice to Vacate (NTV) Issued</h3>
+            <p>Texas law requires a written Notice to Vacate before filing. We deliver it via regular mail with certificate of mailing, certified mail with return receipt, email to the tenant, and to their Tenant Portal — ensuring it is legally documented and delivered. The NTV specifies a firm vacate date of 7–10 days from the postmark.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">3</div>
+          <div class="svc-step-body">
+            <h3>Tenant Portal Deactivated</h3>
+            <p>Once the NTV date has passed without resolution, the Tenant Portal is deactivated and rent collection from that tenant ceases. The eviction process moves forward.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">4</div>
+          <div class="svc-step-body">
+            <h3>Sworn Complaint Filed with JP Court</h3>
+            <p>We file the Sworn Complaint/Petition with the county Justice of the Peace assigned to the property. Military status (SCRA) reports and affidavits are completed for all adult tenants. Initial court filing and service costs are the owner's responsibility — these are nominal in Texas's efficient small-claims system.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">5</div>
+          <div class="svc-step-body">
+            <h3>Court Appearance</h3>
+            <p>We can attend the initial JP court hearing on your behalf — typically at a fraction of the cost of hiring an attorney. Texas JP courts take nonpayment of rent seriously, and many cases are resolved at this stage — sometimes with the tenant returning keys in the courthouse.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">6</div>
+          <div class="svc-step-body">
+            <h3>Writ of Possession (If Needed)</h3>
+            <p>If the JP rules in your favor and the tenant does not vacate, we file for the Writ of Possession. The county Constable's Office schedules an appointment — law enforcement meets us at the property to remove occupants while a licensed locksmith rekeys the home and a moving crew removes all belongings to the curb. The entire process is documented with photos before, during, and after.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">Appeals &amp; County Court</span>
+      <h2>If a Tenant Appeals</h2>
+      <p>
+        Tenants have the right to appeal a JP court ruling. An appeal elevates the case from
+        JP court to county court — where the rules of evidence and procedure are more formal.
+        At county court, Texas law requires the landlord to be represented by a licensed attorney.
+        We will coordinate with you and refer qualified legal counsel if an appeal is filed.
+      </p>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <h4>JP Court (Initial)</h4>
+          <p>We can attend on your behalf. Proceedings are efficient, straightforward, and landlord-friendly for clear nonpayment cases.</p>
+        </div>
+        <div class="svc-card">
+          <h4>County Court (Appeal)</h4>
+          <p>Attorney representation is required. We will coordinate with legal counsel and provide all documentation needed to support your case.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">After Eviction</span>
+      <h2>Recovering What You're Owed</h2>
+      <p>
+        Court costs for an eviction can be billed back to the defaulting tenant per the lease
+        terms — though only unpaid rent (not other damages) can be included in the eviction suit itself.
+        For any remaining balance after the security deposit is applied, we pursue collections
+        on your behalf:
+      </p>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <h4>10-Day Payment Demand</h4>
+          <p>We send a formal demand for any outstanding balance to the tenant's last known or forwarding address, giving them 10 days to pay or arrange a payment plan.</p>
+        </div>
+        <div class="svc-card">
+          <h4>Collections Agency Referral</h4>
+          <p>Unpaid balances are referred to a collections agency for credit reporting — the debt is reported to major credit bureaus and may appear on the tenant's credit report for future housing or employment applications.</p>
+        </div>
+        <div class="svc-card">
+          <h4>Property Make-Ready</h4>
+          <p>After possession is returned, we coordinate the full make-ready process — cleaning, repairs, and re-leasing — to get your property back on the market as quickly as possible.</p>
+        </div>
+        <div class="svc-card">
+          <h4>Legal Judgment (Option)</h4>
+          <p>As an additional measure, a collections attorney may seek a legal judgment for outstanding debt through small claims court — making collection enforceable through wage garnishment or other legal means.</p>
+        </div>
+      </div>
+      <div class="svc-alert">
+        <p><strong>No prices are disclosed on this page.</strong> Court filing fees, appearance fees, and legal cost structures are outlined in your Property Management Agreement (Paragraph 6G). All fees are nominal relative to the protection they provide. Contact our team for a full overview.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="svc-cta">
+  <div class="container">
+    <h2>When It Gets Difficult, We Handle It.</h2>
+    <p>We take on the legal burden so you don't have to face it alone — or at all.</p>
+    <a href="index.html#contact" class="svc-btn-primary">Get a Free Consultation &rarr;</a>
+  </div>
+</div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex; margin-bottom:16px;">
+          <span class="logo-top">Alliance Properties</span>
+          <span class="logo-bottom">Century 21&reg; &bull; Property Management</span>
+        </a>
+        <p>Professional property management services for Tarrant, Parker and Surrounding Counties homeowners. We protect your investment, maximize your returns, and give you true peace of mind.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#why-us">Why Choose Us</a></li>
+          <li><a href="index.html#about">Our Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="tenant-criteria.html">Tenant Criteria</a></li>
+          <li><a href="petscreening.html">PetScreening Process</a></li>
+          <li><a href="services-screening.html">Screening &amp; Placement</a></li>
+          <li><a href="services-rent.html">Rent Collection</a></li>
+          <li><a href="services-maintenance.html">Maintenance</a></li>
+          <li><a href="services-reporting.html">Financial Reporting</a></li>
+          <li><a href="services-inspections.html">Inspections</a></li>
+          <li><a href="services-evictions.html">Eviction Management</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Century 21&reg; Alliance Properties. All rights reserved.</p>
+      <p class="footer-c21">Each Century 21&reg; office is independently owned and operated. &reg; &trade; Century 21&reg; Real Estate LLC. Equal Housing Opportunity.</p>
+    </div>
+    <div class="footer-trec">
+      <p>TREC Lic. No. 9014679 &bull; Broker: Alliance Sails LLC &bull; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener noreferrer">Consumer Protection Notice</a> &bull; <a href="docs/sarena-smith-iabs-2026.pdf" target="_blank" rel="noopener noreferrer">IABS — Sarena Smith</a> &bull; <a href="docs/andrew-chavis-iabs-2026.pdf" target="_blank" rel="noopener noreferrer">IABS — Andrew Chavis</a> &bull; <a href="admin/index.html">Staff Portal</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

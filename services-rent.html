@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Century 21® Alliance Properties — Rent Collection & Disbursement. How we collect rent, handle late payments, and get your money to you every month." />
+  <title>Rent Collection &amp; Disbursement | Century 21&reg; Alliance Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .svc-hero { background:#111113; padding:140px 0 80px; text-align:center; position:relative; overflow:hidden; }
+    .svc-hero .container { position:relative; z-index:1; }
+    .svc-hero .section-label { margin-bottom:16px; display:inline-block; }
+    .svc-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3rem); color:#f8f7f4; margin-bottom:20px; line-height:1.2; }
+    .svc-hero h1 em { color:#beaf87; font-style:italic; }
+    .svc-hero p { color:#c4c4c5; max-width:640px; margin:0 auto 32px; font-size:1.05rem; line-height:1.7; }
+    .svc-hero-btns { display:inline-flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+    .svc-btn-primary { display:inline-block; background:#beaf87; color:#111113; font-weight:700; font-size:0.95rem; padding:14px 28px; border-radius:8px; text-decoration:none; letter-spacing:0.03em; }
+    .svc-btn-primary:hover { background:#a89c72; }
+    .svc-btn-outline { display:inline-block; background:#1c1c1e; color:#beaf87; border:1px solid #beaf87; font-weight:700; font-size:0.95rem; padding:14px 28px; border-radius:8px; text-decoration:none; letter-spacing:0.03em; }
+    .svc-btn-outline:hover { background:#2a2a2c; }
+    .svc-body { background:#f8f7f4; padding:80px 0; }
+    .svc-section { max-width:860px; margin:0 auto 64px; }
+    .svc-section:last-child { margin-bottom:0; }
+    .svc-section-label { display:inline-block; background:#beaf87; color:#111113; font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:5px 14px; border-radius:4px; margin-bottom:16px; }
+    .svc-section h2 { font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.2rem); color:#1c1c1e; margin-bottom:16px; line-height:1.25; }
+    .svc-section p { font-size:0.97rem; color:#444; line-height:1.8; margin-bottom:14px; }
+    .svc-section p:last-child { margin-bottom:0; }
+    .svc-flow { display:flex; flex-direction:column; gap:0; margin-top:32px; }
+    .svc-step { display:flex; gap:24px; padding:28px 0; border-bottom:1px solid rgba(0,0,0,0.08); }
+    .svc-step:first-child { border-top:1px solid rgba(0,0,0,0.08); }
+    .svc-step-num { flex-shrink:0; width:44px; height:44px; border-radius:50%; background:#1c1c1e; color:#beaf87; font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; display:flex; align-items:center; justify-content:center; }
+    .svc-step-body h3 { font-family:'Playfair Display',serif; font-size:1.1rem; color:#1c1c1e; margin-bottom:8px; }
+    .svc-step-body p { font-size:0.93rem; color:#555; line-height:1.75; margin:0; }
+    .svc-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:28px; }
+    .svc-card { background:#fff; border-radius:10px; padding:24px 28px; border:1px solid rgba(0,0,0,0.07); }
+    .svc-card h4 { font-family:'Playfair Display',serif; font-size:1rem; color:#beaf87; margin-bottom:8px; }
+    .svc-card p { font-size:0.88rem; color:#555; line-height:1.7; margin:0; }
+    .svc-alert { background:#1c1c1e; border-left:3px solid #beaf87; border-radius:0 10px 10px 0; padding:20px 24px; margin-top:24px; }
+    .svc-alert p { color:#c4c4c5; font-size:0.92rem; line-height:1.75; margin:0; }
+    .svc-alert strong { color:#beaf87; }
+    .svc-cta { background:#1c1c1e; padding:64px 0; text-align:center; }
+    .svc-cta h2 { font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3vw,2rem); color:#f8f7f4; margin-bottom:12px; }
+    .svc-cta p { color:rgba(255,255,255,0.5); font-size:0.95rem; margin-bottom:28px; }
+    @media(max-width:640px){ .svc-grid{grid-template-columns:1fr;} .svc-step{flex-direction:column;gap:12px;} }
+    @media(max-width:768px){ .svc-hero{padding:100px 0 60px;} }
+    @media(max-width:480px){ .svc-hero{padding:80px 0 48px;} }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-top">Alliance Properties</span>
+        <span class="logo-bottom">Century 21&reg; &bull; Property Management</span>
+      </a>
+      <div class="fluid-nav fluid-nav-right" id="fluidNavRight">
+        <button class="fn-trigger" id="fnTriggerRight" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="fn-icon fn-icon-open"><img src="img/nav-key.jpg" class="fn-key-icon" alt="" aria-hidden="true" /></span>
+          <span class="fn-icon fn-icon-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="1" y1="1" x2="13" y2="13"/><line x1="13" y1="1" x2="1" y2="13"/></svg></span>
+        </button>
+        <div class="fn-items" id="fnItemsRight">
+          <a href="index.html#services"  class="fn-item" style="--i:0">Services</a>
+          <a href="index.html#contact"   class="fn-item" style="--i:1">Owners</a><a href="index.html#about"     class="fn-item" style="--i:2">Our Team</a>
+          
+          <a href="tenant-criteria.html" class="fn-item" style="--i:3">Tenants</a>
+          <a href="https://c21allianceproperties.com/our-rentals" class="fn-item" style="--i:4" target="_blank" rel="noopener">Properties</a>
+          <a href="index.html"           class="fn-item" style="--i:5">Home</a>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#about">Our Team</a>
+  <a href="index.html#contact">Owners</a>
+  <a href="tenant-criteria.html">Tenants</a>
+  <a href="https://c21allianceproperties.com/our-rentals" target="_blank" rel="noopener">Properties</a>
+  <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 12 9 6 15 12"/></svg>
+</button>
+
+
+<div class="svc-hero">
+  <div class="container">
+    <span class="section-label">Our Services</span>
+    <h1>Rent Collection<br>&amp; <em>Disbursement</em></h1>
+    <p>
+      Consistent, on-time rent collection is the foundation of a profitable rental property.
+      We manage the entire payment lifecycle — from tenant collection to owner disbursement —
+      so your money arrives without you having to chase it.
+    </p>
+    <div class="svc-hero-btns">
+      <a class="svc-btn-outline" href="index.html#services">All Services</a>
+      <a class="svc-btn-primary" href="index.html#contact">Talk to Our Team &rarr;</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="svc-body">
+  <div class="container">
+
+    <div class="svc-section">
+      <span class="svc-section-label">How It Works</span>
+      <h2>From Tenant Payment to Your Account</h2>
+      <p>
+        Rent is collected through a secure Tenant Portal with automatic payment capabilities.
+        Tenants have 24/7 access to their portal to submit payments, view their ledger, and
+        receive notices. Here is the full cycle from collection to your disbursement:
+      </p>
+      <div class="svc-flow">
+        <div class="svc-step">
+          <div class="svc-step-num">1</div>
+          <div class="svc-step-body">
+            <h3>Tenant Submits Payment via Portal</h3>
+            <p>Tenants pay online through the secure Tenant Portal — available 24/7 on any device. Automatic payment options are available to reduce late payments before they start.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">2</div>
+          <div class="svc-step-body">
+            <h3>Payment Clears &amp; Is Logged</h3>
+            <p>All payments are automatically logged against the tenant's ledger and matched to the lease. Every transaction is documented with a full audit trail accessible through your Owner Portal.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">3</div>
+          <div class="svc-step-body">
+            <h3>Management Fees &amp; Expenses Applied</h3>
+            <p>Management fees, any approved maintenance expenses, and other authorized charges are deducted from collected rent in accordance with your Property Management Agreement.</p>
+          </div>
+        </div>
+        <div class="svc-step">
+          <div class="svc-step-num">4</div>
+          <div class="svc-step-body">
+            <h3>Electronic Disbursement to You</h3>
+            <p>Your net proceeds are disbursed electronically each month. You receive a detailed monthly owner statement covering every line item — income, expenses, and balance — so there are no surprises.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">Late &amp; Non-Payment</span>
+      <h2>What Happens When Rent Is Late</h2>
+      <p>
+        We stay proactively in contact with tenants throughout the month to prevent late payments
+        before they occur. When rent is not received on time, we follow a structured escalation
+        process to protect your income:
+      </p>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <h4>Late Fee Assessment</h4>
+          <p>Late fees are assessed per the terms of the executed lease. These are documented and applied to the tenant's ledger immediately upon the grace period expiring.</p>
+        </div>
+        <div class="svc-card">
+          <h4>NSF &amp; Returned Payments</h4>
+          <p>Returned or NSF (Non-Sufficient Funds) payments are addressed immediately. The tenant is notified and a returned payment fee is assessed per the lease terms.</p>
+        </div>
+        <div class="svc-card">
+          <h4>Proactive Communication</h4>
+          <p>Our team contacts the tenant directly to understand the situation, make arrangements where appropriate, and document every interaction — building the record that protects you if legal action becomes necessary.</p>
+        </div>
+        <div class="svc-card">
+          <h4>Escalation to Eviction</h4>
+          <p>If a tenant cannot be brought current within the terms of the lease, we recommend initiating the eviction process under Texas law. Nonpayment of rent is the most common — and most straightforward — ground for eviction in Texas JP courts.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">HOA &amp; Compliance</span>
+      <h2>Violations Are Handled Before They Cost You</h2>
+      <p>
+        The most common HOA or city code violations — overgrown lawn, visible trash cans, unsightly
+        material at the curb — are addressed immediately when reported. We issue written notice
+        to the tenant and require photographic proof of cure within 48 hours. An administrative
+        fee is assessed to the tenant for each violation.
+      </p>
+      <p>
+        This documented approach has proven highly effective at ensuring tenants understand HOA
+        and city expectations and do not repeat the same offense.
+      </p>
+      <div class="svc-alert">
+        <p><strong>No prices are disclosed on this page.</strong> All management, late fee, and disbursement structures are outlined in your Property Management Agreement. Contact our team for a full overview tailored to your property.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="svc-cta">
+  <div class="container">
+    <h2>Stop Chasing Rent. Let Us Handle It.</h2>
+    <p>From first payment to final disbursement — we manage the money so you don't have to.</p>
+    <a href="index.html#contact" class="svc-btn-primary">Get a Free Consultation &rarr;</a>
+  </div>
+</div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex; margin-bottom:16px;">
+          <span class="logo-top">Alliance Properties</span>
+          <span class="logo-bottom">Century 21&reg; &bull; Property Management</span>
+        </a>
+        <p>Professional property management services for Tarrant, Parker and Surrounding Counties homeowners. We protect your investment, maximize your returns, and give you true peace of mind.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#why-us">Why Choose Us</a></li>
+          <li><a href="index.html#about">Our Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="tenant-criteria.html">Tenant Criteria</a></li>
+          <li><a href="petscreening.html">PetScreening Process</a></li>
+          <li><a href="services-screening.html">Screening &amp; Placement</a></li>
+          <li><a href="services-rent.html">Rent Collection</a></li>
+          <li><a href="services-maintenance.html">Maintenance</a></li>
+          <li><a href="services-reporting.html">Financial Reporting</a></li>
+          <li><a href="services-inspections.html">Inspections</a></li>
+          <li><a href="services-evictions.html">Eviction Management</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Century 21&reg; Alliance Properties. All rights reserved.</p>
+      <p class="footer-c21">Each Century 21&reg; office is independently owned and operated. &reg; &trade; Century 21&reg; Real Estate LLC. Equal Housing Opportunity.</p>
+    </div>
+    <div class="footer-trec">
+      <p>TREC Lic. No. 9014679 &bull; Broker: Alliance Sails LLC &bull; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener noreferrer">Consumer Protection Notice</a> &bull; <a href="docs/sarena-smith-iabs-2026.pdf" target="_blank" rel="noopener noreferrer">IABS — Sarena Smith</a> &bull; <a href="docs/andrew-chavis-iabs-2026.pdf" target="_blank" rel="noopener noreferrer">IABS — Andrew Chavis</a> &bull; <a href="admin/index.html">Staff Portal</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Century 21® Alliance Properties — Financial Reporting & Owner Portal. Monthly statements, year-end reports, and 24/7 access to your property's financials." />
+  <title>Financial Reporting | Century 21&reg; Alliance Properties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .svc-hero { background:#111113; padding:140px 0 80px; text-align:center; position:relative; overflow:hidden; }
+    .svc-hero .container { position:relative; z-index:1; }
+    .svc-hero .section-label { margin-bottom:16px; display:inline-block; }
+    .svc-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3rem); color:#f8f7f4; margin-bottom:20px; line-height:1.2; }
+    .svc-hero h1 em { color:#beaf87; font-style:italic; }
+    .svc-hero p { color:#c4c4c5; max-width:640px; margin:0 auto 32px; font-size:1.05rem; line-height:1.7; }
+    .svc-hero-btns { display:inline-flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+    .svc-btn-primary { display:inline-block; background:#beaf87; color:#111113; font-weight:700; font-size:0.95rem; padding:14px 28px; border-radius:8px; text-decoration:none; letter-spacing:0.03em; }
+    .svc-btn-primary:hover { background:#a89c72; }
+    .svc-btn-outline { display:inline-block; background:#1c1c1e; color:#beaf87; border:1px solid #beaf87; font-weight:700; font-size:0.95rem; padding:14px 28px; border-radius:8px; text-decoration:none; letter-spacing:0.03em; }
+    .svc-btn-outline:hover { background:#2a2a2c; }
+    .svc-body { background:#f8f7f4; padding:80px 0; }
+    .svc-section { max-width:860px; margin:0 auto 64px; }
+    .svc-section:last-child { margin-bottom:0; }
+    .svc-section-label { display:inline-block; background:#beaf87; color:#111113; font-size:0.72rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:5px 14px; border-radius:4px; margin-bottom:16px; }
+    .svc-section h2 { font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.2rem); color:#1c1c1e; margin-bottom:16px; line-height:1.25; }
+    .svc-section p { font-size:0.97rem; color:#444; line-height:1.8; margin-bottom:14px; }
+    .svc-section p:last-child { margin-bottom:0; }
+    .svc-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:28px; }
+    .svc-card { background:#fff; border-radius:10px; padding:24px 28px; border:1px solid rgba(0,0,0,0.07); }
+    .svc-card h4 { font-family:'Playfair Display',serif; font-size:1rem; color:#beaf87; margin-bottom:8px; }
+    .svc-card p { font-size:0.88rem; color:#555; line-height:1.7; margin:0; }
+    .svc-feature-list { list-style:none; padding:0; margin:24px 0 0; display:flex; flex-direction:column; gap:14px; }
+    .svc-feature-list li { display:flex; gap:14px; align-items:flex-start; font-size:0.95rem; color:#444; line-height:1.7; }
+    .svc-feature-list li::before { content:''; flex-shrink:0; width:6px; height:6px; border-radius:50%; background:#beaf87; margin-top:9px; }
+    .svc-alert { background:#1c1c1e; border-left:3px solid #beaf87; border-radius:0 10px 10px 0; padding:20px 24px; margin-top:24px; }
+    .svc-alert p { color:#c4c4c5; font-size:0.92rem; line-height:1.75; margin:0; }
+    .svc-alert strong { color:#beaf87; }
+    .svc-portal-block { background:#1c1c1e; border-radius:14px; padding:40px; margin-top:32px; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .svc-portal-item h4 { font-family:'Playfair Display',serif; font-size:1rem; color:#beaf87; margin-bottom:8px; }
+    .svc-portal-item p { font-size:0.88rem; color:#c4c4c5; line-height:1.7; margin:0; }
+    .svc-cta { background:#1c1c1e; padding:64px 0; text-align:center; }
+    .svc-cta h2 { font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3vw,2rem); color:#f8f7f4; margin-bottom:12px; }
+    .svc-cta p { color:rgba(255,255,255,0.5); font-size:0.95rem; margin-bottom:28px; }
+    @media(max-width:640px){ .svc-grid{grid-template-columns:1fr;} .svc-portal-block{grid-template-columns:1fr;} }
+    @media(max-width:768px){ .svc-hero{padding:100px 0 60px;} }
+    @media(max-width:480px){ .svc-hero{padding:80px 0 48px;} }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-top">Alliance Properties</span>
+        <span class="logo-bottom">Century 21&reg; &bull; Property Management</span>
+      </a>
+      <div class="fluid-nav fluid-nav-right" id="fluidNavRight">
+        <button class="fn-trigger" id="fnTriggerRight" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="fn-icon fn-icon-open"><img src="img/nav-key.jpg" class="fn-key-icon" alt="" aria-hidden="true" /></span>
+          <span class="fn-icon fn-icon-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="1" y1="1" x2="13" y2="13"/><line x1="13" y1="1" x2="1" y2="13"/></svg></span>
+        </button>
+        <div class="fn-items" id="fnItemsRight">
+          <a href="index.html#services"  class="fn-item" style="--i:0">Services</a>
+          <a href="index.html#contact"   class="fn-item" style="--i:1">Owners</a><a href="index.html#about"     class="fn-item" style="--i:2">Our Team</a>
+          
+          <a href="tenant-criteria.html" class="fn-item" style="--i:3">Tenants</a>
+          <a href="https://c21allianceproperties.com/our-rentals" class="fn-item" style="--i:4" target="_blank" rel="noopener">Properties</a>
+          <a href="index.html"           class="fn-item" style="--i:5">Home</a>
+        </div>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#about">Our Team</a>
+  <a href="index.html#contact">Owners</a>
+  <a href="tenant-criteria.html">Tenants</a>
+  <a href="https://c21allianceproperties.com/our-rentals" target="_blank" rel="noopener">Properties</a>
+  <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 12 9 6 15 12"/></svg>
+</button>
+
+
+<div class="svc-hero">
+  <div class="container">
+    <span class="section-label">Our Services</span>
+    <h1>Financial Reporting<br>&amp; <em>Owner Portal</em></h1>
+    <p>
+      You should always know exactly where your money is going.
+      We provide detailed monthly statements, full year-end reports, and 24/7 access
+      to your Owner Portal — so your property's finances are always transparent and accessible.
+    </p>
+    <div class="svc-hero-btns">
+      <a class="svc-btn-outline" href="index.html#services">All Services</a>
+      <a class="svc-btn-primary" href="index.html#contact">Talk to Our Team &rarr;</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="svc-body">
+  <div class="container">
+
+    <div class="svc-section">
+      <span class="svc-section-label">What You Receive</span>
+      <h2>Full Visibility into Your Property's Performance</h2>
+      <p>
+        Every dollar that comes in and goes out of your property is tracked, categorized,
+        and reported to you with full documentation. Whether you own one home or a growing
+        portfolio, you have access to the same level of financial detail.
+      </p>
+      <div class="svc-grid">
+        <div class="svc-card">
+          <h4>Monthly Owner Statement</h4>
+          <p>A detailed accounting of all rent collected, management fees, maintenance expenses, and other charges — delivered each month alongside your electronic disbursement.</p>
+        </div>
+        <div class="svc-card">
+          <h4>Year-End Report</h4>
+          <p>A comprehensive annual summary of all income and expenses for the full calendar year — formatted to simplify your tax preparation and maximize your deduction documentation.</p>
+        </div>
+        <div class="svc-card">
+          <h4>Vendor &amp; Maintenance Receipts</h4>
+          <p>Every repair and maintenance expense is documented with the original vendor invoice and receipt — stored in your account and available for download at any time.</p>
+        </div>
+        <div class="svc-card">
+          <h4>Tenant Payment Ledger</h4>
+          <p>A full record of every payment made, every charge assessed, and the current balance of your tenant's account — updated in real time as transactions are processed.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">Owner Portal</span>
+      <h2>Your Property at Your Fingertips — 24/7</h2>
+      <p>
+        Your Owner Portal is a secure, always-on dashboard giving you real-time visibility
+        into everything happening at your property. No waiting for a callback. No digging
+        through emails. Everything is in one place.
+      </p>
+      <div class="svc-portal-block">
+        <div class="svc-portal-item">
+          <h4>Financial Statements</h4>
+          <p>View and download current and historical monthly statements, year-end reports, and disbursement summaries.</p>
+        </div>
+        <div class="svc-portal-item">
+          <h4>Maintenance History</h4>
+          <p>A full log of every work order submitted, dispatched, completed, and invoiced — with vendor notes and cost documentation.</p>
+        </div>
+        <div class="svc-portal-item">
+          <h4>Tenant Information</h4>
+          <p>Current lease details, tenant contact information, and payment status — all accessible at a glance.</p>
+        </div>
+        <div class="svc-portal-item">
+          <h4>Inspection Reports</h4>
+          <p>Move-in, periodic, and move-out inspection reports with photos — available in your portal after each inspection is completed.</p>
+        </div>
+        <div class="svc-portal-item">
+          <h4>Document Storage</h4>
+          <p>Lease agreements, addenda, violation notices, and other key documents are stored securely in your portal for easy reference.</p>
+        </div>
+        <div class="svc-portal-item">
+          <h4>Handbook &amp; Updates</h4>
+          <p>The latest version of the Owner's Handbook is always available in your portal so you stay current with policies and procedures.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="svc-section">
+      <span class="svc-section-label">Disbursements</span>
+      <h2>Your Money, Delivered Electronically</h2>
+      <p>
+        Owner disbursements are sent electronically each month once rent has been collected
+        and cleared. There are no checks to cash, no trips to the bank, and no delays.
+        Your net proceeds — after management fees and any approved expenses — are transferred
+        directly to your account with a full statement attached.
+      </p>
+      <ul class="svc-feature-list">
+        <li>Electronic transfer direct to your designated bank account</li>
+        <li>Detailed statement accompanies every disbursement</li>
+        <li>All deductions are itemized with documentation</li>
+        <li>Historical disbursement records accessible in Owner Portal at any time</li>
+      </ul>
+      <div class="svc-alert">
+        <p><strong>No prices are disclosed on this page.</strong> Management fee structures and disbursement timelines are outlined in your Property Management Agreement. Contact our team for a complete overview.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="svc-cta">
+  <div class="container">
+    <h2>Always Know Where Your Money Stands.</h2>
+    <p>Full financial transparency — from the first rent check to the annual report.</p>
+    <a href="index.html#contact" class="svc-btn-primary">Get a Free Consultation &rarr;</a>
+  </div>
+</div>
+
+
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex; margin-bottom:16px;">
+          <span class="logo-top">Alliance Properties</span>
+          <span class="logo-bottom">Century 21&reg; &bull; Property Management</span>
+        </a>
+        <p>Professional property management services for Tarrant, Parker and Surrounding Counties homeowners. We protect your investment, maximize your returns, and give you true peace of mind.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#why-us">Why Choose Us</a></li>
+          <li><a href="index.html#about">Our Team</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="tenant-criteria.html">Tenant Criteria</a></li>
+          <li><a href="petscreening.html">PetScreening Process</a></li>
+          <li><a href="services-screening.html">Screening &amp; Placement</a></li>
+          <li><a href="services-rent.html">Rent Collection</a></li>
+          <li><a href="services-maintenance.html">Maintenance</a></li>
+          <li><a href="services-reporting.html">Financial Reporting</a></li>
+          <li><a href="services-inspections.html">Inspections</a></li>
+          <li><a href="services-evictions.html">Eviction Management</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Century 21&reg; Alliance Properties. All rights reserved.</p>
+      <p class="footer-c21">Each Century 21&reg; office is independently owned and operated. &reg; &trade; Century 21&reg; Real Estate LLC. Equal Housing Opportunity.</p>
+    </div>
+    <div class="footer-trec">
+      <p>TREC Lic. No. 9014679 &bull; Broker: Alliance Sails LLC &bull; <a href="https://www.trec.texas.gov/forms/consumer-protection-notice" target="_blank" rel="noopener noreferrer">Consumer Protection Notice</a> &bull; <a href="docs/sarena-smith-iabs-2026.pdf" target="_blank" rel="noopener noreferrer">IABS — Sarena Smith</a> &bull; <a href="docs/andrew-chavis-iabs-2026.pdf" target="_blank" rel="noopener noreferrer">IABS — Andrew Chavis</a> &bull; <a href="admin/index.html">Staff Portal</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
