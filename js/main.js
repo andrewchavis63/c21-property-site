@@ -234,21 +234,33 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.disabled = true;
       btn.textContent = 'Sending...';
 
-      const response = await fetch('https://zksjjekaiscwkmiibbqp.supabase.co/functions/v1/handle-contact-form', {
+      const name    = `${form.querySelector('[name="firstName"]').value} ${form.querySelector('[name="lastName"]').value}`.trim();
+      const email   = form.querySelector('[name="email"]').value;
+      const phone   = form.querySelector('[name="phone"]')?.value || '';
+      const message = [
+        form.querySelector('[name="propertyAddress"]')?.value ? `Property: ${form.querySelector('[name="propertyAddress"]').value}` : '',
+        form.querySelector('[name="propertyType"]')?.value    ? `Type: ${form.querySelector('[name="propertyType"]').value}` : '',
+        form.querySelector('[name="currentStatus"]')?.value   ? `Status: ${form.querySelector('[name="currentStatus"]').value}` : '',
+        form.querySelector('[name="message"]')?.value         || '',
+      ].filter(Boolean).join('\n');
+
+      // 1. Save to admin portal (Supabase)
+      await fetch('https://zksjjekaiscwkmiibbqp.supabase.co/functions/v1/handle-contact-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name:            `${form.querySelector('[name="firstName"]').value} ${form.querySelector('[name="lastName"]').value}`.trim(),
-          email:           form.querySelector('[name="email"]').value,
-          phone:           form.querySelector('[name="phone"]')?.value || '',
-          message:         [
-            form.querySelector('[name="propertyAddress"]')?.value ? `Property: ${form.querySelector('[name="propertyAddress"]').value}` : '',
-            form.querySelector('[name="propertyType"]')?.value    ? `Type: ${form.querySelector('[name="propertyType"]').value}` : '',
-            form.querySelector('[name="currentStatus"]')?.value   ? `Status: ${form.querySelector('[name="currentStatus"]').value}` : '',
-            form.querySelector('[name="message"]')?.value         || '',
-          ].filter(Boolean).join('\n'),
-          source: 'contact_form',
-        }),
+        body: JSON.stringify({ name, email, phone, message, source: 'contact_form' }),
+      }).catch(() => {}); // non-blocking — DB failure shouldn't block email
+
+      // 2. Send email notification (Formspree)
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('email', email);
+      formData.append('phone', phone);
+      formData.append('message', message);
+      const response = await fetch('https://formspree.io/f/xlgwkdkn', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData,
       });
 
       if (response.ok) {
