@@ -688,15 +688,28 @@
 <div class="filter-bar">
   <button class="filter-tab active" onclick="filterPosts('all', this)">All Posts</button>
   <button class="filter-tab" onclick="filterPosts('market', this)">Market Updates</button>
-  <button class="filter-tab" onclick="filterPosts('buyers', this)">Buyer Guides</button>
-  <button class="filter-tab" onclick="filterPosts('sellers', this)">Seller Tips</button>
   <button class="filter-tab" onclick="filterPosts('buyers-tenants', this)">Buyers &amp; Tenants</button>
+  <button class="filter-tab" onclick="filterPosts('sellers', this)">Seller Tips</button>
   <button class="filter-tab" onclick="filterPosts('neighborhoods', this)">Neighborhoods</button>
   <button class="filter-tab" onclick="filterPosts('investing', this)">Investing</button>
 </div>
 
 <!-- POST GRID -->
 <section class="posts-grid" id="postsGrid">
+
+  <div class="post-card" data-cat="buyers-tenants" onclick="openPost('tar-representation')">
+    <div class="post-card-img">
+      <img src="img/charlesdeluvio-AT5vuPoi8vc-unsplash.jpg" alt="Neon handshake sign representing agreement between parties" loading="lazy">
+      <div class="img-overlay"></div>
+    </div>
+    <div class="post-meta">
+      <span class="post-cat-tag">Buyers &amp; Tenants</span>
+      <div class="post-dot"></div>
+      <span class="post-date">March 2026</span>
+    </div>
+    <h3>What Is a Buyer/Tenant Representation Agreement — And Why It Works in Your Favor</h3>
+    <p>Before your agent opens a single door, you'll be asked to sign a representation agreement. Here's what it means and why it protects you.</p>
+  </div>
 
   <div class="post-card" data-cat="market" onclick="openPost('featured')">
     <div class="post-card-img">
@@ -754,13 +767,13 @@
     <p>If you own a rental property in DFW but live out of state, this is the article you didn't know you needed to read.</p>
   </div>
 
-  <div class="post-card" data-cat="buyers" onclick="openPost('first-time')">
+  <div class="post-card" data-cat="buyers-tenants" onclick="openPost('first-time')">
     <div class="post-card-img">
       <img src="img/ian-dooley-DJ7bWa-Gwks-unsplash.jpg" alt="Laptop and notebook for home buyer research" loading="lazy">
       <div class="img-overlay"></div>
     </div>
     <div class="post-meta">
-      <span class="post-cat-tag">Buyer Guides</span>
+      <span class="post-cat-tag">Buyers &amp; Tenants</span>
       <div class="post-dot"></div>
       <span class="post-date">January 2026</span>
     </div>
