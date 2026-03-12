@@ -845,7 +845,10 @@
     try {
       const res = await fetch(FN_URL, {
         method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inprc2pqZWthaXNjd2ttaWliYnFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxMzgyODIsImV4cCI6MjA4ODcxNDI4Mn0.wPlNgLu4GvaGCsSHnM5loewvgysTSqRHgLXczzrDqRo',
+        },
         body:    JSON.stringify({ email, source: 'tarrent_blog' }),
       })
 

@@ -247,7 +247,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // 1. Save to admin portal (Supabase)
       await fetch('https://zksjjekaiscwkmiibbqp.supabase.co/functions/v1/handle-contact-form', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inprc2pqZWthaXNjd2ttaWliYnFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxMzgyODIsImV4cCI6MjA4ODcxNDI4Mn0.wPlNgLu4GvaGCsSHnM5loewvgysTSqRHgLXczzrDqRo',
+        },
         body: JSON.stringify({ name, email, phone, message, source: 'contact_form' }),
       }).catch(() => {}); // non-blocking — DB failure shouldn't block email
 
