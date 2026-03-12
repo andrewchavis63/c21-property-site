@@ -1179,28 +1179,6 @@
     if (e.key === 'Escape') closePost();
   });
 
-  // Inject card thumbnail images from posts data
-  document.addEventListener('DOMContentLoaded', function() {
-    const featuredImgDiv = document.querySelector('.featured-img');
-    if (featuredImgDiv && posts.featured) {
-      const img = document.createElement('img');
-      img.src = posts.featured.img;
-      img.alt = posts.featured.title;
-      featuredImgDiv.insertBefore(img, featuredImgDiv.firstChild);
-    }
-    document.querySelectorAll('.post-card').forEach(function(card) {
-      const match = (card.getAttribute('onclick') || '').match(/openPost\('([^']+)'\)/);
-      if (match && posts[match[1]]) {
-        const imgDiv = card.querySelector('.post-card-img');
-        if (imgDiv) {
-          const img = document.createElement('img');
-          img.src = posts[match[1]].img;
-          img.alt = posts[match[1]].title;
-          imgDiv.insertBefore(img, imgDiv.firstChild);
-        }
-      }
-    });
-  });
 
   function filterPosts(cat, btn) {
     document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
