@@ -9,8 +9,8 @@ Target audience: remote investors in Tarrant & Parker County, North Texas.
 - `index.html` — main single-page site + homepage blog teaser
 - `css/styles.css` — all styles
 - `js/main.js` — scroll effects, mobile menu, form, counter animations
-- `blog/index.html` — blog page (posts rendered via JS modal, images hardcoded in HTML)
-- `blog/img/` — blog post images (source originals in C:\Users\achav\OneDrive\Desktop\FW Royalty Free Pics)
+- `TARRENT/index.html` — blog page (posts rendered via JS modal, images hardcoded in HTML)
+- `TARRENT/img/` — blog post images (source originals in C:\Users\achav\OneDrive\Desktop\FW Royalty Free Pics)
 
 ## Business Info
 - **Company:** Century 21® Alliance Properties
