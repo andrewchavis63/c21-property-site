@@ -2,7 +2,7 @@
 
 ## Project Overview
 Single-page property management website for Century 21 Alliance Properties.
-Target audience: absentee homeowners in Tarrant & Parker County, North Texas.
+Target audience: remote investors in Tarrant & Parker County, North Texas.
 
 ## Stack
 - Pure HTML + CSS + JS — no framework, no build step
@@ -26,7 +26,7 @@ Target audience: absentee homeowners in Tarrant & Parker County, North Texas.
 - Headings: Playfair Display | Body: Inter (Google Fonts)
 
 ## Team
-1. **Starlyn Smith** — Lead Realtor · Owner Liaison | (817) 995-3722 | Starlyn.Smith21@gmail.com
+1. **Starlyn Smith** — Lead REALTOR® · Owner Liaison | (817) 995-3722 | Starlyn.Smith21@gmail.com
 2. **Sarena Smith** — Leasing Specialist · Property Manager | (817) 201-0410 | SarenaSSmith@gmail.com
 3. **Andrew Chavis** — Maintenance Coordinator · Digital Marketing | (817) 420-0833 | AndrewChavis63@gmail.com
 
