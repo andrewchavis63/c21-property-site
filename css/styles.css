@@ -190,8 +190,8 @@ ul { list-style: none; }
 }
 .c21-badge sup {
   position: absolute;
-  top: 2px;
-  right: -7px;
+  top: 22px;
+  right: 2px;
   font-family: var(--font-body);
   font-size: 0.45rem;
   font-weight: 700;
