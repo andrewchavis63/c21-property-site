@@ -668,16 +668,16 @@
 <!-- FEATURED POST -->
 <section class="featured-wrapper">
   <div class="section-label">Featured Article</div>
-  <div class="featured-card" onclick="openPost('tar-representation')">
+  <div class="featured-card" onclick="openPost('fed-freeze-rental')">
     <div class="featured-img">
-      <img src="img/charlesdeluvio-AT5vuPoi8vc-unsplash.jpg" alt="Neon handshake sign representing agreement between parties" loading="lazy">
+      <img src="img/kelly-christiansen-nmOIvholDG4-unsplash.jpg" alt="Residential neighborhood aerial view" loading="lazy">
       <div class="featured-img-overlay"></div>
     </div>
     <div class="featured-content">
-      <div class="post-category">Buyers &amp; Tenants</div>
-      <h2>What Is a Buyer/Tenant Representation Agreement — And Why It Works in Your Favor</h2>
-      <p>Before your agent opens a single door, you'll be asked to sign a representation agreement. Here's what it means and why it protects you.</p>
-      <a href="#" class="read-btn" onclick="event.stopPropagation(); openPost('tar-representation')">
+      <div class="post-category">Market Updates</div>
+      <h2>The Fed Froze Rates Again. Here's What That Means for Tarrant County Renters and Landlords.</h2>
+      <p>The FOMC held the federal funds rate steady yesterday. If you rent, own a rental, or are trying to decide between the two — here's the honest breakdown of what changes and what doesn't.</p>
+      <a href="#" class="read-btn" onclick="event.stopPropagation(); openPost('fed-freeze-rental')">
         Read the Full Article <span class="arrow">→</span>
       </a>
     </div>
@@ -696,6 +696,20 @@
 
 <!-- POST GRID -->
 <section class="posts-grid" id="postsGrid">
+
+  <div class="post-card" data-cat="market" onclick="openPost('fed-freeze-rental')">
+    <div class="post-card-img">
+      <img src="img/kelly-christiansen-nmOIvholDG4-unsplash.jpg" alt="Residential neighborhood aerial view" loading="lazy">
+      <div class="img-overlay"></div>
+    </div>
+    <div class="post-meta">
+      <span class="post-cat-tag">Market Updates</span>
+      <div class="post-dot"></div>
+      <span class="post-date">March 2026</span>
+    </div>
+    <h3>The Fed Froze Rates Again. Here's What That Means for Tarrant County Renters and Landlords.</h3>
+    <p>The FOMC held steady yesterday. If you rent, own a rental, or are trying to decide between the two — here's the honest breakdown of what changes and what doesn't.</p>
+  </div>
 
   <div class="post-card" data-cat="buyers-tenants" onclick="openPost('tar-representation')">
     <div class="post-card-img">
@@ -908,6 +922,54 @@
 
 <script>
   const posts = {
+    'fed-freeze-rental': {
+      category: 'Market Updates',
+      date: 'March 2026',
+      img: 'img/kelly-christiansen-nmOIvholDG4-unsplash.jpg',
+      title: 'The Fed Froze Rates Again. Here\'s What That Means for Tarrant County Renters and Landlords.',
+      intro: 'The FOMC held the federal funds rate steady on March 19, 2026. If you rent, own a rental property, or are sitting on the fence between the two — here\'s the honest breakdown of what this means for you.',
+      content: `
+        <h2>What the Fed Actually Did — And What It Didn\'t Do</h2>
+        <p>The Federal Open Market Committee voted to hold the federal funds rate in its current range. No cut. No hike. A hold.</p>
+        <p>That language matters. The Fed isn\'t signaling confidence that inflation is conquered — it\'s signaling caution. When the Fed pauses, it\'s telling the market: we\'re not ready to ease yet. And for housing, that has real consequences.</p>
+        <p>One thing worth clarifying: the federal funds rate doesn\'t directly set your mortgage rate. But it sets the floor. Mortgage rates respond to broader bond market signals, and those signals take cues from the Fed\'s posture. When the Fed freezes, the mortgage market tends to freeze with it — or drift higher, not lower.</p>
+
+        <div class="article-callout">
+          <p>📐 Where rates stand: The 30-year fixed mortgage rate has been holding in the 6.75–7.1% range. On a $340,000 home with 5% down, that\'s roughly $2,230–$2,310/month in principal and interest alone — before taxes and insurance. That\'s the number that\'s keeping would-be buyers on the sidelines.</p>
+        </div>
+
+        <h2>The Homeownership Door Stays Closed — and That Fills Apartments</h2>
+        <p>Here\'s the chain reaction that a rate freeze sets in motion for the rental market:</p>
+        <ul>
+          <li>Mortgage rates stay elevated → monthly payments on entry-level homes remain unaffordable for a large share of would-be buyers</li>
+          <li>Would-be first-time buyers stay in the rental market longer than planned</li>
+          <li>Existing homeowners locked into 3–4% mortgages won\'t sell — limiting resale inventory</li>
+          <li>Both forces sustain demand for rentals from opposite directions: buyers who can\'t buy, and inventory that won\'t come to market</li>
+        </ul>
+        <p>This isn\'t a new dynamic — it\'s been building since 2022. But a rate freeze in March 2026 means there\'s no near-term relief valve. The buyers who were hoping to exit the rental market this spring and summer are likely to stay put.</p>
+
+        <h2>What This Means for Tarrant County\'s Rental Market</h2>
+        <p>The Fort Worth metro has not seen the dramatic rent spike correction that some markets experienced after 2022. Rents moderated — they didn\'t collapse. Vacancy rates across the metro have been stabilizing in the mid-single-digit range, and the demand floor is holding.</p>
+        <p>With rate cuts now pushed further out, that demand floor doesn\'t soften. If anything, it firms. Every month that homeownership stays out of reach for a renter who wants to buy is another month of rental income for a landlord with a property in this market.</p>
+        <p>For renters: if you\'ve been hoping the rental market would loosen up as buyers left, that loosening isn\'t coming this spring. Locking in a renewal now — rather than waiting for a better deal — is likely the sharper move.</p>
+
+        <div class="article-callout">
+          <p>💡 The calculus for Tarrant County landlords: sustained rental demand + flat rate environment = predictable income. The risk isn\'t occupancy right now. The risk is underpricing a lease that hasn\'t been reviewed since 2022 or 2023.</p>
+        </div>
+
+        <h2>If You Own a Rental Property Right Now</h2>
+        <p>A rate freeze is actually favorable for landlords — the demand picture doesn\'t deteriorate. But favorable macro conditions don\'t automatically translate to maximum return. Two things I see consistently with self-managed rental owners in Tarrant County:</p>
+        <ul>
+          <li><strong>Stale lease rates.</strong> If your rent was set before 2023 and you\'ve been rolling renewals on autopilot, there\'s a strong chance you\'re undercharging. The rental market in DFW moved significantly between 2021 and 2024. A free rental market analysis takes 20 minutes and usually reveals something meaningful.</li>
+          <li><strong>Deferred maintenance that costs more later.</strong> In a high-rate environment, your margins matter more. A $300 repair deferred becomes a $2,000 repair — and a vacancy you weren\'t planning for. Proactive maintenance coordination is one of the most underrated functions of professional property management.</li>
+        </ul>
+        <p>The fundamentals of this market are on your side right now. The question is whether you\'re capturing them — or leaving income on the table.</p>
+
+        <h2>My Take</h2>
+        <p>The Fed\'s decision yesterday isn\'t a crisis for the housing market — but it\'s a reality check for anyone who was counting on rate relief to shift their plans. The rental market in Tarrant County remains solid. Demand is not going away. But the environment rewards preparation over passivity, whether you\'re a renter trying to lock in a good deal or a landlord who hasn\'t revisited their lease terms in two years.</p>
+        <p>If you own a rental property in Tarrant County and want to know what it\'s worth on today\'s market — or if you\'re a renter trying to figure out your next move — reach out. Every conversation is free and there\'s no pressure. Just information.</p>
+      `
+    },
     featured: {
       category: 'Fort Worth Market Update',
       date: 'March 2026',
