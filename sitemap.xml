@@ -73,4 +73,64 @@
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://allpantherproperties.com/TARRENT/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://allpantherproperties.com/TARRENT/fed-freeze-rental.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allpantherproperties.com/TARRENT/fort-worth-buyers-market-2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allpantherproperties.com/TARRENT/living-in-saginaw-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allpantherproperties.com/TARRENT/tarrant-county-seller-mistakes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allpantherproperties.com/TARRENT/remote-investor-fort-worth.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allpantherproperties.com/TARRENT/first-time-homebuyer-dfw.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allpantherproperties.com/TARRENT/dfw-interest-rates-inventory-2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allpantherproperties.com/TARRENT/living-in-azle-tx.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://allpantherproperties.com/TARRENT/buyer-tenant-representation-agreement-texas.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

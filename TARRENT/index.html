@@ -315,6 +315,9 @@
     .post-card {
       cursor: pointer;
       transition: transform 0.2s ease;
+      display: block;
+      text-decoration: none;
+      color: inherit;
     }
     .post-card:hover { transform: translateY(-3px); }
 
@@ -697,7 +700,7 @@
 <!-- POST GRID -->
 <section class="posts-grid" id="postsGrid">
 
-  <div class="post-card" data-cat="market" onclick="openPost('fed-freeze-rental')">
+  <a class="post-card" data-cat="market" href="fed-freeze-rental.html" onclick="event.preventDefault(); openPost('fed-freeze-rental')">
     <div class="post-card-img">
       <img src="img/kelly-christiansen-nmOIvholDG4-unsplash.jpg" alt="Residential neighborhood aerial view" loading="lazy">
       <div class="img-overlay"></div>
@@ -709,9 +712,9 @@
     </div>
     <h3>The Fed Froze Rates Again. Here's What That Means for Tarrant County Renters and Landlords.</h3>
     <p>The FOMC held steady yesterday. If you rent, own a rental, or are trying to decide between the two — here's the honest breakdown of what changes and what doesn't.</p>
-  </div>
+  </a>
 
-  <div class="post-card" data-cat="buyers-tenants" onclick="openPost('tar-representation')">
+  <a class="post-card" data-cat="buyers-tenants" href="buyer-tenant-representation-agreement-texas.html" onclick="event.preventDefault(); openPost('tar-representation')">
     <div class="post-card-img">
       <img src="img/charlesdeluvio-AT5vuPoi8vc-unsplash.jpg" alt="Neon handshake sign representing agreement between parties" loading="lazy">
       <div class="img-overlay"></div>
@@ -723,9 +726,9 @@
     </div>
     <h3>What Is a Buyer/Tenant Representation Agreement — And Why It Works in Your Favor</h3>
     <p>Before your agent opens a single door, you'll be asked to sign a representation agreement. Here's what it means and why it protects you.</p>
-  </div>
+  </a>
 
-  <div class="post-card" data-cat="market" onclick="openPost('featured')">
+  <a class="post-card" data-cat="market" href="fort-worth-buyers-market-2026.html" onclick="event.preventDefault(); openPost('featured')">
     <div class="post-card-img">
       <img src="img/jon-haley-B7-2OJVBf5I-unsplash.jpg" alt="Fort Worth skyline reflected in river" loading="lazy">
       <div class="img-overlay"></div>
@@ -737,9 +740,9 @@
     </div>
     <h3>Is 2026 Finally a Buyer's Market in Fort Worth? Here's What the Data Actually Says</h3>
     <p>Everyone's heard the rumors — rates are dropping, inventory is rising, and buyers have more leverage than they've had in years. But what's actually happening in Tarrant County right now, block by block?</p>
-  </div>
+  </a>
 
-  <div class="post-card" data-cat="neighborhoods" onclick="openPost('saginaw')">
+  <a class="post-card" data-cat="neighborhoods" href="living-in-saginaw-tx.html" onclick="event.preventDefault(); openPost('saginaw')">
     <div class="post-card-img">
       <img src="img/braden-egli-HNpFSPRbl7E-unsplash.jpg" alt="Aerial view of Saginaw neighborhood" loading="lazy">
       <div class="img-overlay"></div>
@@ -751,9 +754,9 @@
     </div>
     <h3>Living in Saginaw, TX: Everything You Need to Know Before You Move</h3>
     <p>Saginaw keeps flying under the radar while prices climb in Keller and Southlake. Here's why smart buyers are paying attention.</p>
-  </div>
+  </a>
 
-  <div class="post-card" data-cat="sellers" onclick="openPost('seller-mistakes')">
+  <a class="post-card" data-cat="sellers" href="tarrant-county-seller-mistakes.html" onclick="event.preventDefault(); openPost('seller-mistakes')">
     <div class="post-card-img">
       <img src="img/kent-rebman-Hau9TnHS130-unsplash.jpg" alt="Suburban homes at sunset" loading="lazy">
       <div class="img-overlay"></div>
@@ -765,9 +768,9 @@
     </div>
     <h3>5 Mistakes Tarrant County Sellers Make That Cost Them Thousands at Closing</h3>
     <p>Pricing it wrong isn't even the most common error. Here are the five missteps I see over and over — and how to avoid every single one.</p>
-  </div>
+  </a>
 
-  <div class="post-card" data-cat="investing" onclick="openPost('absentee')">
+  <a class="post-card" data-cat="investing" href="remote-investor-fort-worth.html" onclick="event.preventDefault(); openPost('absentee')">
     <div class="post-card-img">
       <img src="img/j-king-ebuixpviQH0-unsplash.jpg" alt="Aerial view of residential neighborhood" loading="lazy">
       <div class="img-overlay"></div>
@@ -779,9 +782,9 @@
     </div>
     <h3>Remote Investor? Here's Why Your Fort Worth Property Is Leaving Money on the Table</h3>
     <p>If you own a rental property in DFW but live out of state, this is the article you didn't know you needed to read.</p>
-  </div>
+  </a>
 
-  <div class="post-card" data-cat="buyers-tenants" onclick="openPost('first-time')">
+  <a class="post-card" data-cat="buyers-tenants" href="first-time-homebuyer-dfw.html" onclick="event.preventDefault(); openPost('first-time')">
     <div class="post-card-img">
       <img src="img/ian-dooley-DJ7bWa-Gwks-unsplash.jpg" alt="Laptop and notebook for home buyer research" loading="lazy">
       <div class="img-overlay"></div>
@@ -793,9 +796,9 @@
     </div>
     <h3>The First-Time Homebuyer's Playbook for DFW: What Nobody Tells You</h3>
     <p>From pre-approval to keys in hand — the no-fluff guide to buying your first home in one of the most competitive markets in the country.</p>
-  </div>
+  </a>
 
-  <div class="post-card" data-cat="market" onclick="openPost('rates')">
+  <a class="post-card" data-cat="market" href="dfw-interest-rates-inventory-2026.html" onclick="event.preventDefault(); openPost('rates')">
     <div class="post-card-img">
       <img src="img/fallon-michael-2B88yyWGEPE-unsplash.jpg" alt="Fort Worth landmark mural" loading="lazy">
       <div class="img-overlay"></div>
@@ -807,9 +810,9 @@
     </div>
     <h3>Interest Rates, Inventory & Timing: Reading the DFW Market Heading Into 2026</h3>
     <p>Should you wait for rates to drop or lock in now? Here's how to stop guessing and start making data-driven decisions.</p>
-  </div>
+  </a>
 
-  <div class="post-card" data-cat="neighborhoods" onclick="openPost('azle')">
+  <a class="post-card" data-cat="neighborhoods" href="living-in-azle-tx.html" onclick="event.preventDefault(); openPost('azle')">
     <div class="post-card-img">
       <img src="img/federico-respini-sYffw0LNr7s-unsplash.jpg" alt="Open Texas field at golden hour sunset" loading="lazy">
       <div class="img-overlay"></div>
@@ -821,7 +824,7 @@
     </div>
     <h3>Azle, TX: The Underrated Community Where Small-Town Feel Meets DFW Access</h3>
     <p>Azle isn't just "out west." It's a lifestyle — and the affordability gap between here and Fort Worth proper is widening in buyers' favor.</p>
-  </div>
+  </a>
 
 </section>
 
@@ -1214,6 +1217,18 @@
     }
   };
 
+  const postUrls = {
+    'fed-freeze-rental': 'fed-freeze-rental.html',
+    'featured': 'fort-worth-buyers-market-2026.html',
+    'saginaw': 'living-in-saginaw-tx.html',
+    'seller-mistakes': 'tarrant-county-seller-mistakes.html',
+    'absentee': 'remote-investor-fort-worth.html',
+    'first-time': 'first-time-homebuyer-dfw.html',
+    'rates': 'dfw-interest-rates-inventory-2026.html',
+    'azle': 'living-in-azle-tx.html',
+    'tar-representation': 'buyer-tenant-representation-agreement-texas.html'
+  };
+
   // TAR(RENT) formula: no inline sources in post content.
   // All data sources are maintained on disclaimer.html, grouped by post.
   function openPost(id) {
@@ -1239,6 +1254,7 @@
             <div style="font-size:12px;color:var(--gold);margin-top:4px;">(817) 420-0833 · andrewchavis63@gmail.com</div>
           </div>
         </div>
+        ${postUrls[id] ? `<div style="margin-top:24px;text-align:right;"><a href="${postUrls[id]}" style="font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;">View Full Article →</a></div>` : ''}
       </div>
     `;
     document.getElementById('postOverlay').classList.add('open');
