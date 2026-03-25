@@ -19,10 +19,11 @@
   {
     "@context": "https://schema.org",
     "@type": ["RealEstateAgent", "LocalBusiness"],
-    "name": "Century 21 Alliance Properties",
+    "name": "Century 21 Alliance Properties Property Management",
+    "alternateName": "All Panther Properties",
     "url": "https://allpantherproperties.com",
-    "logo": "https://allpantherproperties.com/images/c21-logo.png",
-    "description": "Full-service property management for Tarrant, Parker and surrounding counties. Tenant screening, rent collection, maintenance, and financial reporting.",
+    "logo": "https://allpantherproperties.com/img/C21_Seal_Black.png",
+    "description": "Full-service property management for Tarrant, Parker and surrounding counties. Tenant screening, rent collection, maintenance coordination, and owner reporting — so you collect the check without the calls.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "120 W. McLeroy Blvd.",
@@ -41,14 +42,122 @@
       }
     ],
     "areaServed": [
-      { "@type": "City", "name": "Saginaw, TX" },
-      { "@type": "City", "name": "Fort Worth, TX" },
-      { "@type": "AdministrativeArea", "name": "Tarrant County, TX" },
-      { "@type": "AdministrativeArea", "name": "Parker County, TX" }
+      { "@type": "City", "name": "Saginaw" },
+      { "@type": "City", "name": "Fort Worth" },
+      { "@type": "City", "name": "Haslet" },
+      { "@type": "City", "name": "Keller" },
+      { "@type": "City", "name": "Grapevine" },
+      { "@type": "City", "name": "Lake Worth" },
+      { "@type": "City", "name": "Azle" },
+      { "@type": "City", "name": "Watauga" },
+      { "@type": "City", "name": "North Richland Hills" },
+      { "@type": "City", "name": "Haltom City" },
+      { "@type": "City", "name": "Springtown" },
+      { "@type": "City", "name": "Weatherford" },
+      { "@type": "AdministrativeArea", "name": "Tarrant County" },
+      { "@type": "AdministrativeArea", "name": "Parker County" }
     ],
-    "serviceType": "Property Management",
+    "serviceType": ["Property Management", "Tenant Placement", "Rental Property Management"],
     "priceRange": "$$",
-    "sameAs": []
+    "employee": {
+      "@type": "Person",
+      "name": "Andrew Chavis",
+      "jobTitle": "REALTOR® & Property Manager",
+      "telephone": "+18174200833",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Real Estate License",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Texas Real Estate Commission",
+          "url": "https://www.trec.texas.gov"
+        },
+        "identifier": "0845090"
+      }
+    },
+    "sameAs": [
+      "https://www.google.com/maps?cid=10028968061729013880"
+    ]
+  }
+  </script>
+
+  <!-- Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Property Management",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Century 21 Alliance Properties Property Management",
+      "url": "https://allpantherproperties.com"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Tarrant County, TX"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Property Management Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tenant Screening & Placement" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rent Collection & Disbursement" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maintenance Coordination" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Owner Financial Reporting" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eviction Management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lease Compliance" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When and how do I receive my rental income?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Owner disbursements are sent electronically each month once rent has been collected and cleared. The record of owner disbursements are included in each monthly statement, accessible through your Owner Portal, so you can review your financials at any time without waiting on a call or email."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you screen tenants before placing them in my property?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We use software equipped with identity verification technology and Red Flag compliance tools to catch fraud before a lease is ever signed. Every applicant 18 years and older is required to submit their own application. We review each applicant's credit score, employment and rental verification, and any history of debt payments, criminal convictions, evictions, foreclosures, bankruptcies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if a tenant doesn't pay rent on time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We stay proactively in contact with tenants to address issues before they become defaults. When rent is late, we issue required notices per the lease terms and Texas Property Code. If a tenant refuses to pay or cannot be brought current, we will have instituted the groundwork for eviction and recovery of your property."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you handle maintenance requests? Do I need to approve every repair?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tenants submit maintenance requests 24/7 through the Tenant Portal. Our management agreement includes an authorization limit — meaning we can approve and dispatch vetted, insured vendors for repairs under that threshold without requiring your approval each time. Emergency situations such as burst pipes, HVAC failure, or sewer backups are handled immediately to protect your property and the tenant's safety."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How will I stay informed about my property?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You have 24/7 access to your Owner Portal — a secure online dashboard where you can view your property's cash flow report, maintenance history, and move-in property assessment. Monthly owner statements are generated automatically and emailed, and your team is always available during business hours to answer questions."
+        }
+      }
+    ]
   }
   </script>
 </head>
