@@ -671,16 +671,16 @@
 <!-- FEATURED POST -->
 <section class="featured-wrapper">
   <div class="section-label">Featured Article</div>
-  <div class="featured-card" onclick="openPost('fed-freeze-rental')">
+  <div class="featured-card" onclick="openPost('tx-homebuyer-2025')">
     <div class="featured-img">
-      <img src="img/kelly-christiansen-nmOIvholDG4-unsplash.jpg" alt="Residential neighborhood aerial view" loading="lazy">
+      <img src="img/fallon-michael-r6pK-f6m5M8-unsplash.jpg" alt="Texas residential neighborhood street" loading="lazy">
       <div class="featured-img-overlay"></div>
     </div>
     <div class="featured-content">
-      <div class="post-category">Market Updates</div>
-      <h2>The Fed Froze Rates Again. Here's What That Means for Tarrant County Renters and Landlords.</h2>
-      <p>The FOMC held the federal funds rate steady yesterday. If you rent, own a rental, or are trying to decide between the two — here's the honest breakdown of what changes and what doesn't.</p>
-      <a href="#" class="read-btn" onclick="event.stopPropagation(); openPost('fed-freeze-rental')">
+      <div class="post-category">Buyers &amp; Tenants</div>
+      <h2>The 2025 Texas Homebuyer: Who's Buying, What They're Paying, and What It Tells Sellers</h2>
+      <p>New NAR survey data shows Texas buyers paid a median $300,000 in 2025 — down $53,000 from 2024. Here's who's in the market, how they pick their agent, and what it means if you're selling.</p>
+      <a href="texas-homebuyer-profile-2025.html" class="read-btn" onclick="event.stopPropagation(); openPost('tx-homebuyer-2025')">
         Read the Full Article <span class="arrow">→</span>
       </a>
     </div>
@@ -925,6 +925,45 @@
 
 <script>
   const posts = {
+    'tx-homebuyer-2025': {
+      category: 'Buyer Guides',
+      date: 'March 2026',
+      img: 'img/fallon-michael-r6pK-f6m5M8-unsplash.jpg',
+      title: 'The 2025 Texas Homebuyer: Who\'s Buying, What They\'re Paying, and What It Tells Sellers',
+      intro: 'NAR just released its Texas oversample from the 2025 Profile of Home Buyers and Sellers — covering purchases made between July 2024 and June 2025. The numbers are worth sitting with.',
+      fullLink: 'texas-homebuyer-profile-2025.html',
+      content: `
+        <h2>The Price Correction Is Real — and Buyers Know It</h2>
+        <p>The headline stat: Texas buyers paid a median purchase price of <strong>$300,000</strong> in 2025 — down from $353,000 in 2024. That's a $53,000 pullback in one year. Home sizes barely moved (2,100 sq ft vs. 2,095 sq ft), which means buyers got essentially the same house for significantly less money.</p>
+        <p>Sellers who are still pricing to 2024 comps are going to feel this. Buyers are not. They're walking into this market informed, and 79% of them already believe homeownership is a good long-term financial investment — 35% say it beats stocks outright. The confidence is there. The tolerance for overpricing is not.</p>
+
+        <div class="article-callout">
+          <p>Texas buyers paid a median $300,000 in 2025 — down from $353,000 in 2024. Same size house, $53,000 less. Sellers still pricing to last year's comps are fighting the data.</p>
+        </div>
+
+        <h2>First-Time Buyers Are Back</h2>
+        <p>First-time buyers made up <strong>21% of all Texas buyers</strong> in 2025 — up 11 points from 2024. That's the biggest jump in the data set. The price correction almost certainly drove this. When the entry point drops by $53,000, people who were priced out suddenly aren't.</p>
+        <p>Of those first-timers, 81% bought a previously owned home. They weren't waiting for new construction. They were buying what was available and what fit the budget.</p>
+        <p>If you're selling a home in the $280,000–$330,000 range in Tarrant County, first-time buyers are your audience right now. 50% of all buyers said finding the right property was their most difficult step — make yours easy to find and easy to evaluate.</p>
+
+        <h2>How Buyers Pick Their Agent — and What They Actually Want</h2>
+        <p>Referrals still dominate: <strong>46% of buyers found their agent through a friend, neighbor, or relative.</strong> Another 17% used the same agent they'd worked with before. Once they pick someone, they commit — 79% interviewed only one agent, up 4 points from last year.</p>
+        <p>What buyers want most from their agent:</p>
+        <ul>
+          <li><strong>45%</strong> — Help finding the right home</li>
+          <li><strong>26%</strong> — Help negotiating price and terms</li>
+          <li><strong>54%</strong> — Said their agent pointed out unnoticed faults or features</li>
+          <li><strong>52%</strong> — Said their agent helped them understand the process</li>
+        </ul>
+        <p>93% rated their agent's honesty and integrity as excellent. 78% said they'd definitely use that agent again. The buyers who are happiest are the ones whose agent showed them something they would have missed.</p>
+
+        <h2>What This Means If You're Selling in Tarrant County Right Now</h2>
+        <p>The buyer in front of you in 2025 is not the same buyer from 2022 or 2023. They've watched prices correct. Their number is closer to $300,000 than $353,000. They searched for 8 weeks on average. They interviewed one agent and trusted the referral. They want to be guided, not sold.</p>
+        <p>The sellers who win this year price with current data, present their property clearly, and work with an agent who closes the trust gap fast. The buyers aren't shopping around for agents — and they're not going to shop around for your house either if it doesn't make sense at first glance.</p>
+
+        <p style="font-size:13px;color:#999;margin-top:24px;">Source: NAR 2025 Profile of Home Buyers and Sellers — Texas Oversample. Covers primary residence purchases July 2024–June 2025. <a href="texas-homebuyer-profile-2025.html" style="color:var(--gold);">Read the full article →</a></p>
+      `
+    },
     'fed-freeze-rental': {
       category: 'Market Updates',
       date: 'March 2026',
