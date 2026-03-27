@@ -321,6 +321,19 @@ body {
 }
 .btn-ghost:hover { color: var(--text); border-color: rgba(190,175,135,0.4); }
 
+.btn-danger {
+  background: none;
+  color: #c0504f;
+  border: 1px solid #4a2020;
+  border-radius: 6px;
+  padding: 7px 16px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn-danger:hover { background: #2a1010; border-color: #c0504f; }
+
 /* ─── SIDEBAR ────────────────────────────────────────────── */
 .admin-sidebar h3 {
   font-family: 'Playfair Display', serif;

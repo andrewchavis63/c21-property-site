@@ -148,8 +148,18 @@ async function loadSubscribers() {
           <span>${fmtDate(s.subscribed_at)}</span>
         </div>
       </div>
+      <div class="card-actions">
+        <button class="btn-danger" onclick="deleteSubscriber('${s.id}', '${esc(s.email)}')">Delete</button>
+      </div>
     </div>
   `).join('')
+}
+
+async function deleteSubscriber(id, email) {
+  if (!confirm(`Remove ${email} from subscribers?`)) return
+  const { error } = await sb.from('subscribers').delete().eq('id', id)
+  if (error) alert('Error: ' + error.message)
+  else { loadSubscribers(); loadStats() }
 }
 
 // ─── CONTACTS ──────────────────────────────────────────────
@@ -191,8 +201,18 @@ async function loadContacts() {
             Dates: ${c.contact_events.map(e => `${esc(e.label)} — ${e.date}`).join(' · ')}
           </div>` : ''}
       </div>
+      <div class="card-actions">
+        <button class="btn-danger" onclick="deleteContact('${c.id}', '${esc(c.name)}')">Delete</button>
+      </div>
     </div>
   `).join('')
+}
+
+async function deleteContact(id, name) {
+  if (!confirm(`Delete contact "${name}"? This cannot be undone.`)) return
+  const { error } = await sb.from('contacts').delete().eq('id', id)
+  if (error) alert('Error: ' + error.message)
+  else { loadContacts(); loadStats() }
 }
 
 // ─── PROMOTE MODAL ─────────────────────────────────────────
