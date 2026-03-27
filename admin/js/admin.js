@@ -108,9 +108,17 @@ async function loadLeads() {
         <button class="btn-gold" onclick="openPromoteModal('${lead.id}', '${esc(lead.name)}', '${esc(lead.email)}', '${esc(lead.phone || '')}')">
           → Contact
         </button>
+        <button class="btn-danger" onclick="deleteLead('${lead.id}', '${esc(lead.name)}')">Delete</button>
       </div>
     </div>
   `).join('')
+}
+
+async function deleteLead(id, name) {
+  if (!confirm(`Delete lead "${name}"? This cannot be undone.`)) return
+  const { error } = await sb.from('leads').delete().eq('id', id)
+  if (error) alert('Error: ' + error.message)
+  else { loadLeads(); loadStats() }
 }
 
 async function updateLeadStatus(select) {
