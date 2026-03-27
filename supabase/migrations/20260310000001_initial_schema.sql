@@ -86,12 +86,18 @@ create policy "team read leads"
 create policy "team update leads"
   on leads for update to authenticated using (true);
 
+create policy "team delete leads"
+  on leads for delete to authenticated using (true);
+
 -- subscribers: anyone can insert, only auth users can read/edit
 create policy "public insert subscribers"
   on subscribers for insert to anon with check (true);
 
 create policy "team read subscribers"
   on subscribers for select to authenticated using (true);
+
+create policy "team delete subscribers"
+  on subscribers for delete to authenticated using (true);
 
 -- contacts + related: auth users only
 create policy "team all contacts"
