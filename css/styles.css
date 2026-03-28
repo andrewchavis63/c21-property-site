@@ -254,12 +254,12 @@ ul { list-style: none; }
   transition: opacity 0.25s, transform 0.25s;
 }
 
-/* Key image fills the circle, cropped to show the medallion */
+/* AP logo fills the circle */
 .fn-key-icon {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 68% center;
+  object-position: center center;
   border-radius: 50%;
   display: block;
 }
