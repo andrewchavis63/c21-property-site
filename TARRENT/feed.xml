@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>TAR(RENT) — All Panther Properties</title>
+    <title>TAR(RENT) -- All Panther Properties</title>
     <link>https://allpantherproperties.com/TARRENT/</link>
     <description>Real estate market insights, landlord tips, and buyer/seller guides for Tarrant County, TX.</description>
     <language>en-us</language>
@@ -10,7 +10,8 @@
     <item>
       <title>The 2025 Texas Homebuyer: Who's Buying, What They're Paying, and What It Tells Sellers</title>
       <link>https://allpantherproperties.com/TARRENT/texas-homebuyer-profile-2025.html</link>
-      <description>New NAR survey data reveals Texas buyers paid a median $300,000 in 2025 — down $53,000 from 2024. Here's who's buying, how they find their agent, and what it means for sellers in Tarrant County.</description>
+      <description><![CDATA[New NAR survey data reveals Texas buyers paid a median $300,000 in 2025 — down $53,000 from 2024. Here's who's buying, how they find their agent, and what it means for sellers in Tarrant County.]]></description>
+      <content:encoded><![CDATA[]]></content:encoded>
       <pubDate>Wed, 26 Mar 2026 06:17:00 +0000</pubDate>
       <guid>https://allpantherproperties.com/TARRENT/texas-homebuyer-profile-2025.html</guid>
     </item>
@@ -18,7 +19,8 @@
     <item>
       <title>What Is a Buyer/Tenant Representation Agreement — And Why It Works in Your Favor</title>
       <link>https://allpantherproperties.com/TARRENT/buyer-tenant-representation-agreement-texas.html</link>
-      <description>Before we show you properties, you'll sign a Buyer/Tenant Representation Agreement. Here's exactly what it says, what it means, and why it protects you.</description>
+      <description><![CDATA[Before we show you properties, you'll sign a Buyer/Tenant Representation Agreement. Here's exactly what it says, what it means, and why it protects you.]]></description>
+      <content:encoded><![CDATA[]]></content:encoded>
       <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://allpantherproperties.com/TARRENT/buyer-tenant-representation-agreement-texas.html</guid>
     </item>
@@ -26,7 +28,8 @@
     <item>
       <title>Azle, TX: The Underrated Community Where Small-Town Feel Meets DFW Access</title>
       <link>https://allpantherproperties.com/TARRENT/living-in-azle-tx.html</link>
-      <description>Azle TX is one of DFW's best-kept secrets — affordable homes, large lots, Eagle Mountain Lake access, and a genuine commute to Fort Worth's job centers.</description>
+      <description><![CDATA[Azle TX is one of DFW's best-kept secrets — affordable homes, large lots, Eagle Mountain Lake access, and a genuine commute to Fort Worth's job centers.]]></description>
+      <content:encoded><![CDATA[]]></content:encoded>
       <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://allpantherproperties.com/TARRENT/living-in-azle-tx.html</guid>
     </item>
@@ -34,7 +37,8 @@
     <item>
       <title>Interest Rates, Inventory &amp; Timing: Reading the DFW Market Heading Into 2026</title>
       <link>https://allpantherproperties.com/TARRENT/dfw-interest-rates-inventory-2026.html</link>
-      <description>Should you wait for rates to drop or buy now in DFW? Here's how to read the Tarrant County market data and stop making timing decisions based on guesswork.</description>
+      <description><![CDATA[Should you wait for rates to drop or buy now in DFW? Here's how to read the Tarrant County market data and stop making timing decisions based on guesswork.]]></description>
+      <content:encoded><![CDATA[]]></content:encoded>
       <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://allpantherproperties.com/TARRENT/dfw-interest-rates-inventory-2026.html</guid>
     </item>
@@ -42,7 +46,8 @@
     <item>
       <title>The First-Time Homebuyer's Playbook for DFW: What Nobody Tells You</title>
       <link>https://allpantherproperties.com/TARRENT/first-time-homebuyer-dfw.html</link>
-      <description>The no-fluff guide to buying your first home in DFW — from pre-approval to closing, Texas option periods, down payment assistance, and what nobody tells you.</description>
+      <description><![CDATA[The no-fluff guide to buying your first home in DFW — from pre-approval to closing, Texas option periods, down payment assistance, and what nobody tells you.]]></description>
+      <content:encoded><![CDATA[]]></content:encoded>
       <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://allpantherproperties.com/TARRENT/first-time-homebuyer-dfw.html</guid>
     </item>
@@ -50,7 +55,8 @@
     <item>
       <title>Remote Investor? Here's Why Your Fort Worth Property Is Leaving Money on the Table</title>
       <link>https://allpantherproperties.com/TARRENT/remote-investor-fort-worth.html</link>
-      <description>Own a Fort Worth rental but live out of state? You may be undercharging by $300–$600/month and exposing yourself to legal risk. Here's what to do about it.</description>
+      <description><![CDATA[Own a Fort Worth rental but live out of state? You may be undercharging by $300-$600/month and exposing yourself to legal risk. Here's what to do about it.]]></description>
+      <content:encoded><![CDATA[]]></content:encoded>
       <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://allpantherproperties.com/TARRENT/remote-investor-fort-worth.html</guid>
     </item>
@@ -58,7 +64,8 @@
     <item>
       <title>5 Mistakes Tarrant County Sellers Make That Cost Them Thousands at Closing</title>
       <link>https://allpantherproperties.com/TARRENT/tarrant-county-seller-mistakes.html</link>
-      <description>Pricing it wrong isn't even the top mistake. Here are the 5 most costly errors Tarrant County sellers make — and exactly how to avoid each one before you list.</description>
+      <description><![CDATA[Pricing it wrong isn't even the top mistake. Here are the 5 most costly errors Tarrant County sellers make -- and exactly how to avoid each one before you list.]]></description>
+      <content:encoded><![CDATA[]]></content:encoded>
       <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://allpantherproperties.com/TARRENT/tarrant-county-seller-mistakes.html</guid>
     </item>
@@ -66,7 +73,8 @@
     <item>
       <title>Living in Saginaw, TX: Everything You Need to Know Before You Move</title>
       <link>https://allpantherproperties.com/TARRENT/living-in-saginaw-tx.html</link>
-      <description>Saginaw TX offers some of the best price-per-square-foot ratios in DFW. Here's what life in Saginaw 76179 really looks like — schools, commute, and market data.</description>
+      <description><![CDATA[Saginaw TX offers some of the best price-per-square-foot ratios in DFW. Here's what life in Saginaw 76179 really looks like -- schools, commute, and market data.]]></description>
+      <content:encoded><![CDATA[]]></content:encoded>
       <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://allpantherproperties.com/TARRENT/living-in-saginaw-tx.html</guid>
     </item>
@@ -74,7 +82,8 @@
     <item>
       <title>Is 2026 Finally a Buyer's Market in Fort Worth? Here's What the Data Actually Says</title>
       <link>https://allpantherproperties.com/TARRENT/fort-worth-buyers-market-2026.html</link>
-      <description>Is 2026 finally a buyer's market in Fort Worth? We break down the actual Tarrant County data — median DOM, list-to-sale ratios, and where leverage really exists.</description>
+      <description><![CDATA[Is 2026 finally a buyer's market in Fort Worth? We break down the actual Tarrant County data -- median DOM, list-to-sale ratios, and where leverage really exists.]]></description>
+      <content:encoded><![CDATA[]]></content:encoded>
       <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://allpantherproperties.com/TARRENT/fort-worth-buyers-market-2026.html</guid>
     </item>
@@ -82,7 +91,8 @@
     <item>
       <title>The Fed Froze Rates Again. Here's What That Means for Tarrant County Renters and Landlords.</title>
       <link>https://allpantherproperties.com/TARRENT/fed-freeze-rental.html</link>
-      <description>The FOMC held rates steady on March 19, 2026. Here's what the Fed freeze means for Tarrant County renters, landlords, and anyone watching mortgage rates.</description>
+      <description><![CDATA[The FOMC held rates steady on March 19, 2026. Here's what the Fed freeze means for Tarrant County renters, landlords, and anyone watching mortgage rates.]]></description>
+      <content:encoded><![CDATA[]]></content:encoded>
       <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://allpantherproperties.com/TARRENT/fed-freeze-rental.html</guid>
     </item>
