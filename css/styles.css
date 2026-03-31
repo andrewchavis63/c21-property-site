@@ -798,7 +798,7 @@ ul { list-style: none; }
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 52px;
 }
 
@@ -830,7 +830,7 @@ ul { list-style: none; }
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.38);
+  color: rgba(255,255,255,0.65);
 }
 
 /* ============================================
@@ -1254,7 +1254,7 @@ ul { list-style: none; }
 .faq-num {
   font-family: 'Pompiere', sans-serif;
   font-size: 0.7rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.65);
   flex-shrink: 0;
   min-width: 24px;
   padding-top: 8px;
@@ -1574,7 +1574,7 @@ ul { list-style: none; }
 }
 .footer-col ul li a {
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.65);
   transition: color var(--transition);
 }
 .footer-col ul li a:hover { color: var(--gold); }
@@ -1590,11 +1590,11 @@ ul { list-style: none; }
 }
 .footer-bottom p {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.60);
 }
 .footer-c21 {
   font-size: 0.72rem;
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.60);
   max-width: 400px;
   line-height: 1.5;
   text-align: right;
@@ -1664,7 +1664,7 @@ ul { list-style: none; }
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.55);
   margin-bottom: 40px;
 }
 
