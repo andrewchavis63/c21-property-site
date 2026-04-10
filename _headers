@@ -1,0 +1,9 @@
+/img/*
+  Content-Type: image/jpeg
+  Access-Control-Allow-Origin: *
+  X-Content-Type-Options: nosniff
+
+/TARRENT/img/*
+  Content-Type: image/jpeg
+  Access-Control-Allow-Origin: *
+  X-Content-Type-Options: nosniff
