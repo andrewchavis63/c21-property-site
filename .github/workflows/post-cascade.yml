@@ -2,7 +2,7 @@ name: TAR(RENT) Post Cascade
 
 on:
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - 'posts-queue/**.md'
 
