@@ -1,0 +1,74 @@
+name: TAR(RENT) Post Cascade
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'posts-queue/**.md'
+
+jobs:
+  cascade:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Find new posts-queue files
+        id: find-posts
+        run: |
+          NEW_FILES=$(git diff --name-only HEAD~1 HEAD -- 'posts-queue/*.md' | grep -v '_TEMPLATE' || true)
+          echo "files=$NEW_FILES" >> $GITHUB_OUTPUT
+          echo "Found new post files: $NEW_FILES"
+
+      - name: Run cascade generator
+        if: steps.find-posts.outputs.files != ''
+        run: |
+          for f in ${{ steps.find-posts.outputs.files }}; do
+            echo "Processing: $f"
+            python scripts/generate-post.py "$f"
+          done
+
+      - name: Fire Resend broadcast
+        if: steps.find-posts.outputs.files != ''
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_AUDIENCE_ID: ${{ secrets.RESEND_AUDIENCE_ID }}
+        run: |
+          for f in ${{ steps.find-posts.outputs.files }}; do
+            python3 - "$f" <<'PYEOF'
+          import sys, re, subprocess
+
+          with open(sys.argv[1]) as fh:
+              text = fh.read()
+
+          def get(key, t):
+              m = re.search(rf'^{key}:\s*"?([^"\n]+)"?', t, re.MULTILINE)
+              return m.group(1).strip() if m else ''
+
+          slug = get('slug', text)
+          title = get('title', text)
+          desc = get('description', text)
+          pub = get('pubDate', text)
+
+          subprocess.run(['python', 'scripts/resend-broadcast.py', slug, title, desc, pub], check=True)
+          PYEOF
+          done
+
+      - name: Commit generated files
+        if: steps.find-posts.outputs.files != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add TARRENT/ index.html
+          git diff --staged --quiet || git commit -m "auto: cascade post publish [skip ci]"
+          git push
