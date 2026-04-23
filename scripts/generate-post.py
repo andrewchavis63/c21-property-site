@@ -40,7 +40,7 @@ def parse_frontmatter(text):
             current_list = []
             meta['sources'] = current_list
             current_item = None
-        elif re.match(r'^[a-z_]+:', line):
+        elif re.match(r'^[a-zA-Z_]+:', line):
             if current_item:
                 current_list.append(current_item)
                 current_item = None
@@ -69,7 +69,7 @@ def read_file(path):
 def write_file(path, content):
     with open(path, 'w', encoding='utf-8') as f:
         f.write(content)
-    print(f"  ✓ wrote {os.path.relpath(path, REPO)}")
+    print(f"  [ok] wrote {os.path.relpath(path, REPO)}")
 
 
 # ── Task A: Generate standalone post HTML ────────────────────────────────────
@@ -155,6 +155,7 @@ def generate_standalone_html(meta, body):
     <h1>{title}</h1>
     {body}
 
+    {related}
     <div class="author-bio">
       <div class="author-avatar">AC</div>
       <div>
@@ -440,7 +441,7 @@ def prepend_feed_item(meta):
     </item>
 """
 
-    marker = re.search(r'(<atom:link[^/]*/>\s*\n)', content)
+    marker = re.search(r'(<atom:link[^>]*/>\s*\n)', content)
     if not marker:
         raise ValueError("Could not find atom:link closing tag in feed.xml")
 
@@ -555,7 +556,7 @@ def main():
     print("\n[G] Rotating root index.html blog teaser...")
     rotate_home_teaser(meta)
 
-    print(f"\n✅ Cascade complete for '{meta['slug']}'")
+    print(f"\n[DONE] Cascade complete for '{meta['slug']}'")
     print("Files to commit: TARRENT/{slug}.html, TARRENT/index.html, TARRENT/disclaimer.html, TARRENT/feed.xml, index.html")
 
 
