@@ -671,16 +671,16 @@
 <!-- FEATURED POST -->
 <section class="featured-wrapper">
   <div class="section-label">Featured Article</div>
-  <div class="featured-card" onclick="openPost('buyer-delusion-2026')">
+  <div class="featured-card" onclick="openPost('seller-pricing-2026')">
     <div class="featured-img">
-      <img src="img/yash-mannepalli-zPhYj34f1Mw-unsplash.jpg" alt="Fort Worth neighborhood — buyer delusion math Tarrant County 2026" loading="lazy">
+      <img src="img/fallon-michael-mJxyZfj4LUE-unsplash.jpg" alt="For sale sign in front of Fort Worth home — seller pricing strategy 2026" loading="lazy">
       <div class="featured-img-overlay"></div>
     </div>
     <div class="featured-content">
-      <div class="post-category">Buying</div>
-      <h2>Buyer Delusion: The Math Killing Fort Worth Deals in 2026</h2>
-      <p>A $425k home. 20% down. Payments under $1,500/mo. Buyers are walking into Tarrant County negotiations with builder buydown logic and 2021 rate memory — and it's costing them. Here's the math that ends the conversation.</p>
-      <a href="buyer-delusion-fort-worth-2026.html" class="read-btn" onclick="event.stopPropagation(); openPost('buyer-delusion-2026')">
+      <div class="post-category">Seller Tips</div>
+      <h2>Half of Fort Worth Sellers Cut Their Price Last Month. Here's How to Avoid Joining Them.</h2>
+      <p>Nearly half of Tarrant County listings dropped their price in the last 30 days. Rates are frozen at 6.37% with no cuts coming before your listing expires. Here's how to price your home right the first time.</p>
+      <a href="fort-worth-seller-pricing-2026.html" class="read-btn" onclick="event.stopPropagation();">
         Read the Full Article <span class="arrow">→</span>
       </a>
     </div>
@@ -699,6 +699,20 @@
 
 <!-- POST GRID -->
 <section class="posts-grid" id="postsGrid">
+
+  <a class="post-card" data-cat="sellers" href="fort-worth-seller-pricing-2026.html" onclick="event.preventDefault(); openPost('seller-pricing-2026')">
+    <div class="post-card-img">
+      <img src="img/fallon-michael-mJxyZfj4LUE-unsplash.jpg" alt="For sale sign in Fort Worth neighborhood" loading="lazy">
+      <div class="img-overlay"></div>
+    </div>
+    <div class="post-meta">
+      <span class="post-cat-tag">Seller Tips</span>
+      <div class="post-dot"></div>
+      <span class="post-date">April 2026</span>
+    </div>
+    <h3>Half of Fort Worth Sellers Cut Their Price Last Month. Here's How to Avoid Joining Them.</h3>
+    <p>Nearly half of Tarrant County listings dropped their price in the last 30 days. Here's why — and how to price right the first time.</p>
+  </a>
 
   <a class="post-card" data-cat="buyers-tenants" href="buyer-delusion-fort-worth-2026.html" onclick="event.preventDefault(); openPost('buyer-delusion-2026')">
     <div class="post-card-img">
@@ -995,6 +1009,27 @@
 
 <script>
   const posts = {
+    'seller-pricing-2026': {
+      category: 'Seller Tips',
+      date: 'April 2026',
+      img: 'img/fallon-michael-mJxyZfj4LUE-unsplash.jpg',
+      title: 'Half of Fort Worth Sellers Cut Their Price Last Month. Here\'s How to Avoid Joining Them.',
+      intro: 'Nearly half of Tarrant County listings took a price reduction in the last 30 days. The rate relief sellers are waiting for isn\'t coming before their listings expire. Here\'s how to price your Fort Worth home right the first time.',
+      fullLink: 'fort-worth-seller-pricing-2026.html',
+      content: `
+        <h2>The Numbers on the Ground</h2>
+        <p>The Fort Worth market has shifted in ways that haven't fully hit sellers yet. 35.4% of Fort Worth listings have taken price reductions — up from 26% last year. Nearly half of all Tarrant County listings dropped their price in the last 30 days. Homes are averaging 55 days on market, up from 50. Only 13.8% of homes sold above list price, down from 50%+ in 2022.</p>
+        <div class="article-callout"><p>⚠️ Nearly half of Tarrant County sellers adjusted their price last month. That's not a blip. That's the market telling you — loudly — what it will and won't pay.</p></div>
+        <h2>Why Buyers Aren't Moving at Your Number</h2>
+        <p>The Fed held its benchmark rate at 3.5–3.75% at both the January and March 2026 meetings. The 30-year fixed is sitting at 6.37% as of April (Freddie Mac). No meaningful relief is expected before late 2026 at the earliest. Mortgage purchase applications fell 7% year-over-year as of early April. Buyers aren't gone — they're cautious, informed, and they have 30,000 options in Tarrant County.</p>
+        <div class="article-callout"><p>📐 On a $340,000 home with 5% down at 6.37%, that's roughly $2,150/month in P&amp;I alone. Buyers are doing this math. If your price doesn't work at current rates, your listing sits.</p></div>
+        <h2>The DOM Death Spiral</h2>
+        <p>Every seller who cut their price had a moment where they believed the market would come to them. Days 1–14: serious buyers preview everything new. If your price is off, they note it and move on. Days 15–30: the listing gets stale. Day 30+: buyers assume something is wrong. Homes that take a price reduction sell for an average of 3–7% below correctly-priced comparables. The seller who prices right on day one almost always nets more at closing.</p>
+        <h2>How to Price Right</h2>
+        <p>Price to 90-day sold comps, not active listings. Factor in 2–3% seller concessions before you list. Kill the "negotiate room" cushion — in a 55-day market, it costs you more in carry than you'll gain. And remember: your first 14 days are your best 14 days. More eyes hit a new listing in week one than in the next 60 days combined.</p>
+        <p style="font-size:13px;color:#999;margin-top:24px;">Full sources at <a href="disclaimer.html" style="color:var(--gold);">disclaimer.html</a>. <a href="fort-worth-seller-pricing-2026.html" style="color:var(--gold);">Read the full article →</a></p>
+      `
+    },
     'tx-homebuyer-2025': {
       category: 'Buyer Guides',
       date: 'March 2026',
