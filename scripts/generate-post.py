@@ -273,12 +273,15 @@ def update_tarrent_index_posts_object(meta, body):
     body_text = re.sub(r'\s+', ' ', body_text).strip()
     modal_content = body_text[:600] + ('...' if len(body_text) > 600 else '')
 
+    title_js = title.replace("'", "\\'")
+    intro_js = intro.replace("'", "\\'")
+
     new_entry = f"""    '{posts_key}': {{
       category: '{category}',
       date: '{date}',
       img: '{img}',
-      title: '{title.replace("'", "\\'")}',
-      intro: '{intro.replace("'", "\\'")}',
+      title: '{title_js}',
+      intro: '{intro_js}',
       fullLink: '{slug}.html',
       content: `
         {body}
