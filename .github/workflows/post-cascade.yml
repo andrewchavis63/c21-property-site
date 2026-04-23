@@ -47,12 +47,9 @@ jobs:
           git diff --staged --quiet || git commit -m "auto: cascade post publish [skip ci]"
           git push
 
-      - name: Fire Resend broadcast
+      - name: Fire newsletter
         if: steps.find-posts.outputs.files != ''
         continue-on-error: true
-        env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          RESEND_AUDIENCE_ID: ${{ secrets.RESEND_AUDIENCE_ID }}
         run: |
           for f in ${{ steps.find-posts.outputs.files }}; do
             python3 - "$f" <<'PYEOF'
@@ -68,8 +65,7 @@ jobs:
           slug = get('slug', text)
           title = get('title', text)
           desc = get('description', text)
-          pub = get('pubDate', text)
 
-          subprocess.run(['python', 'scripts/resend-broadcast.py', slug, title, desc, pub], check=True)
+          subprocess.run(['python', 'scripts/resend-broadcast.py', slug, title, desc], check=True)
           PYEOF
           done
