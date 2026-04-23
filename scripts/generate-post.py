@@ -492,7 +492,27 @@ def rotate_home_teaser(meta):
         raise ValueError("Could not find blog-teaser-grid in root index.html")
 
     grid_start = content.index(grid_marker) + len(grid_marker)
-    grid_end = content.index('</div>', grid_start)
+
+    # Find the matching closing </div> by tracking nesting depth
+    depth = 1
+    pos = grid_start
+    grid_end = -1
+    while pos < len(content):
+        next_open = content.find('<div', pos)
+        next_close = content.find('</div>', pos)
+        if next_close == -1:
+            raise ValueError("Could not find closing </div> for blog-teaser-grid")
+        if next_open != -1 and next_open < next_close:
+            depth += 1
+            pos = next_open + 4
+        else:
+            depth -= 1
+            if depth == 0:
+                grid_end = next_close
+                break
+            pos = next_close + 6
+    if grid_end == -1:
+        raise ValueError("Could not find closing </div> for blog-teaser-grid")
 
     new_grid_inner = '\n' + '\n'.join(cards_to_keep) + '\n\n    '
     content = content[:grid_start] + new_grid_inner + content[grid_end:]
