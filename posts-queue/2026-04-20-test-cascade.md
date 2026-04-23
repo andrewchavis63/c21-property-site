@@ -6,8 +6,8 @@ category: Market Updates
 category_tag: market
 date: April 2026
 pubDate: Mon, 20 Apr 2026 12:00:00 +0000
-img: img/kelly-christiansen-nmOIvholDG4-unsplash.jpg
-img_alt: "Tarrant County rental homes — Fort Worth 2026"
+img: img/ashley-byrd-tThqDr8Alj8-unsplash.jpg
+img_alt: "Fort Worth residential neighborhood — Tarrant County rental market 2026"
 posts_key: tarrant-rental-outlook-2026
 intro: "Busy season hits in May. Fort Worth rental vacancy is tightening and landlords who price right now will fill faster. Here's what the data says."
 substack_slug: tarrant-county-rental-outlook-2026

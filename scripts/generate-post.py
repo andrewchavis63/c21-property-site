@@ -330,13 +330,30 @@ def update_featured_card(meta):
   </div>
 </section>"""
 
-    pattern = r'<section class="featured-wrapper">.*?</section>'
-    new_content = re.sub(pattern, new_featured, content, count=1, flags=re.DOTALL)
-
-    if new_content == content:
+    start_tag = '<section class="featured-wrapper">'
+    start_idx = content.find(start_tag)
+    if start_idx == -1:
         raise ValueError("Could not find featured-wrapper section in TARRENT/index.html")
 
-    write_file(path, new_content)
+    depth = 1
+    pos = start_idx + len(start_tag)
+    end_idx = -1
+    while pos < len(content):
+        next_open = content.find('<section', pos)
+        next_close = content.find('</section>', pos)
+        if next_close == -1:
+            raise ValueError("Could not find closing </section> for featured-wrapper")
+        if next_open != -1 and next_open < next_close:
+            depth += 1
+            pos = next_open + len('<section')
+        else:
+            depth -= 1
+            if depth == 0:
+                end_idx = next_close + len('</section>')
+                break
+            pos = next_close + len('</section>')
+
+    write_file(path, content[:start_idx] + new_featured + content[end_idx:])
 
 
 # ── Task D: Prepend post card to posts grid in TARRENT/index.html ─────────────
