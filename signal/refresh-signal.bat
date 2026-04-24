@@ -1,0 +1,9 @@
+@echo off
+cd /d C:\Users\achav\c21-property-site
+echo Triggering SIGNAL pull...
+gh workflow run signal-cron.yml --repo andrewchavis63/c21-property-site
+echo Waiting for pull to complete...
+timeout /t 35 /nobreak
+echo Fetching latest brief...
+git pull --quiet
+start "" "%CD%\signal\brief.html"
