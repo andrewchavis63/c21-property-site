@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-04-24T11:10:49.011566+00:00",
+  "pulled_at": "2026-04-24T11:23:24.379601+00:00",
   "reddit": [],
   "rss": [
     {
@@ -90,23 +90,12 @@
     "city": "Fort Worth",
     "state": "TX",
     "zip": "76179",
-    "pulled_at": "2026-04-24T11:10:49.011403+00:00",
+    "pulled_at": "2026-04-24T11:23:24.379378+00:00",
     "source_url": "https://app.rentcast.io"
   },
   "angles": [
     {
       "rank": 1,
-      "headline": "Night & Day 4/22 — What It Means for Fort Worth",
-      "format": "blog",
-      "seo_keyword": "fort worth real estate market 2026",
-      "competition": "medium",
-      "source_type": "rss",
-      "source_title": "Night & Day 4/22",
-      "source_url": "https://www.fwweekly.com/2026/04/22/night-day-449/",
-      "engagement_score": 0
-    },
-    {
-      "rank": 2,
       "headline": "Sweeping Zoning Reforms Presents Opportunities For Multifamily Investments — What It Means for Fort Worth",
       "format": "blog",
       "seo_keyword": "fort worth real estate market 2026",
@@ -117,7 +106,29 @@
       "engagement_score": 0
     },
     {
+      "rank": 2,
+      "headline": "BiggerPockets Pulse: Investor Sentiment Falls Amid International Turmoil and Ren — What It Means for Fort Worth",
+      "format": "blog",
+      "seo_keyword": "fort worth real estate market 2026",
+      "competition": "medium",
+      "source_type": "rss",
+      "source_title": "BiggerPockets Pulse: Investor Sentiment Falls Amid International Turmoil and Renewed Economic Concerns",
+      "source_url": "https://www.biggerpockets.com/blog/pulse-q2-2026",
+      "engagement_score": 0
+    },
+    {
       "rank": 3,
+      "headline": "More Than 50,000 Home-Purchase Contracts Fell Through in March — What It Means for Fort Worth",
+      "format": "blog",
+      "seo_keyword": "fort worth real estate market 2026",
+      "competition": "medium",
+      "source_type": "rss",
+      "source_title": "More Than 50,000 Home-Purchase Contracts Fell Through in March",
+      "source_url": "https://www.redfin.com/news/contract-cancellations-march-2026/",
+      "engagement_score": 0
+    },
+    {
+      "rank": 4,
       "headline": "Fort Worth Rental Market Update: Rents shifting YoY — Data and Analysis",
       "format": "screen_recording",
       "seo_keyword": "fort worth rental market 2026",
@@ -128,7 +139,7 @@
       "engagement_score": 0
     },
     {
-      "rank": 4,
+      "rank": 5,
       "headline": "Why Fort Worth Is Still One of the Best Places to Buy in Texas Right Now",
       "format": "youtube",
       "seo_keyword": "fort worth real estate buy 2026",
