@@ -7,8 +7,44 @@ import urllib.error
 from datetime import datetime, timezone
 from xml.etree import ElementTree
 
-SUBREDDITS = ['FortWorth', 'DFW', 'realestate', 'FirstTimeHomeBuyer', 'landlord']
+SUBREDDITS = ['FortWorth', 'DFW', 'realestate', 'TexasRealEstate', 'landlord']
 LOCAL_SUBREDDITS = {'FortWorth', 'DFW'}
+LOCAL_RSS_SOURCES = {'FortWorthReport', 'PaperCity', 'WFAA', 'NBCDFW', 'FWWeekly'}
+
+RE_TITLE_KEYWORDS = {
+    'rent', 'rental', 'renting', 'lease', 'landlord', 'tenant', 'tenants',
+    'property', 'properties', 'home', 'homes', 'house', 'houses', 'housing',
+    'apartment', 'apartments', 'condo', 'townhome', 'townhouse',
+    'mortgage', 'buy', 'buying', 'sell', 'selling', 'sold', 'listing',
+    'market', 'closing', 'realtor', 'realty', 'agent', 'broker',
+    'invest', 'investment', 'investor', 'flip', 'flipping',
+    'evict', 'eviction', 'hoa', 'neighbor', 'neighborhood', 'suburb',
+    'development', 'builder', 'built', 'construction', 'zoning',
+    'afford', 'affordable', 'price', 'prices', 'cost', 'costs',
+    'move', 'moving', 'relocat',
+}
+
+
+NON_TX_STATE_CODES = {
+    'AK','AL','AR','AZ','CA','CO','CT','DC','DE','FL','GA','HI','IA','ID',
+    'IL','IN','KS','KY','LA','MA','MD','ME','MI','MN','MO','MS','MT','NC',
+    'ND','NE','NH','NJ','NM','NV','NY','OH','OK','OR','PA','RI','SC','SD',
+    'TN','UT','VA','VT','WA','WI','WV','WY',
+}
+
+
+def is_re_relevant(title):
+    """Return True if the post title contains at least one real-estate keyword."""
+    words = title.lower().replace('-', ' ').replace('/', ' ').split()
+    return any(any(w.startswith(kw) for kw in RE_TITLE_KEYWORDS) for w in words)
+
+
+def is_out_of_state(title):
+    """Return True if the title explicitly references a non-TX US state (e.g. [Landlord-US-IN])."""
+    for code in NON_TX_STATE_CODES:
+        if f'-{code}]' in title or f'[{code}]' in title or f'({code})' in title:
+            return True
+    return False
 
 RSS_FEEDS = {
     # Local Fort Worth
@@ -67,7 +103,7 @@ def fetch_reddit(subreddits):
             for t in threads:
                 t['is_local'] = is_local
             if is_local:
-                local_threads.extend(threads)
+                local_threads.extend(t for t in threads if is_re_relevant(t['title']))
             else:
                 national_threads.extend(threads)
             time.sleep(0.5)
@@ -191,74 +227,93 @@ def fetch_rentcast(api_key):
 
 def generate_angles(reddit_threads, rss_items, market_data):
     """
-    Returns exactly 7 content angle dicts ranked by SEO potential.
-    Sources: top 3 Reddit threads, top 2 RSS items, 1 RentCast angle, 1 evergreen local.
-    Every angle includes a source URL — no angles without citations.
+    Returns exactly 7 content angle dicts. Priority order — no engagement sort.
+
+    Content pool (5 slots):
+      P1: local Reddit — RE-keyword-filtered r/FortWorth and r/DFW posts (max 3)
+      P2: FortWorthReport RSS — highest-signal local RE source (max 1)
+      P3: other local RSS (PaperCity, WFAA, etc.) — local context (max 1)
+      P4: national RSS (HousingWire, BiggerPockets, etc.) — industry context
+      P5: national Reddit (TexasRealEstate, realestate, landlord) — last resort
+    Slot 6: RentCast market angle (always)
+    Slot 7: Evergreen (always)
     """
     angles = []
 
-    local = [t for t in reddit_threads if t.get('is_local', t.get('subreddit') in LOCAL_SUBREDDITS)]
-    national = [t for t in reddit_threads if not t.get('is_local', t.get('subreddit') in LOCAL_SUBREDDITS)]
+    local_reddit = [t for t in reddit_threads
+                    if t.get('is_local', t.get('subreddit') in LOCAL_SUBREDDITS)]
+    national_reddit = [t for t in reddit_threads
+                       if not t.get('is_local', t.get('subreddit') in LOCAL_SUBREDDITS)
+                       and not is_out_of_state(t['title'])]
+    # Local RSS filtered by RE keywords — FortWorthReport publishes events/food too
+    fw_report_rss = [i for i in rss_items
+                     if i.get('source') == 'FortWorthReport' and is_re_relevant(i['title'])]
+    other_local_rss = [i for i in rss_items
+                       if i.get('source') in LOCAL_RSS_SOURCES
+                       and i.get('source') != 'FortWorthReport'
+                       and is_re_relevant(i['title'])]
+    national_rss = [i for i in rss_items if i.get('source') not in LOCAL_RSS_SOURCES]
 
-    # Fill up to 3 Reddit slots: locals first, nationals fill gaps
-    reddit_pool = local[:3] + national[:max(0, 3 - len(local[:3]))]
-    reddit_pool = reddit_pool[:3]
+    # Build ordered content pool — priority determines position
+    content_pool = []
+    content_pool.extend(('local_reddit', t) for t in local_reddit[:3])
+    content_pool.extend(('fw_report', i) for i in fw_report_rss[:1])
+    content_pool.extend(('local_rss', i) for i in other_local_rss[:1])
+    content_pool.extend(('national_rss', i) for i in national_rss[:3])
+    content_pool.extend(('national_reddit', t) for t in national_reddit[:3])
+    content_pool = content_pool[:5]
 
-    for thread in reddit_pool:
-        engagement = thread['score'] + (thread['num_comments'] * 2)
-        post_format = 'blog' if thread['num_comments'] > 50 else 'social'
-        is_local = thread.get('is_local', thread.get('subreddit') in LOCAL_SUBREDDITS)
-        if is_local:
-            headline = f"Fort Worth: {thread['title'][:90]}"
-            seo_kw = f"fort worth {thread['subreddit'].lower()} real estate 2026"
+    for src_type, item in content_pool:
+        if src_type in ('local_reddit', 'national_reddit'):
+            t = item
+            is_local = src_type == 'local_reddit'
+            angles.append({
+                'rank': 0,
+                'headline': (f"Fort Worth: {t['title'][:90]}" if is_local
+                             else f"What Fort Worth Buyers Should Know: {t['title'][:70]}"),
+                'format': 'blog' if t['num_comments'] > 50 else 'social',
+                'seo_keyword': 'fort worth real estate 2026' if is_local else 'fort worth real estate market 2026',
+                'competition': 'low' if is_local else 'medium',
+                'source_type': 'reddit',
+                'source_title': t['title'],
+                'source_url': t['url'],
+                'engagement_score': t['score'] + t['num_comments'] * 2,
+            })
         else:
-            headline = f"What Fort Worth Buyers Should Know: {thread['title'][:70]}"
-            seo_kw = 'fort worth real estate market 2026'
-        angles.append({
-            'rank': len(angles) + 1,
-            'headline': headline,
-            'format': post_format,
-            'seo_keyword': seo_kw,
-            'competition': 'low' if thread['score'] < 500 else 'medium',
-            'source_type': 'reddit',
-            'source_title': thread['title'],
-            'source_url': thread['url'],
-            'engagement_score': engagement,
-        })
+            rss_item = item
+            is_local_src = src_type in ('fw_report', 'local_rss')
+            angles.append({
+                'rank': 0,
+                'headline': (f"Fort Worth: {rss_item['title'][:90]}" if is_local_src
+                             else f"{rss_item['title'][:80]} — What It Means for Fort Worth"),
+                'format': 'blog',
+                'seo_keyword': ('fort worth real estate news 2026' if is_local_src
+                                else 'fort worth real estate market 2026'),
+                'competition': 'low' if is_local_src else 'medium',
+                'source_type': 'rss',
+                'source_title': rss_item['title'],
+                'source_url': rss_item['url'],
+                'engagement_score': 0,
+            })
 
-    for item in rss_items[:2]:
-        angles.append({
-            'rank': len(angles) + 1,
-            'headline': f"{item['title'][:90]} — What It Means for Fort Worth",
-            'format': 'blog',
-            'seo_keyword': 'fort worth real estate market 2026',
-            'competition': 'medium',
-            'source_type': 'rss',
-            'source_title': item['title'],
-            'source_url': item['url'],
-            'engagement_score': 0,
-        })
-
+    # Slot 6: Market data
     if market_data.get('median_rent'):
         yoy = market_data.get('rent_yoy_change')
         yoy_str = f"{yoy:+.1f}%" if isinstance(yoy, (int, float)) else "shifting"
         angles.append({
-            'rank': 6,
+            'rank': 0,
             'headline': f"Fort Worth Rental Market Update: Rents {yoy_str} YoY — Data and Analysis",
             'format': 'screen_recording',
             'seo_keyword': 'fort worth rental market 2026',
             'competition': 'low',
             'source_type': 'rentcast',
-            'source_title': (
-                f"RentCast Tarrant County — pulled "
-                f"{market_data.get('pulled_at', '')[:10]}"
-            ),
+            'source_title': f"RentCast Tarrant County — pulled {market_data.get('pulled_at', '')[:10]}",
             'source_url': market_data.get('source_url', 'https://app.rentcast.io'),
             'engagement_score': 0,
         })
     else:
         angles.append({
-            'rank': 6,
+            'rank': 0,
             'headline': 'Tarrant County Market Update: What Buyers and Renters Need to Know',
             'format': 'social',
             'seo_keyword': 'tarrant county real estate 2026',
@@ -269,20 +324,20 @@ def generate_angles(reddit_threads, rss_items, market_data):
             'engagement_score': 0,
         })
 
-    top_sub = reddit_threads[0]['subreddit'] if reddit_threads else 'FortWorth'
+    # Slot 7: Evergreen
+    top_local = local_reddit[0]['subreddit'] if local_reddit else 'FortWorth'
     angles.append({
-        'rank': 7,
+        'rank': 0,
         'headline': 'Why Fort Worth Is Still One of the Best Places to Buy in Texas Right Now',
         'format': 'youtube',
         'seo_keyword': 'fort worth real estate buy 2026',
         'competition': 'medium',
         'source_type': 'reddit',
-        'source_title': f"r/{top_sub} — top local discussions this week",
-        'source_url': f"https://reddit.com/r/{top_sub}",
+        'source_title': f"r/{top_local} — top local discussions this week",
+        'source_url': f"https://reddit.com/r/{top_local}",
         'engagement_score': 0,
     })
 
-    angles.sort(key=lambda a: a['engagement_score'], reverse=True)
     for i, angle in enumerate(angles):
         angle['rank'] = i + 1
 
