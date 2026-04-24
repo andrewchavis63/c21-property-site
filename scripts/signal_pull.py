@@ -11,7 +11,13 @@ SUBREDDITS = ['FortWorth', 'DFW', 'realestate', 'FirstTimeHomeBuyer', 'landlord'
 LOCAL_SUBREDDITS = {'FortWorth', 'DFW'}
 
 RSS_FEEDS = {
+    # Local Fort Worth
     'FortWorthReport': 'https://fortworthreport.org/feed/',
+    'PaperCity': 'https://www.papercitymag.com/feed/',
+    'WFAA': 'https://www.wfaa.com/feeds/syndication/rss/news/',
+    'NBCDFW': 'https://www.nbcdfw.com/feed/',
+    'FWWeekly': 'https://www.fwweekly.com/feed/',
+    # National RE / mortgage
     'RealTrends': 'https://www.realtrends.com/feed/',
     'MortgageReports': 'https://themortgagereports.com/feed',
     'HousingWire': 'https://www.housingwire.com/feed/',
