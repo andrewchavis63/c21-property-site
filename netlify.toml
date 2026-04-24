@@ -1,2 +1,2 @@
 [build]
-  ignore = "git diff --quiet HEAD~1 HEAD -- TARRENT/ index.html"
+  ignore = "git diff --quiet HEAD~1 HEAD -- TARRENT/ index.html signal/"
