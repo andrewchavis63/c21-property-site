@@ -671,16 +671,16 @@
 <!-- FEATURED POST -->
 <section class="featured-wrapper">
   <div class="section-label">Featured Article</div>
-  <div class="featured-card" onclick="openPost('tarrant-rental-outlook-2026')">
+  <div class="featured-card" onclick="openPost('fort-worth-rental-timeline')">
     <div class="featured-img">
-      <img src="img/ashley-byrd-tThqDr8Alj8-unsplash.jpg" alt="Fort Worth residential neighborhood — Tarrant County rental market 2026" loading="lazy">
+      <img src="img/ashley-byrd-lR4Ggg61MA8-unsplash.jpg" alt="Fort Worth suburban neighborhood — NW Fort Worth rental market 2026" loading="lazy">
       <div class="featured-img-overlay"></div>
     </div>
     <div class="featured-content">
       <div class="post-category">Market Updates</div>
-      <h2>Tarrant County Rental Outlook 2026: What Landlords Need to Know Before May</h2>
-      <p>Busy season hits in May. Fort Worth rental vacancy is tightening and landlords who price right now will fill faster. Here's what the data says.</p>
-      <a href="tarrant-county-rental-outlook-2026.html" class="read-btn" onclick="event.stopPropagation();">
+      <h2>Why Fort Worth Rentals Are Taking ~45 Days Right Now</h2>
+      <p>Fort Worth rentals in zip 76179 are averaging ~45 days on market. Most of the time it's pricing — not the market. Here's what landlords need to know heading into busy season.</p>
+      <a href="fort-worth-rental-timeline.html" class="read-btn" onclick="event.stopPropagation();">
         Read the Full Article <span class="arrow">→</span>
       </a>
     </div>
@@ -699,6 +699,20 @@
 
 <!-- POST GRID -->
 <section class="posts-grid" id="postsGrid">
+  <a class="post-card" data-cat="market" href="fort-worth-rental-timeline.html" onclick="event.preventDefault(); openPost('fort-worth-rental-timeline')">
+    <div class="post-card-img">
+      <img src="img/ashley-byrd-lR4Ggg61MA8-unsplash.jpg" alt="Fort Worth suburban neighborhood — NW Fort Worth rental market 2026" loading="lazy">
+      <div class="img-overlay"></div>
+    </div>
+    <div class="post-meta">
+      <span class="post-cat-tag">Market Updates</span>
+      <div class="post-dot"></div>
+      <span class="post-date">April 2026</span>
+    </div>
+    <h3>Why Fort Worth Rentals Are Taking ~45 Days Right Now</h3>
+    <p>Fort Worth rentals in zip 76179 are averaging ~45 days. Most of the time it's pricing — not the market. Here's what's driving the timeline.</p>
+  </a>
+
   <a class="post-card" data-cat="market" href="tarrant-county-rental-outlook-2026.html" onclick="event.preventDefault(); openPost('tarrant-rental-outlook-2026')">
     <div class="post-card-img">
       <img src="img/ashley-byrd-tThqDr8Alj8-unsplash.jpg" alt="Fort Worth residential neighborhood — Tarrant County rental market 2026" loading="lazy">
@@ -1023,6 +1037,36 @@
 
 <script>
   const posts = {
+    'fort-worth-rental-timeline': {
+      category: 'Market Updates',
+      date: 'April 2026',
+      img: 'img/ashley-byrd-lR4Ggg61MA8-unsplash.jpg',
+      title: 'Why Fort Worth Rentals Are Taking ~45 Days Right Now',
+      intro: 'Fort Worth rentals are taking about 45 days right now. That\'s longer than it should be. If it\'s sitting past the first couple weeks, something\'s off.',
+      fullLink: 'fort-worth-rental-timeline.html',
+      content: `
+        <p class="intro">Fort Worth rentals are taking about 45 days right now. That\'s longer than it should be. If it\'s sitting past the first couple weeks, something\'s off.</p>
+
+<h2>It\'s Usually Pricing.</h2>
+<p>Not the market. Renters are still moving. They\'re just not overpaying anymore.</p>
+<p>Right now, they have options. If you\'re $100–150 over, they\'ll look at it — and rent the one priced right three listings down.</p>
+<p>Most Fort Worth rentals aren\'t sitting because of the market. They\'re sitting because they missed the price early.</p>
+
+<div class="article-callout">
+  <p>📊 Tarrant County snapshot — April 2026: Median rent ~$2,000 · Days on market ~45 days · Inventory: increasing. Source: RentCast.</p>
+</div>
+
+<h2>The First Two Weeks Matter.</h2>
+<p>Well-priced units move fast. Overpriced ones sit and drag the average up.</p>
+<p>If you\'re past two weeks with no real applicants, it\'s usually the price. In a $2,000 market, 30 extra days costs you $2,000. That\'s not theory. That\'s math.</p>
+
+<h2>This Is Where Out-of-State Owners Get Hurt.</h2>
+<p>You don\'t see the local feed. You don\'t see comps drop. You don\'t see showings slow down. By the time it hits 45 days, it\'s usually been off for weeks. That\'s where the time gets lost.</p>
+<p>Text me the address. I\'ll run the numbers.</p>
+        <p style="font-size:13px;color:#999;margin-top:24px;">Full sources at <a href="disclaimer.html" style="color:var(--gold);">disclaimer.html</a>. <a href="fort-worth-rental-timeline.html" style="color:var(--gold);">Read the full article →</a></p>
+      `
+    },
+
     'tarrant-rental-outlook-2026': {
       category: 'Market Updates',
       date: 'April 2026',
@@ -1034,17 +1078,20 @@
         <p class="intro">Busy season hits in May. Fort Worth rental vacancy is tightening and landlords who price right now will fill faster. Here's what the data says.</p>
 
 <h2>The Market Heading Into May</h2>
-<p>Tarrant County rental demand picks up every spring as lease expirations hit and new residents arrive. In 2026, that demand is hitting a tighter-than-expected inventory. Vacancy rates have ticked down across Fort Worth, Saginaw, and Grapevine — the same submarkets where our portfolio operates.</p>
+<p>Tarrant County rental demand picks up every spring as lease expirations hit and new residents arrive. In 2026, that demand is hitting a tighter-than-expected inventory. The NW Fort Worth corridor (zip 76179) is running a ~$2,000 median rent and ~45 days on market — with inventory increasing but well-priced units still moving in the first two weeks.</p>
 
 <div class="article-callout">
   <p>📊 Landlords who price accurately in the first week of listing fill 40% faster than those who test the market high. The first 7 days are when your best tenants are looking.</p>
 </div>
 
 <h2>What This Means for Landlords</h2>
-<p>The window between lease-up and re-listing matters more in a tight market. Properties sitting more than 14 days are signaling a price problem to qualified prospects — and those prospects move on. The landlords filling fastest right now are the ones pricing to current comps, not last year's peak.</p>
+<p>The window between lease-up and re-listing matters more in a tight market. Properties sitting more than 14 days are signaling a price problem to qualified prospects — and those prospects move on. The landlords filling fastest right now are the ones pricing to current comps, not last year\'s peak.</p>
+
+<h2>Why Busy Season Closes Fast</h2>
+<p>The May–August rental cycle in DFW is the tightest window of the year. Renters moving in May started searching in March. List before May 1 if you have a vacancy opening in May or June. Price to April comps. Don\'t test the market high — you\'ll burn the window.</p>
 
 <h2>Bottom Line</h2>
-<p>If you have a vacancy opening before June, the time to list is now. If you're already listed and not getting qualified leads, the price is the signal. We'll run the numbers for free — reach out directly.</p>
+<p>If you have a vacancy opening before June, the time to list is now. If you\'re already listed and not seeing qualified applicants after two weeks, the price is the signal. We\'ll pull the current rent range for your property for free. Reach out directly.</p>
         <p style="font-size:13px;color:#999;margin-top:24px;">Full sources at <a href="disclaimer.html" style="color:var(--gold);">disclaimer.html</a>. <a href="tarrant-county-rental-outlook-2026.html" style="color:var(--gold);">Read the full article →</a></p>
       `
     },
