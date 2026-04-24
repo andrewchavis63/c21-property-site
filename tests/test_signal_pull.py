@@ -230,9 +230,13 @@ SAMPLE_DATA = {
          'source': 'Inman'}
     ],
     'market': {
-        'median_rent': 1850, 'rent_yoy_change': 3.2, 'vacancy_rate': 0.04,
-        'days_on_market': 18, 'pulled_at': '2026-04-23T05:00:00+00:00',
-        'source_url': 'https://app.rentcast.io'
+        'median_rent': 1850, 'rent_yoy_change': 3.2, 'rental_dom': 18,
+        'rental_new_listings': 289, 'rental_total_listings': 748,
+        'sale_median_price': 355000, 'sale_avg_price': 545781,
+        'sale_price_per_sqft': 177.58, 'sale_dom': 56.71, 'sale_median_dom': 30,
+        'sale_new_listings': 204, 'sale_total_listings': 712, 'sale_updated': '2026-04-23',
+        'city': 'Fort Worth', 'state': 'TX', 'zip': '76179',
+        'pulled_at': '2026-04-23T05:00:00+00:00', 'source_url': 'https://app.rentcast.io'
     },
     'angles': [
         {

@@ -122,15 +122,27 @@ def parse_rentcast_response(data):
     if not data:
         return {}
     rental = data.get('rentalData') or data
+    sale = data.get('saleData') or {}
     return {
+        # Rental
         'median_rent': rental.get('medianRent') or rental.get('averageRent'),
         'rent_yoy_change': rental.get('rentYoYChange') or rental.get('averageRentYoY'),
-        'vacancy_rate': rental.get('vacancyRate'),
-        'days_on_market': rental.get('averageDaysOnMarket') or rental.get('daysOnMarket'),
-        'new_listings': rental.get('newListings'),
-        'total_listings': rental.get('totalListings'),
+        'rental_dom': rental.get('averageDaysOnMarket') or rental.get('daysOnMarket'),
+        'rental_new_listings': rental.get('newListings'),
+        'rental_total_listings': rental.get('totalListings'),
+        # Sale
+        'sale_median_price': sale.get('medianPrice'),
+        'sale_avg_price': sale.get('averagePrice'),
+        'sale_price_per_sqft': sale.get('medianPricePerSquareFoot') or sale.get('averagePricePerSquareFoot'),
+        'sale_dom': sale.get('averageDaysOnMarket'),
+        'sale_median_dom': sale.get('medianDaysOnMarket'),
+        'sale_new_listings': sale.get('newListings'),
+        'sale_total_listings': sale.get('totalListings'),
+        'sale_updated': (sale.get('lastUpdatedDate') or '')[:10],
+        # Meta
         'city': 'Fort Worth',
         'state': 'TX',
+        'zip': '76179',
         'pulled_at': datetime.now(timezone.utc).isoformat(),
         'source_url': 'https://app.rentcast.io',
     }
@@ -313,31 +325,51 @@ def generate_html(data, path='signal/brief.html'):
             f'</div>'
         )
 
-    if market.get('median_rent'):
-        yoy = market.get('rent_yoy_change')
-        yoy_display = f'{yoy:+.1f}%' if isinstance(yoy, (int, float)) else 'N/A'
-        yoy_color = '#4ade80' if isinstance(yoy, (int, float)) and yoy > 0 else '#f87171'
-        dom = market.get('days_on_market') or 'N/A'
-        vac = market.get('vacancy_rate') or 'N/A'
+    def stat_box(value, label, color='#38bdf8'):
+        return (
+            f'<div style="background:#1e293b;border-radius:8px;padding:16px;text-align:center;">'
+            f'<div style="color:{color};font-size:24px;font-weight:700;">{value}</div>'
+            f'<div style="color:#64748b;font-size:11px;margin-top:4px;">{label}</div></div>'
+        )
+
+    if market.get('median_rent') or market.get('sale_median_price'):
+        pulled = market.get('pulled_at', '')[:10]
+        zipc = market.get('zip', '76179')
+
+        rental_row = ''
+        if market.get('median_rent'):
+            yoy = market.get('rent_yoy_change')
+            yoy_display = f'{yoy:+.1f}%' if isinstance(yoy, (int, float)) else 'N/A'
+            yoy_color = '#4ade80' if isinstance(yoy, (int, float)) and yoy > 0 else '#f87171'
+            rental_row = (
+                f'<div style="margin-bottom:8px;color:#94a3b8;font-size:11px;font-weight:600;'
+                f'text-transform:uppercase;letter-spacing:1px;">Rental Market</div>'
+                f'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:20px;">'
+                + stat_box(f'${market["median_rent"]:,.0f}', 'Median Rent', '#38bdf8')
+                + stat_box(yoy_display, 'YoY Change', yoy_color)
+                + stat_box(f'{market.get("rental_dom") or "N/A"}d', 'Avg DOM', '#a78bfa')
+                + stat_box(str(market.get('rental_new_listings') or 'N/A'), 'New Listings', '#fb923c')
+                + '</div>'
+            )
+
+        sale_row = ''
+        if market.get('sale_median_price'):
+            sale_row = (
+                f'<div style="margin-bottom:8px;color:#94a3b8;font-size:11px;font-weight:600;'
+                f'text-transform:uppercase;letter-spacing:1px;">Sale Market</div>'
+                f'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;">'
+                + stat_box(f'${market["sale_median_price"]:,.0f}', 'Median Sale Price', '#34d399')
+                + stat_box(f'${market.get("sale_price_per_sqft") or 0:,.0f}/sqft', 'Price / SqFt', '#34d399')
+                + stat_box(f'{market.get("sale_dom") or "N/A"}d', 'Avg DOM', '#a78bfa')
+                + stat_box(str(market.get('sale_new_listings') or 'N/A'), 'New Listings', '#fb923c')
+                + stat_box(str(market.get('sale_total_listings') or 'N/A'), 'Total Listings', '#64748b')
+                + '</div>'
+            )
+
         market_html = (
-            f'<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;">'
-            f'<div style="background:#1e293b;border-radius:8px;padding:16px;text-align:center;">'
-            f'<div style="color:#38bdf8;font-size:28px;font-weight:700;">'
-            f'${market["median_rent"]:,.0f}</div>'
-            f'<div style="color:#64748b;font-size:12px;margin-top:4px;">Median Rent</div></div>'
-            f'<div style="background:#1e293b;border-radius:8px;padding:16px;text-align:center;">'
-            f'<div style="color:{yoy_color};font-size:28px;font-weight:700;">{yoy_display}</div>'
-            f'<div style="color:#64748b;font-size:12px;margin-top:4px;">YoY Change</div></div>'
-            f'<div style="background:#1e293b;border-radius:8px;padding:16px;text-align:center;">'
-            f'<div style="color:#a78bfa;font-size:28px;font-weight:700;">{dom}</div>'
-            f'<div style="color:#64748b;font-size:12px;margin-top:4px;">Days on Market</div></div>'
-            f'<div style="background:#1e293b;border-radius:8px;padding:16px;text-align:center;">'
-            f'<div style="color:#fb923c;font-size:28px;font-weight:700;">{vac}</div>'
-            f'<div style="color:#64748b;font-size:12px;margin-top:4px;">Vacancy Rate</div></div>'
-            f'</div>'
-            f'<div style="color:#64748b;font-size:11px;margin-top:8px;">'
-            f'Source: RentCast &middot; Fort Worth, TX &middot; '
-            f'Pulled: {market.get("pulled_at", "")[:10]}</div>'
+            rental_row + sale_row +
+            f'<div style="color:#64748b;font-size:11px;margin-top:10px;">'
+            f'Source: RentCast &middot; Zip {zipc} (NW Fort Worth / Saginaw) &middot; Pulled: {pulled}</div>'
         )
     else:
         market_html = (
