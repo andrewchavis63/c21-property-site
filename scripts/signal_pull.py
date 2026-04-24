@@ -395,27 +395,6 @@ def generate_html(data, path='signal/brief.html'):
             f'{src}</div>'
         )
 
-    def reddit_card(t):
-        return (
-            f'<div style="background:#1e293b;border-radius:6px;padding:12px;margin-bottom:8px;">'
-            f'<a href="{t["url"]}" target="_blank" style="color:#f8fafc;font-size:14px;'
-            f'font-weight:500;text-decoration:none;">{t["title"][:100]}</a>'
-            f'<div style="color:#64748b;font-size:12px;margin-top:4px;">'
-            f'r/{t["subreddit"]} &middot; &uarr;{t["score"]:,} &middot; {t["num_comments"]:,} comments</div>'
-            f'</div>'
-        )
-
-    def rss_card(item):
-        date_str = item.get('pub_date', '')[:16] if item.get('pub_date') else ''
-        return (
-            f'<div style="background:#1e293b;border-radius:6px;padding:12px;margin-bottom:8px;">'
-            f'<a href="{item["url"]}" target="_blank" style="color:#f8fafc;font-size:14px;'
-            f'font-weight:500;text-decoration:none;">{item["title"][:100]}</a>'
-            f'<div style="color:#64748b;font-size:12px;margin-top:4px;">'
-            f'{item["source"]} &middot; {date_str}</div>'
-            f'</div>'
-        )
-
     def stat_box(value, label, color='#38bdf8'):
         return (
             f'<div style="background:#1e293b;border-radius:8px;padding:16px;text-align:center;">'
@@ -470,12 +449,6 @@ def generate_html(data, path='signal/brief.html'):
         )
 
     angles_html = ''.join(angle_card(a) for a in angles)
-    reddit_html = ''.join(reddit_card(t) for t in reddit[:5])
-    rss_html = ''.join(rss_card(item) for item in rss[:5])
-
-    reddit_count = len(reddit)
-    rss_count = len(rss)
-    sources_pulled = f'{reddit_count} Reddit threads &middot; {rss_count} news items'
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
@@ -490,22 +463,10 @@ def generate_html(data, path='signal/brief.html'):
   .section{{margin-bottom:36px}}
   .section-label{{font-size:11px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}}
   .divider{{border:none;border-top:1px solid #1a2540;margin:28px 0}}
-  .collapsed{{display:none}}
-  .toggle-row{{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:10px 0;border-top:1px solid #1a2540;user-select:none}}
-  .toggle-row:hover .toggle-label{{color:#94a3b8}}
-  .toggle-label{{font-size:12px;font-weight:600;color:#334155;text-transform:uppercase;letter-spacing:1px}}
-  .toggle-caret{{font-size:11px;color:#334155}}
   code{{background:#131d35;border-radius:3px;padding:1px 5px;color:#38bdf8;font-size:11px}}
   a{{color:#60a5fa;text-decoration:none}}
   a:hover{{color:#93c5fd}}
 </style>
-<script>
-function toggle(id,btn){{
-  var el=document.getElementById(id);
-  var open=el.classList.toggle('collapsed');
-  btn.querySelector('.toggle-caret').textContent=open?'▶':'▼';
-}}
-</script>
 </head>
 <body>
 <div class="container">
@@ -516,10 +477,6 @@ function toggle(id,btn){{
       <div style="font-size:11px;font-weight:700;letter-spacing:3px;color:#38bdf8;text-transform:uppercase;margin-bottom:6px">All Panther Properties</div>
       <div style="font-size:32px;font-weight:800;color:#f8fafc;letter-spacing:-0.5px">&#9889; SIGNAL</div>
       <div style="color:#475569;font-size:13px;margin-top:5px">Fort Worth Content Intelligence &mdash; Week of {pulled_at[:10]}</div>
-    </div>
-    <div style="text-align:right">
-      <div style="font-size:11px;color:#334155;margin-bottom:4px">Sources pulled</div>
-      <div style="font-size:13px;color:#64748b">{sources_pulled}</div>
     </div>
   </div>
 
@@ -536,21 +493,6 @@ function toggle(id,btn){{
     <div class="section-label">&#128202; Market Snapshot &mdash; Tarrant County / 76179</div>
     <div id="market">{market_html}</div>
   </div>
-
-  <hr class="divider">
-
-  <!-- Raw Sources — collapsed by default -->
-  <div onclick="toggle('reddit-body',this)" class="toggle-row">
-    <span class="toggle-label">&#128293; Reddit Hot Topics &mdash; Raw Signals</span>
-    <span class="toggle-caret">▶</span>
-  </div>
-  <div id="reddit-body" class="collapsed" style="padding-top:12px;margin-bottom:20px">{reddit_html}</div>
-
-  <div onclick="toggle('news-body',this)" class="toggle-row">
-    <span class="toggle-label">&#128240; News Angles &mdash; Raw Feeds</span>
-    <span class="toggle-caret">▶</span>
-  </div>
-  <div id="news-body" class="collapsed" style="padding-top:12px;margin-bottom:20px">{rss_html}</div>
 
   <div style="color:#1e3050;font-size:11px;text-align:center;margin-top:48px;padding-top:16px;border-top:1px solid #1a2540">
     SIGNAL &middot; allpantherproperties.com &middot; Every stat is sourced and timestamped. Do not publish unverified data.

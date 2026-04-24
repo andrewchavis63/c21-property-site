@@ -287,8 +287,6 @@ class TestOutputFiles(unittest.TestCase):
             self.assertIn('SIGNAL', html)
             self.assertIn('Content Angles', html)
             self.assertIn('Market Snapshot', html)
-            self.assertIn('Reddit Hot Topics', html)
-            self.assertIn('News Angles', html)
 
     def test_generate_html_includes_pulled_date(self):
         with tempfile.TemporaryDirectory() as tmpdir:

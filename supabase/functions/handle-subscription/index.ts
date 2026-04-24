@@ -35,6 +35,21 @@ serve(async (req) => {
 
     if (dbError) throw new Error(dbError.message)
 
+    // Add subscriber to Beehiiv
+    await fetch(`https://api.beehiiv.com/v2/publications/${Deno.env.get('BEEHIIV_PUBLICATION_ID')}/subscriptions`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${Deno.env.get('BEEHIIV_API_KEY')}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        reactivate_existing: false,
+        send_welcome_email: true,
+        utm_source: source || 'c21_website',
+      }),
+    })
+
     await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {

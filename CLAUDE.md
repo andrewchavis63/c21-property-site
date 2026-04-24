@@ -72,6 +72,14 @@ Target audience: remote investors in Tarrant & Parker County, North Texas.
 - Keep it vanilla — no npm, no bundler, no frameworks
 - Mobile-first, responsive
 
+## Shell / Environment
+- Bash paths must use Unix format: `/c/Users/achav/c21-property-site` — Windows paths fail
+
+## TARRENT — Current State (2026-04-06)
+- 12 posts live — always verify count before referencing post numbers
+- No photo reuse — grep filename across all `TARRENT/*.html` before assigning hero image
+- Supabase edge fn: `curl -X POST https://zksjjekaiscwkmiibbqp.supabase.co/functions/v1/<fn> -H "apikey: <anon>" -H "Authorization: Bearer <anon>"`
+
 ## Open Tasks
 - [ ] Starlyn's bio (needs interview/bullet points)
 - [ ] Headshots (scheduled 2026-03-12) — swap placeholders after shoot
