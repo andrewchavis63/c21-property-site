@@ -24,6 +24,7 @@ jobs:
       - name: Run SIGNAL pull
         env:
           RENTCAST_API_KEY: ${{ secrets.RENTCAST_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: python scripts/signal_pull.py
 
       - name: Commit generated files

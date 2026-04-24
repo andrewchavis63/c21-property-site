@@ -425,6 +425,45 @@ function toggle(id){{document.getElementById(id).classList.toggle('collapsed')}}
         f.write(html)
 
 
+def send_email_brief(html_path, pulled_at, resend_api_key):
+    """Email the SIGNAL brief HTML to Andrew via Resend."""
+    if not resend_api_key:
+        print('WARNING: RESEND_API_KEY not set — skipping email', file=sys.stderr)
+        return
+    try:
+        with open(html_path, encoding='utf-8') as f:
+            html_body = f.read()
+    except FileNotFoundError:
+        print(f'WARNING: {html_path} not found — skipping email', file=sys.stderr)
+        return
+
+    subject = f'SIGNAL -- Week of {pulled_at[:10]}'
+    payload = json.dumps({
+        'from': 'newsletter@allpantherproperties.com',
+        'to': ['andrewchavis63@gmail.com'],
+        'subject': subject,
+        'html': html_body,
+    }).encode('utf-8')
+
+    req = urllib.request.Request(
+        'https://api.resend.com/emails',
+        data=payload,
+        headers={
+            'Authorization': f'Bearer {resend_api_key}',
+            'Content-Type': 'application/json',
+        },
+        method='POST',
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            result = json.loads(resp.read().decode())
+            print(f'SIGNAL: brief emailed (id: {result.get("id", "?")})', flush=True)
+    except urllib.error.HTTPError as e:
+        print(f'WARNING: email failed {e.code}: {e.read().decode()}', file=sys.stderr)
+    except Exception as e:
+        print(f'WARNING: email failed: {e}', file=sys.stderr)
+
+
 def main():
     api_key = os.environ.get('RENTCAST_API_KEY', '')
 
@@ -457,6 +496,10 @@ def main():
 
     generate_html(data)
     print('SIGNAL: signal/brief.html written', flush=True)
+
+    resend_key = os.environ.get('RESEND_API_KEY', '')
+    print('SIGNAL: emailing brief...', flush=True)
+    send_email_brief('signal/brief.html', data['pulled_at'], resend_key)
 
     print(f'\nSIGNAL: done. Top angle: {angles[0]["headline"][:70]}', flush=True)
 
