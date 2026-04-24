@@ -12,8 +12,11 @@ class TestSkeleton(unittest.TestCase):
     def test_constants_defined(self):
         self.assertEqual(len(sp.SUBREDDITS), 5)
         self.assertIn('FortWorth', sp.SUBREDDITS)
-        self.assertEqual(len(sp.RSS_FEEDS), 5)
+        self.assertEqual(len(sp.RSS_FEEDS), 8)
         self.assertIn('FortWorthReport', sp.RSS_FEEDS)
+        self.assertIn('RealTrends', sp.RSS_FEEDS)
+        self.assertIn('RealtorMag', sp.RSS_FEEDS)
+        self.assertIn('Redfin', sp.RSS_FEEDS)
 
 
 MOCK_REDDIT_JSON = {

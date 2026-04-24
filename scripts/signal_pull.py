@@ -12,10 +12,13 @@ LOCAL_SUBREDDITS = {'FortWorth', 'DFW'}
 
 RSS_FEEDS = {
     'FortWorthReport': 'https://fortworthreport.org/feed/',
+    'RealTrends': 'https://www.realtrends.com/feed/',
     'MortgageReports': 'https://themortgagereports.com/feed',
     'HousingWire': 'https://www.housingwire.com/feed/',
     'BiggerPockets': 'https://www.biggerpockets.com/blog/feed',
     'CalculatedRisk': 'https://feeds.feedburner.com/CalculatedRisk',
+    'RealtorMag': 'https://magazine.realtor/rss',
+    'Redfin': 'https://www.redfin.com/news/feed/',
 }
 
 USER_AGENT = 'signal-pull/1.0 (allpantherproperties.com; content research bot)'
@@ -45,7 +48,10 @@ def fetch_reddit(subreddits):
     local_threads = []
     national_threads = []
     for sub in subreddits:
-        url = f'https://www.reddit.com/r/{sub}/hot.json?limit=10'
+        if sub in LOCAL_SUBREDDITS:
+            url = f'https://www.reddit.com/r/{sub}/search.json?q=real+estate&sort=top&t=week&limit=10&restrict_sr=1'
+        else:
+            url = f'https://www.reddit.com/r/{sub}/hot.json?limit=10'
         try:
             req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
             with urllib.request.urlopen(req, timeout=10) as resp:
@@ -406,6 +412,10 @@ def generate_html(data, path='signal/brief.html'):
     reddit_html = ''.join(reddit_card(t) for t in reddit[:5])
     rss_html = ''.join(rss_card(item) for item in rss[:5])
 
+    reddit_count = len(reddit)
+    rss_count = len(rss)
+    sources_pulled = f'{reddit_count} Reddit threads &middot; {rss_count} news items'
+
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -414,64 +424,77 @@ def generate_html(data, path='signal/brief.html'):
 <title>SIGNAL &mdash; Weekly Brief &middot; {pulled_at[:10]}</title>
 <style>
   *{{box-sizing:border-box;margin:0;padding:0}}
-  body{{background:#0f172a;color:#f1f5f9;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;padding:24px}}
-  h2{{font-size:15px;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:1px;cursor:pointer;user-select:none}}
-  h2:hover{{color:#f1f5f9}}
-  .section{{margin-bottom:32px}}
-  .section-header{{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #1e293b}}
+  body{{background:#0a0f1e;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:32px 24px}}
+  .container{{max-width:860px;margin:0 auto}}
+  .section{{margin-bottom:36px}}
+  .section-label{{font-size:11px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}}
+  .divider{{border:none;border-top:1px solid #1a2540;margin:28px 0}}
   .collapsed{{display:none}}
-  code{{background:#1e293b;border-radius:3px}}
-  a{{color:#38bdf8}}
+  .toggle-row{{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:10px 0;border-top:1px solid #1a2540;user-select:none}}
+  .toggle-row:hover .toggle-label{{color:#94a3b8}}
+  .toggle-label{{font-size:12px;font-weight:600;color:#334155;text-transform:uppercase;letter-spacing:1px}}
+  .toggle-caret{{font-size:11px;color:#334155}}
+  code{{background:#131d35;border-radius:3px;padding:1px 5px;color:#38bdf8;font-size:11px}}
+  a{{color:#60a5fa;text-decoration:none}}
+  a:hover{{color:#93c5fd}}
 </style>
 <script>
-function toggle(id){{document.getElementById(id).classList.toggle('collapsed')}}
+function toggle(id,btn){{
+  var el=document.getElementById(id);
+  var open=el.classList.toggle('collapsed');
+  btn.querySelector('.toggle-caret').textContent=open?'▶':'▼';
+}}
 </script>
 </head>
 <body>
-<div style="max-width:900px;margin:0 auto">
-  <div style="margin-bottom:32px">
-    <div style="font-size:28px;font-weight:700;color:#f8fafc">&#9889; SIGNAL</div>
-    <div style="color:#64748b;font-size:13px;margin-top:4px">
-      Fort Worth Content Intelligence &middot; Week of {pulled_at[:10]} &middot; allpantherproperties.com
+<div class="container">
+
+  <!-- Header -->
+  <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:36px;flex-wrap:wrap;gap:12px">
+    <div>
+      <div style="font-size:11px;font-weight:700;letter-spacing:3px;color:#38bdf8;text-transform:uppercase;margin-bottom:6px">All Panther Properties</div>
+      <div style="font-size:32px;font-weight:800;color:#f8fafc;letter-spacing:-0.5px">&#9889; SIGNAL</div>
+      <div style="color:#475569;font-size:13px;margin-top:5px">Fort Worth Content Intelligence &mdash; Week of {pulled_at[:10]}</div>
+    </div>
+    <div style="text-align:right">
+      <div style="font-size:11px;color:#334155;margin-bottom:4px">Sources pulled</div>
+      <div style="font-size:13px;color:#64748b">{sources_pulled}</div>
     </div>
   </div>
 
+  <!-- Content Angles -->
   <div class="section">
-    <div class="section-header" onclick="toggle('angles')">
-      <h2>&#127919; 7 Content Angles This Week</h2>
-      <span style="color:#475569;font-size:12px">click to collapse</span>
-    </div>
+    <div class="section-label">&#127919; Content Angles This Week</div>
     <div id="angles">{angles_html}</div>
   </div>
 
+  <hr class="divider">
+
+  <!-- Market Snapshot -->
   <div class="section">
-    <div class="section-header" onclick="toggle('market')">
-      <h2>&#128202; Market Snapshot &mdash; Tarrant County</h2>
-      <span style="color:#475569;font-size:12px">click to collapse</span>
-    </div>
+    <div class="section-label">&#128202; Market Snapshot &mdash; Tarrant County / 76179</div>
     <div id="market">{market_html}</div>
   </div>
 
-  <div class="section">
-    <div class="section-header" onclick="toggle('reddit')">
-      <h2>&#128293; Reddit Hot Topics</h2>
-      <span style="color:#475569;font-size:12px">click to collapse</span>
-    </div>
-    <div id="reddit">{reddit_html}</div>
+  <hr class="divider">
+
+  <!-- Raw Sources — collapsed by default -->
+  <div onclick="toggle('reddit-body',this)" class="toggle-row">
+    <span class="toggle-label">&#128293; Reddit Hot Topics &mdash; Raw Signals</span>
+    <span class="toggle-caret">▶</span>
+  </div>
+  <div id="reddit-body" class="collapsed" style="padding-top:12px;margin-bottom:20px">{reddit_html}</div>
+
+  <div onclick="toggle('news-body',this)" class="toggle-row">
+    <span class="toggle-label">&#128240; News Angles &mdash; Raw Feeds</span>
+    <span class="toggle-caret">▶</span>
+  </div>
+  <div id="news-body" class="collapsed" style="padding-top:12px;margin-bottom:20px">{rss_html}</div>
+
+  <div style="color:#1e3050;font-size:11px;text-align:center;margin-top:48px;padding-top:16px;border-top:1px solid #1a2540">
+    SIGNAL &middot; allpantherproperties.com &middot; Every stat is sourced and timestamped. Do not publish unverified data.
   </div>
 
-  <div class="section">
-    <div class="section-header" onclick="toggle('news')">
-      <h2>&#128240; News Angles</h2>
-      <span style="color:#475569;font-size:12px">click to collapse</span>
-    </div>
-    <div id="news">{rss_html}</div>
-  </div>
-
-  <div style="color:#334155;font-size:11px;text-align:center;margin-top:48px;padding-top:16px;border-top:1px solid #1e293b">
-    SIGNAL &middot; allpantherproperties.com &middot; Every stat above is sourced and timestamped.
-    Do not publish anything not in this brief.
-  </div>
 </div>
 </body>
 </html>'''
