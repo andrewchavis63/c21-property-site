@@ -8,11 +8,12 @@ from datetime import datetime, timezone
 from xml.etree import ElementTree
 
 SUBREDDITS = ['FortWorth', 'DFW', 'realestate', 'FirstTimeHomeBuyer', 'landlord']
+LOCAL_SUBREDDITS = {'FortWorth', 'DFW'}
 
 RSS_FEEDS = {
-    'Inman': 'https://www.inman.com/feed/',
+    'FortWorthReport': 'https://fortworthreport.org/feed/',
+    'MortgageReports': 'https://themortgagereports.com/feed',
     'HousingWire': 'https://www.housingwire.com/feed/',
-    'Redfin': 'https://www.redfin.com/news/feed/',
     'BiggerPockets': 'https://www.biggerpockets.com/blog/feed',
     'CalculatedRisk': 'https://feeds.feedburner.com/CalculatedRisk',
 }
@@ -40,8 +41,9 @@ def parse_reddit_response(data, subreddit):
 
 
 def fetch_reddit(subreddits):
-    """Fetch top threads from all subreddits, sorted by score desc. Returns top 10."""
-    all_threads = []
+    """Fetch top threads. Local subs (FortWorth, DFW) fill first 3 slots; national fills the rest."""
+    local_threads = []
+    national_threads = []
     for sub in subreddits:
         url = f'https://www.reddit.com/r/{sub}/hot.json?limit=10'
         try:
@@ -49,12 +51,20 @@ def fetch_reddit(subreddits):
             with urllib.request.urlopen(req, timeout=10) as resp:
                 data = json.loads(resp.read().decode())
             threads = parse_reddit_response(data, sub)
-            all_threads.extend(threads)
+            is_local = sub in LOCAL_SUBREDDITS
+            for t in threads:
+                t['is_local'] = is_local
+            if is_local:
+                local_threads.extend(threads)
+            else:
+                national_threads.extend(threads)
             time.sleep(0.5)
         except Exception as e:
             print(f'WARNING: Reddit fetch failed for r/{sub}: {e}', file=sys.stderr)
-    all_threads.sort(key=lambda t: t['score'], reverse=True)
-    return all_threads[:10]
+    local_threads.sort(key=lambda t: t['score'], reverse=True)
+    national_threads.sort(key=lambda t: t['score'], reverse=True)
+    # Local threads always fill first 3 slots — national can't crowd them out
+    return (local_threads[:3] + national_threads[:7])[:10]
 
 
 def parse_rss_feed(xml_bytes, source):
@@ -175,14 +185,28 @@ def generate_angles(reddit_threads, rss_items, market_data):
     """
     angles = []
 
-    for thread in reddit_threads[:3]:
+    local = [t for t in reddit_threads if t.get('is_local', t.get('subreddit') in LOCAL_SUBREDDITS)]
+    national = [t for t in reddit_threads if not t.get('is_local', t.get('subreddit') in LOCAL_SUBREDDITS)]
+
+    # Fill up to 3 Reddit slots: locals first, nationals fill gaps
+    reddit_pool = local[:3] + national[:max(0, 3 - len(local[:3]))]
+    reddit_pool = reddit_pool[:3]
+
+    for thread in reddit_pool:
         engagement = thread['score'] + (thread['num_comments'] * 2)
         post_format = 'blog' if thread['num_comments'] > 50 else 'social'
+        is_local = thread.get('is_local', thread.get('subreddit') in LOCAL_SUBREDDITS)
+        if is_local:
+            headline = f"Fort Worth: {thread['title'][:90]}"
+            seo_kw = f"fort worth {thread['subreddit'].lower()} real estate 2026"
+        else:
+            headline = f"What Fort Worth Buyers Should Know: {thread['title'][:70]}"
+            seo_kw = 'fort worth real estate market 2026'
         angles.append({
             'rank': len(angles) + 1,
-            'headline': f"Fort Worth Real Estate: {thread['title'][:80]}",
+            'headline': headline,
             'format': post_format,
-            'seo_keyword': f"fort worth {thread['subreddit'].lower()} 2026",
+            'seo_keyword': seo_kw,
             'competition': 'low' if thread['score'] < 500 else 'medium',
             'source_type': 'reddit',
             'source_title': thread['title'],

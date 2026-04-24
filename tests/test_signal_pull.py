@@ -13,7 +13,7 @@ class TestSkeleton(unittest.TestCase):
         self.assertEqual(len(sp.SUBREDDITS), 5)
         self.assertIn('FortWorth', sp.SUBREDDITS)
         self.assertEqual(len(sp.RSS_FEEDS), 5)
-        self.assertIn('Inman', sp.RSS_FEEDS)
+        self.assertIn('FortWorthReport', sp.RSS_FEEDS)
 
 
 MOCK_REDDIT_JSON = {
