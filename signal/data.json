@@ -1,156 +1,192 @@
 {
-  "pulled_at": "2026-04-27T07:30:07.537313+00:00",
-  "reddit": [],
+  "pulled_at": "2026-04-30T21:19:22.098580+00:00",
+  "reddit": [
+    {
+      "title": "A Texas homeschool group was able to hire a sex offender to coach. Here's why",
+      "url": "https://www.reddit.com/r/FortWorth/comments/1szumnk/a_texas_homeschool_group_was_able_to_hire_a_sex/",
+      "subreddit": "FortWorth",
+      "pub_date": "2026-04-30T12:26:52+00:00",
+      "is_local": true,
+      "score": 0,
+      "num_comments": 0
+    },
+    {
+      "title": "Texas Home Educators Sports Association board member resigns amid sex offender scandal",
+      "url": "https://www.reddit.com/r/dfw/comments/1sz6saf/texas_home_educators_sports_association_board/",
+      "subreddit": "DFW",
+      "pub_date": "2026-04-29T18:11:31+00:00",
+      "is_local": true,
+      "score": 0,
+      "num_comments": 0
+    },
+    {
+      "title": "New housing coming to East Plano—good move or more strain?",
+      "url": "https://www.reddit.com/r/dfw/comments/1szahyy/new_housing_coming_to_east_planogood_move_or_more/",
+      "subreddit": "DFW",
+      "pub_date": "2026-04-29T20:23:11+00:00",
+      "is_local": true,
+      "score": 0,
+      "num_comments": 0
+    },
+    {
+      "title": "New Rule restricting AI Generated Content from r/Landlord",
+      "url": "https://www.reddit.com/r/Landlord/comments/1pgs1kp/new_rule_restricting_ai_generated_content_from/",
+      "subreddit": "landlord",
+      "pub_date": "2025-12-07T20:02:33+00:00",
+      "is_local": false,
+      "score": 0,
+      "num_comments": 0
+    },
+    {
+      "title": "[General US - CA] Owner raising price of advertised rental because there is a lot of interest. Is this a thing?",
+      "url": "https://www.reddit.com/r/Landlord/comments/1szyfy2/general_us_ca_owner_raising_price_of_advertised/",
+      "subreddit": "landlord",
+      "pub_date": "2026-04-30T14:56:29+00:00",
+      "is_local": false,
+      "score": 0,
+      "num_comments": 0
+    },
+    {
+      "title": "[Landlord-US] Do any small time landlords hire non insured help like painters etc?",
+      "url": "https://www.reddit.com/r/Landlord/comments/1t09ahm/landlordus_do_any_small_time_landlords_hire_non/",
+      "subreddit": "landlord",
+      "pub_date": "2026-04-30T21:15:41+00:00",
+      "is_local": false,
+      "score": 0,
+      "num_comments": 0
+    },
+    {
+      "title": "[General- US- CA] Renter Posts",
+      "url": "https://www.reddit.com/r/Landlord/comments/1t08jss/general_us_ca_renter_posts/",
+      "subreddit": "landlord",
+      "pub_date": "2026-04-30T20:47:47+00:00",
+      "is_local": false,
+      "score": 0,
+      "num_comments": 0
+    },
+    {
+      "title": "[Landlord US-XX] Tenant’s AC caught fire at 2am. She texted me. I didn’t see it until morning. I don’t know how to feel about this.",
+      "url": "https://www.reddit.com/r/Landlord/comments/1sz3q52/landlord_usxx_tenants_ac_caught_fire_at_2am_she/",
+      "subreddit": "landlord",
+      "pub_date": "2026-04-29T16:24:35+00:00",
+      "is_local": false,
+      "score": 0,
+      "num_comments": 0
+    },
+    {
+      "title": "[Landlord US] First Time Landlord I Think I'm Ready to Sell",
+      "url": "https://www.reddit.com/r/Landlord/comments/1sz6oq4/landlord_us_first_time_landlord_i_think_im_ready/",
+      "subreddit": "landlord",
+      "pub_date": "2026-04-29T18:08:08+00:00",
+      "is_local": false,
+      "score": 0,
+      "num_comments": 0
+    },
+    {
+      "title": "[tenant - USA - California] problems with Zillow credit check",
+      "url": "https://www.reddit.com/r/Landlord/comments/1sz9hnr/tenant_usa_california_problems_with_zillow_credit/",
+      "subreddit": "landlord",
+      "pub_date": "2026-04-29T19:46:58+00:00",
+      "is_local": false,
+      "score": 0,
+      "num_comments": 0
+    }
+  ],
   "rss": [
     {
-      "title": "Sweeping Zoning Reforms Presents Opportunities For Multifamily Investments",
-      "url": "https://www.biggerpockets.com/blog/sweeping-zoning-reforms-presents-opportunities-for-multifamily-investments",
-      "description": "With the affordability crisis stinging American pocketbooks and small landlords struggling to maintain cash flow amid high interest rates and property prices, the push for more housing is gaining traction [&#8230;]",
-      "pub_date": "Wed, 22 Apr 2026 17:01:51 +0000",
+      "title": "Trinity Pride Fest, FWPD Brace for Possibly Anti-LGBTQ+ World Cup Visitors",
+      "url": "https://www.fwweekly.com/2026/04/29/trinity-pride-fest-fwpd-brace-for-possibly-anti-lgbtq-world-cup-visitors/",
+      "description": "<p>Once an incredibly LGBTQ+-friendly country, Argentina swung far right with the election of a new president in 2023. After Javier Milei took office, hate crimes against the queer community skyrocketed by 70%, and LGBTQ+ rights were rolled back considerably. By restricting medically supported gende",
+      "pub_date": "Wed, 29 Apr 2026 23:18:30 +0000",
+      "source": "FWWeekly"
+    },
+    {
+      "title": "10 Years Probation",
+      "url": "https://www.fwweekly.com/2026/04/29/10-years-probation/",
+      "description": "<p>A Fort Worth man’s recent punishment for making threatening phone calls while experiencing a psychotic episode shines a light on the way Tarrant County treats mentally ill offenders. Dylan Lofton was recently sentenced to 10 years of probation for the felony offense of calling Tarrant County Comm",
+      "pub_date": "Wed, 29 Apr 2026 20:41:03 +0000",
+      "source": "FWWeekly"
+    },
+    {
+      "title": "Naming Rights",
+      "url": "https://www.fwweekly.com/2026/04/29/naming-rights/",
+      "description": "<p>First of all, let’s knock out my one major complaint. I get that “AT&#38;T” had to be removed from the Arlington stadium signage for a variety of reasons, but renaming the place the “Dallas Stadium” is strangling the life out of nearby Fort Worth, a huge city (11th most populous in the nation) wi",
+      "pub_date": "Wed, 29 Apr 2026 20:38:14 +0000",
+      "source": "FWWeekly"
+    },
+    {
+      "title": "Red Fabric",
+      "url": "https://www.fwweekly.com/2026/04/29/red-fabric/",
+      "description": "<p>David Lowery has never lacked ambition, and so the North Texas product aims for a great many things with Mother Mary. His latest film means to be a study of a friendship suffocated by one person’s global fame, a body-horror exercise like The Substance, a commentary on pop-music megastardom, a met",
+      "pub_date": "Wed, 29 Apr 2026 20:30:52 +0000",
+      "source": "FWWeekly"
+    },
+    {
+      "title": "Fed Holds Rates Steady, But Rare Dissents Signal Cloudy Outlook For Future Path",
+      "url": "https://www.redfin.com/news/fed-meeting-april-2026/",
+      "description": "<p>The Federal Reserve held interest rates steady at its April 29 meeting.  Takeaway: Mortgage rates may rise slightly as Jerome Powell’s last Fed meeting as chair ended with some fireworks. The Board signaled an unusual amount of division over the future path of interest rates and, in a historicall",
+      "pub_date": "Wed, 29 Apr 2026 19:58:53 +0000",
+      "source": "Redfin"
+    },
+    {
+      "title": "‘Deliver The Kind of Service People Remember and Trust’: How Maryam Amiri Became The First Redfin Agent to Sell $1 Billion Worth of Homes",
+      "url": "https://www.redfin.com/news/maryam-amiri-redfin-agent-profile/",
+      "description": "<p>In 2001, Maryam Amiri immigrated to the United States from Iran. Twenty-five years later, she became the first Redfin agent to hit $1 billion in career sales volume.  “At a certain point, it became less about the number and more about what it represented: consistency, trust and the ability to ser",
+      "pub_date": "Wed, 29 Apr 2026 19:43:38 +0000",
+      "source": "Redfin"
+    },
+    {
+      "title": "What a Cost Segregation Study Actually Does",
+      "url": "https://www.biggerpockets.com/blog/what-a-cost-segregation-study-actually-does",
+      "description": "This article is presented by Cost Segregation Guys. If you own investment property, you have probably heard the term &#8220;cost segregation&#8221; thrown around at real estate meetups or on podcasts. [&#8230;]",
+      "pub_date": "Wed, 29 Apr 2026 16:17:30 +0000",
       "source": "BiggerPockets"
     },
     {
-      "title": "More Than 50,000 Home-Purchase Contracts Fell Through in March",
-      "url": "https://www.redfin.com/news/contract-cancellations-march-2026/",
-      "description": "<p>13.4% of home-sale agreements that went under contract in March were canceled. House hunters are getting cold feet as costs stay high and economic uncertainty is in the air.  Contract cancellations are most common in big-time buyer’s markets like San Antonio and Orlando, where home searchers have",
-      "pub_date": "Wed, 22 Apr 2026 12:30:33 +0000",
-      "source": "Redfin"
+      "title": "Deed Theft and Fraudulent Tax Lien Sales Are Spreading—Here’s How to Make Sure You Don’t Fall Victim",
+      "url": "https://www.biggerpockets.com/blog/deed-theft-and-fraudulent-tax-lien-sales-are-spreading",
+      "description": "Because of the large sums of money involved, real estate is a fertile hunting ground for scammers, and one of the most profitable scams is spreading outwards from New York: [&#8230;]",
+      "pub_date": "Wed, 29 Apr 2026 16:11:36 +0000",
+      "source": "BiggerPockets"
     },
     {
-      "title": "Fixed-Rate Home Equity Loan Options: Full Guide",
-      "url": "https://themortgagereports.com/129072/fixed-rate-home-equity-loan-options",
-      "description": "Fixed-rate home equity loan options provide predictable monthly payments by locking your interest rate. Compare lump-sum loans, fixed-rate HELOCs, and more.",
-      "pub_date": "Wed, 08 Apr 2026 12:00:00 +0000",
-      "source": "MortgageReports"
+      "title": "BRRRR vs. Turnkey: Which Rental Strategy Actually Wins? (Not What You Think)",
+      "url": "https://www.biggerpockets.com/blog/rookie-711",
+      "description": "Before you buy your first rental property, you’ll need to pick an investing strategy. Should you opt for the convenience of a turnkey rental property or swing for more upside [&#8230;]",
+      "pub_date": "Wed, 29 Apr 2026 11:00:47 +0000",
+      "source": "BiggerPockets"
     },
     {
-      "title": "I Traded My 2.9% Mortgage Rate for a 7.35% Rate to Move to Santa Barbara. I Don’t Regret It, But I Did Refinance.",
-      "url": "https://www.redfin.com/news/refinance-personal-essay-2026/",
-      "description": "<p>This was originally published by Inman on April 14, 2026.  I bought a house with a 7.35% rate in 2024. Refinancing the rate down to 6.2% the next year made the mortgage math easier to stomach.  When I moved from Seattle to Santa Barbara, CA 18 months ago, I knew it was a bad financial [&#8230;]</",
-      "pub_date": "Tue, 21 Apr 2026 18:19:11 +0000",
-      "source": "Redfin"
-    },
-    {
-      "title": "31 Best Real Estate Marketing Software Options for Agents",
-      "url": "https://www.realtrends.com/articles/real-estate-marketing-software/",
-      "description": "<p>You&#8217;ve just wrapped up a long day of showings, client meetings, and paperwork. As you settle in for the evening, your phone buzzes. It&#8217;s an eager prospect inquiring about a stunning property you listed last week. Imagine this — the lead came through your automated chatbot, was nurture",
-      "pub_date": "Tue, 17 Dec 2024 20:53:26 +0000",
-      "source": "RealTrends"
-    },
-    {
-      "title": "Spring 2026 First-Time Home Buyer Advice",
-      "url": "https://themortgagereports.com/129452/home-buyer-advice-spring-2026",
-      "description": "The housing market can be difficult to navigate. See what tips industry experts have for first-time home buyers in spring 2026.",
-      "pub_date": "Tue, 14 Apr 2026 18:08:00 +0000",
-      "source": "MortgageReports"
-    },
-    {
-      "title": "Massive gas tanker explosion in Mexico City kills 3 people and injures 70 others",
-      "url": "https://www.nbcdfw.com/news/massive-gas-tanker-explosion-in-mexico-city-kills-3-people-and-injures-70-others/3917202/",
-      "description": "<p>A gas tanker truck exploded and burned multiple vehicles under a Mexico City highway overpass on Wednesday, killing three people and injuring 70 others, some with their entire bodies charred and others waiting for help in the road with burns and torn clothing.</p>\n\n\n\n<p>The crash of the truck car",
-      "pub_date": "Thu, Sep 11 2025 11:06:54 AM",
-      "source": "NBCDFW"
-    },
-    {
-      "title": "How to cook the perfect boiled egg, according to science",
-      "url": "https://www.nbcdfw.com/news/national-international/how-to-cook-the-perfect-boiled-egg-according-to-science/3763546/",
-      "description": "<p>Scientists say they&#8217;ve cracked the code for boiling&nbsp;the perfect egg.</p>\n\n\n\n<p>It&#8217;s a recipe you can test for yourself — though the timing isn&#8217;t ideal with soaring egg prices in the United States from a <a href=\"https://www.nbcdfw.com/news/national-international/usda-detect",
-      "pub_date": "Thu, Feb 06 2025 10:23:12 AM",
-      "source": "NBCDFW"
-    },
-    {
-      "title": "How Long Do You Have to Sue After a Slip and Fall in California?",
-      "url": "https://www.fwweekly.com/2026/04/23/how-long-do-you-have-to-sue-after-a-slip-and-fall-in-california/",
-      "description": "<p>Slip-and-fall accidents can cause injuries that change a person&#8217;s life overnight. In California, you only have a certain amount of time to file a personal injury claim before that right is gone forever. This window is called the statute of limitations, and missing it ends the right to sue. ",
-      "pub_date": "Thu, 23 Apr 2026 19:27:43 +0000",
-      "source": "FWWeekly"
-    },
-    {
-      "title": "Digital Leisure Markets Are Growing, and So Are the Challenges",
-      "url": "https://www.fwweekly.com/2026/04/23/digital-leisure-markets-are-growing-and-so-are-the-challenges/",
-      "description": "<p>Online consumer platforms have grown quickly, often outpacing the systems designed to regulate them. For insurers and brokers, that creates a practical challenge: assessing risk in markets that don’t follow a single, consistent rulebook. Online gaming is a clear example, sitting at the crossroads",
-      "pub_date": "Thu, 23 Apr 2026 16:46:06 +0000",
-      "source": "FWWeekly"
+      "title": "He Bought 50 Rentals, Then Stopped to Do This (Makes $5,000/Month Per Deal)",
+      "url": "https://www.biggerpockets.com/blog/real-estate-1271",
+      "description": "Struggling to find cash flow these days? You’re not the only one. Today’s guest built a portfolio of 50 rental properties before margins started getting thin, but one giant pivot [&#8230;]",
+      "pub_date": "Wed, 29 Apr 2026 11:00:27 +0000",
+      "source": "BiggerPockets"
     }
   ],
   "market": {
-    "median_rent": 1999,
+    "median_rent": 2000,
     "rent_yoy_change": null,
-    "rental_dom": 44.33,
-    "rental_new_listings": 312,
-    "rental_total_listings": 752,
-    "sale_median_price": 357500,
-    "sale_avg_price": 544506,
-    "sale_price_per_sqft": 177.83,
-    "sale_dom": 54.88,
-    "sale_median_dom": 28,
-    "sale_new_listings": 240,
-    "sale_total_listings": 726,
-    "sale_updated": "2026-04-27",
+    "rental_dom": 45.28,
+    "rental_new_listings": 325,
+    "rental_total_listings": 735,
+    "sale_median_price": 356000,
+    "sale_avg_price": 545790,
+    "sale_price_per_sqft": 178.25,
+    "sale_dom": 56.3,
+    "sale_median_dom": 30,
+    "sale_new_listings": 242,
+    "sale_total_listings": 717,
+    "sale_updated": "2026-04-30",
     "city": "Fort Worth",
     "state": "TX",
     "zip": "76179",
-    "pulled_at": "2026-04-27T07:30:07.536710+00:00",
+    "pulled_at": "2026-04-30T21:18:41.812287+00:00",
     "source_url": "https://app.rentcast.io"
   },
   "angles": [
     {
       "rank": 1,
-      "headline": "Fort Worth: Digital Leisure Markets Are Growing, and So Are the Challenges",
-      "format": "blog",
-      "seo_keyword": "fort worth real estate news 2026",
-      "competition": "low",
-      "source_type": "rss",
-      "source_title": "Digital Leisure Markets Are Growing, and So Are the Challenges",
-      "source_url": "https://www.fwweekly.com/2026/04/23/digital-leisure-markets-are-growing-and-so-are-the-challenges/",
-      "engagement_score": 0
-    },
-    {
-      "rank": 2,
-      "headline": "Sweeping Zoning Reforms Presents Opportunities For Multifamily Investments — What It Means for Fort Worth",
-      "format": "blog",
-      "seo_keyword": "fort worth real estate market 2026",
-      "competition": "medium",
-      "source_type": "rss",
-      "source_title": "Sweeping Zoning Reforms Presents Opportunities For Multifamily Investments",
-      "source_url": "https://www.biggerpockets.com/blog/sweeping-zoning-reforms-presents-opportunities-for-multifamily-investments",
-      "engagement_score": 0
-    },
-    {
-      "rank": 3,
-      "headline": "More Than 50,000 Home-Purchase Contracts Fell Through in March — What It Means for Fort Worth",
-      "format": "blog",
-      "seo_keyword": "fort worth real estate market 2026",
-      "competition": "medium",
-      "source_type": "rss",
-      "source_title": "More Than 50,000 Home-Purchase Contracts Fell Through in March",
-      "source_url": "https://www.redfin.com/news/contract-cancellations-march-2026/",
-      "engagement_score": 0
-    },
-    {
-      "rank": 4,
-      "headline": "Fixed-Rate Home Equity Loan Options: Full Guide — What It Means for Fort Worth",
-      "format": "blog",
-      "seo_keyword": "fort worth real estate market 2026",
-      "competition": "medium",
-      "source_type": "rss",
-      "source_title": "Fixed-Rate Home Equity Loan Options: Full Guide",
-      "source_url": "https://themortgagereports.com/129072/fixed-rate-home-equity-loan-options",
-      "engagement_score": 0
-    },
-    {
-      "rank": 5,
-      "headline": "Fort Worth Rental Market Update: Rents shifting YoY — Data and Analysis",
-      "format": "screen_recording",
-      "seo_keyword": "fort worth rental market 2026",
-      "competition": "low",
-      "source_type": "rentcast",
-      "source_title": "RentCast Tarrant County — pulled 2026-04-27",
-      "source_url": "https://app.rentcast.io",
-      "engagement_score": 0
-    },
-    {
-      "rank": 6,
       "headline": "Why Fort Worth Is Still One of the Best Places to Buy in Texas Right Now",
       "format": "youtube",
       "seo_keyword": "fort worth real estate buy 2026",
@@ -158,7 +194,101 @@
       "source_type": "reddit",
       "source_title": "r/FortWorth — top local discussions this week",
       "source_url": "https://reddit.com/r/FortWorth",
-      "engagement_score": 0
+      "engagement_score": 0,
+      "business_lens": "sales",
+      "urgency": "evergreen",
+      "priority_score": 5.0,
+      "action": "Film a 60-second explainer — repurpose as YouTube Short, Reel, and FB video in one take."
+    },
+    {
+      "rank": 2,
+      "headline": "Fort Worth Rental Market Update: Rents shifting YoY — Data and Analysis",
+      "format": "screen_recording",
+      "seo_keyword": "fort worth rental market 2026",
+      "competition": "low",
+      "source_type": "rentcast",
+      "source_title": "RentCast Tarrant County — pulled 2026-04-30",
+      "source_url": "https://app.rentcast.io",
+      "engagement_score": 0,
+      "business_lens": "both",
+      "urgency": "now",
+      "priority_score": 4.7,
+      "action": "Post the market numbers to FB with your read — data posts outperform opinion posts every time."
+    },
+    {
+      "rank": 3,
+      "headline": "Fort Worth: A Texas homeschool group was able to hire a sex offender to coach. Here's why",
+      "format": "social",
+      "seo_keyword": "fort worth real estate 2026",
+      "competition": "low",
+      "source_type": "local_reddit",
+      "source_title": "A Texas homeschool group was able to hire a sex offender to coach. Here's why",
+      "source_url": "https://www.reddit.com/r/FortWorth/comments/1szumnk/a_texas_homeschool_group_was_able_to_hire_a_sex/",
+      "engagement_score": 0,
+      "business_lens": "both",
+      "urgency": "now",
+      "priority_score": 4.2,
+      "action": "Drop this in your FB Story with one local data point — it will outperform any polished post this week."
+    },
+    {
+      "rank": 4,
+      "headline": "Fort Worth: Texas Home Educators Sports Association board member resigns amid sex offender scandal",
+      "format": "social",
+      "seo_keyword": "fort worth real estate 2026",
+      "competition": "low",
+      "source_type": "local_reddit",
+      "source_title": "Texas Home Educators Sports Association board member resigns amid sex offender scandal",
+      "source_url": "https://www.reddit.com/r/dfw/comments/1sz6saf/texas_home_educators_sports_association_board/",
+      "engagement_score": 0,
+      "business_lens": "both",
+      "urgency": "now",
+      "priority_score": 4.2,
+      "action": "Drop this in your FB Story with one local data point — it will outperform any polished post this week."
+    },
+    {
+      "rank": 5,
+      "headline": "Fort Worth: New housing coming to East Plano—good move or more strain?",
+      "format": "social",
+      "seo_keyword": "fort worth real estate 2026",
+      "competition": "low",
+      "source_type": "local_reddit",
+      "source_title": "New housing coming to East Plano—good move or more strain?",
+      "source_url": "https://www.reddit.com/r/dfw/comments/1szahyy/new_housing_coming_to_east_planogood_move_or_more/",
+      "engagement_score": 0,
+      "business_lens": "both",
+      "urgency": "now",
+      "priority_score": 4.2,
+      "action": "Drop this in your FB Story with one local data point — it will outperform any polished post this week."
+    },
+    {
+      "rank": 6,
+      "headline": "Fed Holds Rates Steady, But Rare Dissents Signal Cloudy Outlook For Future Path — What It Means for Fort Worth",
+      "format": "blog",
+      "seo_keyword": "fort worth real estate market 2026",
+      "competition": "medium",
+      "source_type": "national_rss",
+      "source_title": "Fed Holds Rates Steady, But Rare Dissents Signal Cloudy Outlook For Future Path",
+      "source_url": "https://www.redfin.com/news/fed-meeting-april-2026/",
+      "engagement_score": 0,
+      "business_lens": "both",
+      "urgency": "this_week",
+      "priority_score": 2.3,
+      "action": "Use as blog intro hook — swap the national stat with your Tarrant County RentCast number before publishing."
+    },
+    {
+      "rank": 7,
+      "headline": "‘Deliver The Kind of Service People Remember and Trust’: How Maryam Amiri Became — What It Means for Fort Worth",
+      "format": "blog",
+      "seo_keyword": "fort worth real estate market 2026",
+      "competition": "medium",
+      "source_type": "national_rss",
+      "source_title": "‘Deliver The Kind of Service People Remember and Trust’: How Maryam Amiri Became The First Redfin Agent to Sell $1 Billion Worth of Homes",
+      "source_url": "https://www.redfin.com/news/maryam-amiri-redfin-agent-profile/",
+      "engagement_score": 0,
+      "business_lens": "sales",
+      "urgency": "this_week",
+      "priority_score": 2.3,
+      "action": "Use as blog intro hook — swap the national stat with your Tarrant County RentCast number before publishing."
     }
   ]
 }
