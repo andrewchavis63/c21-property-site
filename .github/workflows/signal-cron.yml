@@ -2,8 +2,9 @@ name: SIGNAL Weekly Pull
 
 on:
   schedule:
-    - cron: '0 5 * * 1'   # Monday 5am UTC = Sunday 11pm CT
-  workflow_dispatch:        # Manual re-trigger from Actions tab anytime
+    - cron: "7 7 * * 1"
+      timezone: "America/Chicago"
+  workflow_dispatch:
 
 jobs:
   signal-pull:
@@ -23,14 +24,15 @@ jobs:
 
       - name: Run SIGNAL pull
         env:
-          RENTCAST_API_KEY: ${{ secrets.RENTCAST_API_KEY }}
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RENTCAST_API_KEY:    ${{ secrets.RENTCAST_API_KEY }}
+          ANTHROPIC_API_KEY:   ${{ secrets.ANTHROPIC_API_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python scripts/signal_pull.py
 
       - name: Commit generated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add signal/data.json signal/brief.html
+          git add signal/data.json signal/brief.md signal/brief.html signal/archive/
           git diff --staged --quiet || git commit -m "chore: SIGNAL weekly pull $(date -u +%Y-%m-%d) [skip netlify]"
           git push
