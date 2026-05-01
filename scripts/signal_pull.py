@@ -1138,7 +1138,7 @@ def send_discord_webhook(data, analysis, webhook_url):
                   else angles[0].get('headline', '') if angles else 'see brief')[:90]
 
     brief_url = ('https://raw.githubusercontent.com/andrewchavis63/'
-                 'c21-property-site/main/signal/brief.html')
+                 'c21-property-site/master/signal/brief.html')
 
     content = (
         f'\U0001f4cd **SIGNAL Weekly Brief — {pulled_at}**\n'
