@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-04-30T21:19:22.098580+00:00",
+  "pulled_at": "2026-05-01T11:13:42.036257+00:00",
   "reddit": [
     {
       "title": "A Texas homeschool group was able to hire a sex offender to coach. Here's why",
@@ -11,19 +11,19 @@
       "num_comments": 0
     },
     {
-      "title": "Texas Home Educators Sports Association board member resigns amid sex offender scandal",
-      "url": "https://www.reddit.com/r/dfw/comments/1sz6saf/texas_home_educators_sports_association_board/",
+      "title": "Sharing a free & helpful tool useful for DFW home owners",
+      "url": "https://www.reddit.com/r/dfw/comments/1t09iqk/sharing_a_free_helpful_tool_useful_for_dfw_home/",
       "subreddit": "DFW",
-      "pub_date": "2026-04-29T18:11:31+00:00",
+      "pub_date": "2026-04-30T21:24:44+00:00",
       "is_local": true,
       "score": 0,
       "num_comments": 0
     },
     {
-      "title": "New housing coming to East Plano—good move or more strain?",
-      "url": "https://www.reddit.com/r/dfw/comments/1szahyy/new_housing_coming_to_east_planogood_move_or_more/",
+      "title": "Texas Home Educators Sports Association board member resigns amid sex offender scandal",
+      "url": "https://www.reddit.com/r/dfw/comments/1sz6saf/texas_home_educators_sports_association_board/",
       "subreddit": "DFW",
-      "pub_date": "2026-04-29T20:23:11+00:00",
+      "pub_date": "2026-04-29T18:11:31+00:00",
       "is_local": true,
       "score": 0,
       "num_comments": 0
@@ -47,6 +47,33 @@
       "num_comments": 0
     },
     {
+      "title": "[Landlord US-TX] Renting room in house for first time",
+      "url": "https://www.reddit.com/r/Landlord/comments/1t0hsyo/landlord_ustx_renting_room_in_house_for_first_time/",
+      "subreddit": "landlord",
+      "pub_date": "2026-05-01T03:26:23+00:00",
+      "is_local": false,
+      "score": 0,
+      "num_comments": 0
+    },
+    {
+      "title": "[Landlord US - Chicago] HOA not responding to a main plumbing line issue",
+      "url": "https://www.reddit.com/r/Landlord/comments/1t0gr1w/landlord_us_chicago_hoa_not_responding_to_a_main/",
+      "subreddit": "landlord",
+      "pub_date": "2026-05-01T02:37:09+00:00",
+      "is_local": false,
+      "score": 0,
+      "num_comments": 0
+    },
+    {
+      "title": "[Landlord US - Chicago] is landlord responsible for stolen packages?",
+      "url": "https://www.reddit.com/r/Landlord/comments/1t0fsyt/landlord_us_chicago_is_landlord_responsible_for/",
+      "subreddit": "landlord",
+      "pub_date": "2026-05-01T01:54:28+00:00",
+      "is_local": false,
+      "score": 0,
+      "num_comments": 0
+    },
+    {
       "title": "[Landlord-US] Do any small time landlords hire non insured help like painters etc?",
       "url": "https://www.reddit.com/r/Landlord/comments/1t09ahm/landlordus_do_any_small_time_landlords_hire_non/",
       "subreddit": "landlord",
@@ -56,37 +83,10 @@
       "num_comments": 0
     },
     {
-      "title": "[General- US- CA] Renter Posts",
-      "url": "https://www.reddit.com/r/Landlord/comments/1t08jss/general_us_ca_renter_posts/",
-      "subreddit": "landlord",
-      "pub_date": "2026-04-30T20:47:47+00:00",
-      "is_local": false,
-      "score": 0,
-      "num_comments": 0
-    },
-    {
-      "title": "[Landlord US-XX] Tenant’s AC caught fire at 2am. She texted me. I didn’t see it until morning. I don’t know how to feel about this.",
-      "url": "https://www.reddit.com/r/Landlord/comments/1sz3q52/landlord_usxx_tenants_ac_caught_fire_at_2am_she/",
-      "subreddit": "landlord",
-      "pub_date": "2026-04-29T16:24:35+00:00",
-      "is_local": false,
-      "score": 0,
-      "num_comments": 0
-    },
-    {
-      "title": "[Landlord US] First Time Landlord I Think I'm Ready to Sell",
-      "url": "https://www.reddit.com/r/Landlord/comments/1sz6oq4/landlord_us_first_time_landlord_i_think_im_ready/",
-      "subreddit": "landlord",
-      "pub_date": "2026-04-29T18:08:08+00:00",
-      "is_local": false,
-      "score": 0,
-      "num_comments": 0
-    },
-    {
-      "title": "[tenant - USA - California] problems with Zillow credit check",
-      "url": "https://www.reddit.com/r/Landlord/comments/1sz9hnr/tenant_usa_california_problems_with_zillow_credit/",
-      "subreddit": "landlord",
-      "pub_date": "2026-04-29T19:46:58+00:00",
+      "title": "Protect yourselves from Credit Agencies selling your information. www.optoutprescreen.com",
+      "url": "https://www.reddit.com/r/RealEstate/comments/1hao3ij/protect_yourselves_from_credit_agencies_selling/",
+      "subreddit": "realestate",
+      "pub_date": "2024-12-09T23:47:41+00:00",
       "is_local": false,
       "score": 0,
       "num_comments": 0
@@ -167,21 +167,21 @@
   "market": {
     "median_rent": 2000,
     "rent_yoy_change": null,
-    "rental_dom": 45.28,
-    "rental_new_listings": 325,
-    "rental_total_listings": 735,
-    "sale_median_price": 356000,
-    "sale_avg_price": 545790,
-    "sale_price_per_sqft": 178.25,
-    "sale_dom": 56.3,
-    "sale_median_dom": 30,
-    "sale_new_listings": 242,
-    "sale_total_listings": 717,
-    "sale_updated": "2026-04-30",
+    "rental_dom": 44.95,
+    "rental_new_listings": 107,
+    "rental_total_listings": 737,
+    "sale_median_price": 358999,
+    "sale_avg_price": 548763,
+    "sale_price_per_sqft": 178.41,
+    "sale_dom": 56.31,
+    "sale_median_dom": 29,
+    "sale_new_listings": 0,
+    "sale_total_listings": 715,
+    "sale_updated": "2026-05-01",
     "city": "Fort Worth",
     "state": "TX",
     "zip": "76179",
-    "pulled_at": "2026-04-30T21:18:41.812287+00:00",
+    "pulled_at": "2026-05-01T11:13:02.212776+00:00",
     "source_url": "https://app.rentcast.io"
   },
   "angles": [
@@ -207,7 +207,7 @@
       "seo_keyword": "fort worth rental market 2026",
       "competition": "low",
       "source_type": "rentcast",
-      "source_title": "RentCast Tarrant County — pulled 2026-04-30",
+      "source_title": "RentCast Tarrant County — pulled 2026-05-01",
       "source_url": "https://app.rentcast.io",
       "engagement_score": 0,
       "business_lens": "both",
@@ -232,13 +232,13 @@
     },
     {
       "rank": 4,
-      "headline": "Fort Worth: Texas Home Educators Sports Association board member resigns amid sex offender scandal",
+      "headline": "Fort Worth: Sharing a free & helpful tool useful for DFW home owners",
       "format": "social",
       "seo_keyword": "fort worth real estate 2026",
       "competition": "low",
       "source_type": "local_reddit",
-      "source_title": "Texas Home Educators Sports Association board member resigns amid sex offender scandal",
-      "source_url": "https://www.reddit.com/r/dfw/comments/1sz6saf/texas_home_educators_sports_association_board/",
+      "source_title": "Sharing a free & helpful tool useful for DFW home owners",
+      "source_url": "https://www.reddit.com/r/dfw/comments/1t09iqk/sharing_a_free_helpful_tool_useful_for_dfw_home/",
       "engagement_score": 0,
       "business_lens": "both",
       "urgency": "now",
@@ -247,13 +247,13 @@
     },
     {
       "rank": 5,
-      "headline": "Fort Worth: New housing coming to East Plano—good move or more strain?",
+      "headline": "Fort Worth: Texas Home Educators Sports Association board member resigns amid sex offender scandal",
       "format": "social",
       "seo_keyword": "fort worth real estate 2026",
       "competition": "low",
       "source_type": "local_reddit",
-      "source_title": "New housing coming to East Plano—good move or more strain?",
-      "source_url": "https://www.reddit.com/r/dfw/comments/1szahyy/new_housing_coming_to_east_planogood_move_or_more/",
+      "source_title": "Texas Home Educators Sports Association board member resigns amid sex offender scandal",
+      "source_url": "https://www.reddit.com/r/dfw/comments/1sz6saf/texas_home_educators_sports_association_board/",
       "engagement_score": 0,
       "business_lens": "both",
       "urgency": "now",
